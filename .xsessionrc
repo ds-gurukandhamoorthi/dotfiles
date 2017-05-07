@@ -13,8 +13,9 @@ syndaemon -d -K -i 0.7
 #wmname LG3D
 #NOT HERE it wouldn't work as executing the window manager would override it
 
+#There is a problem with ratpoison too with executing xbindkeys
 #common shortcuts with xbindkeys rather than window manager specific
-xbindkeys &
+#xbindkeys &
 
 #exec ratpoison
 #exec xmonad
