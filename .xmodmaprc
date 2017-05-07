@@ -1,0 +1,8 @@
+! #to use caps lock key as additional key
+remove Lock = Caps_Lock
+keysym Caps_Lock = F13
+keycode 108 = Hyper_R
+clear mod1
+add mod1 = Alt_L
+add mod3 = Hyper_R
+	

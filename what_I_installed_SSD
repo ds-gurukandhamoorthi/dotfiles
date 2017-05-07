@@ -1,0 +1,60 @@
+04/05/2017
+sudo apt-get update
+sudo apt-get upgrade
+
+#make google ad default firefox search engine
+
+sudo apt install xmonad ratpoison
+sudo apt install vim
+sudo apt install lxterminal eterm
+sudo apt install suckless-tools #to get dmenu and for wmname
+
+05/05/2017
+
+#installed ad-block plus for firefox
+sudo apt-get install feh 
+sudo apt-get install aria2 
+sudo apt-get install zathura fbreader
+#xbacklight is only needed for laptop
+sudo apt-get install xdotool xbacklight numlockx  
+sudo apt-get install calibre xpdf
+sudo apt-get install xbindkeys xautomation
+sudo apt-get install dzen2
+sudo apt-get install haskell-platform
+sudo apt-get install libxrandr-dev
+cabal update
+cabal install X11
+sudo apt install libxft-dev
+cabal install xmonad
+cabal install xmonad-contrib
+
+#This time bootchart  etc not installed
+
+
+# cd ~
+#mkdir .xmonad
+#cd .xmonad/
+#wget 'https://raw.githubusercontent.com/ds-gurukandhamoorthi/Guru-sConfigFiles/master/xmonad.hs'
+#restarted xmonad  : It automatically compiles xmonad
+
+sudo apt-get update
+sudo apt-get remove openjdk*
+
+#downloaded jdk form oracle... made jdk system default  using sudo update-alternatives
+#java plugin firefox NOT SUPPORTED by firefox after version 52.  libnpjp2.so no longer supported
+
+#This time Android Studio is not a priority
+
+sudo apt-get install postgresql postgresql-contrib
+
+sudo apt install udiskie
+
+06/05/2017
+sudo apt install libghc-xmonad-contrib-dev
+
+07/05/2017
+sudo apt install git
+
+# git global user ...
+
+#git credentials cache  timeout 3600
