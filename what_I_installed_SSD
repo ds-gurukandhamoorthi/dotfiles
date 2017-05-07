@@ -57,4 +57,5 @@ sudo apt install git
 
 # git global user ...
 
-#git credentials cache  timeout 3600
+git config credential.helper cache
+git config credential.helper "cache --timeout=3600"
