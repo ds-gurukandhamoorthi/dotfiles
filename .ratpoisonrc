@@ -1,7 +1,6 @@
 escape less
-bind f exec firefox
+msgwait 2
 
-bind c exec lxterminal
 exec xrandr --output DVI-0 --rotate left
 # somehow the configuration in xessionrc doesn't get executed
 exec  xmodmap /home/guru/.xmodmaprc 
@@ -12,6 +11,51 @@ definekey top Print random-wallpaper
 
 definekey top F13 other
 
-alias halt exec shutdown now
 
-definekey top C-M-k  halt
+
+bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
+bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
+bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
+bind c exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
+bind C exec Eterm
+
+
+#exec xmodmap -e 'remove Lock = Caps_Lock' -e 'keysym Caps_Lock = F13' &
+definekey top F13 other
+
+#I defined it in .xbinkeysrc
+#definekey top S-F13 exec xdotool key Caps_Lock
+
+#exec numlockx on
+
+#so as to make run-or-raise executable.... FIXME
+set winname class
+
+#to disable touchpad when typing
+#exec syndaemon -d -K -i 0.4
+
+#to make java swing applications run in ratpoison
+exec wmname LG3D
+
+random-wallpaper
+
+#I found it a better thing to modify synaptic vertScrolldelta ... to hava natural scrolling
+#exec xinput set-button-map 10 1 2 3 5 4 6 7 8 9 10 11 12
+alias mediumBrightness exec xrandr --output eDP1 --brightness 0.7
+
+alias brightnessDown exec xbacklight -dec 10
+alias brightnessUp exec xbacklight -inc 10
+
+#I redefined it in xbindkeys
+#definekey top XF86MonBrightnessDown brightnessDown
+#definekey top XF86MonBrightnessUp brightnessUp
+
+alias astudio exec /opt/android-studio/bin/studio.sh
+
+alias batteryStatus exec /home/guru/bin/rpBatStatus.sh
+bind s-F1 batteryStatus
+
+alias halt exec sudo shutdown now
+definekey top C-M-k halt
+
+alias pwd exec xdotool type password
