@@ -1,0 +1,9 @@
+escape less
+bind f exec firefox
+
+bind c exec lxterminal
+exec xrandr --output DVI-0 --rotate left
+
+alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
+
+bind F13 
