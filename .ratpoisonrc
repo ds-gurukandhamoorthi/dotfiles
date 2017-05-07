@@ -3,7 +3,14 @@ bind f exec firefox
 
 bind c exec lxterminal
 exec xrandr --output DVI-0 --rotate left
+# somehow the configuration in xessionrc doesn't get executed
+exec  xmodmap /home/guru/.xmodmaprc 
 
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
+definekey top Print random-wallpaper
 
-bind F13 
+definekey top F13 other
+
+alias halt exec shutdown now
+
+definekey top C-M-k  halt

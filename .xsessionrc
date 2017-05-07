@@ -1,0 +1,22 @@
+#for some reason this is overrided in ratpoison
+#xmodmap $HOME/.xmodmaprc
+	
+setxkbmap -option compose:paus 
+
+
+numlockx on
+
+#make touchpad freeze when we are typing
+syndaemon -d -K -i 0.7
+
+#to make java swing applications run in ratpoison/xmonad..
+#wmname LG3D
+#NOT HERE it wouldn't work as executing the window manager would override it
+
+#common shortcuts with xbindkeys rather than window manager specific
+xbindkeys &
+
+#exec ratpoison
+#exec xmonad
+##exec /home/guru/.cabal/bin/xmonad
+exec /opt/ratpoison-1.4.9/src/ratpoison
