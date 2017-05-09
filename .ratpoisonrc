@@ -59,3 +59,6 @@ alias halt exec sudo shutdown now
 definekey top C-M-k halt
 
 alias pwd exec xdotool type password
+
+alias show-date-time exec /home/guru/bin/show-date-time.sh
+bind a show-date-time
