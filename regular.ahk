@@ -2,11 +2,11 @@
 	Run Firefox
 Return
 #s::
-	Run C:\Users\cdi415\Downloads\wscite365\wscite\SciTE.exe
+	Run C:\wscite374\wscite\SciTE.exe
 Return
 
 #c::
-	Run D:\run\Cygwin.lnk
+	Run C:\Users\Synoviaguest\Downloads\cmder\Cmder.exe
 Return
 
 #+c::
@@ -50,3 +50,19 @@ BackSpace::Send +{Space}
 Volume_Mute::Send {F6}
 #IfWinActive
 
+;; https://autohotkey.com/board/topic/17314-how-to-switch-next-and-previous-window/
+switcher:
+	tooltip, in switcher...
+	Input, key, I T5,{Esc}, n,p,t	;either wait 5 seconds to timeout, or press Esc to cancel
+	tooltip,ErrorLevel: %ErrorLevel%`n-%key%- was pressed...
+	If(ErrorLevel = Timeout)
+	{	Return
+	}
+	Else If(key = "n")
+	{	Send {Alt down}{Tab}{Alt up}
+	}
+
+Return
+
+;; Equivalent to ratpoison Escape key
+sc056::Gosub switcher
