@@ -62,3 +62,8 @@ alias pwd exec xdotool type password
 
 alias show-date-time exec /home/guru/bin/show-date-time.sh
 bind a show-date-time
+
+definekey top s-Right nextscreen
+definekey top s-Left prevscreen
+
+set fwcolor red
