@@ -60,7 +60,7 @@ Volume_Mute::Send {F6}
 ;; https://autohotkey.com/board/topic/17314-how-to-switch-next-and-previous-window/
 switcher:
 	;;tooltip, in switcher...
-	Input, key, M I C T2,{Esc}, n,f,i,s,c,k,{Space}	;either wait 2 seconds to timeout, or press Esc to cancel
+	Input, key, M I C T2,{Esc}, n,f,i,s,c,k, ,	;either wait 2 seconds to timeout, or press Esc to cancel
 	tooltip,ErrorLevel: %ErrorLevel%`n-%key%- was pressed...
 	If(ErrorLevel = Timeout)
 	{	Return
@@ -70,7 +70,7 @@ switcher:
 }Else If(key == "k"){
 	Gosub kill
 	}
-	Else If(key = "n" || key = "{Space}"){
+	Else If(key = "n" || key = " "){
 	Send {Alt down}{Tab}{Alt up}
 	}
 	Else If(key = "f"){
