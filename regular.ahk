@@ -143,3 +143,13 @@ contextSensitiveRefresh:
 	}
 
 return
+
+~Ctrl::
+;400 is the maximum allowed delay (in milliseconds) between presses.
+if (A_PriorHotKey = "~Ctrl" AND A_TimeSincePriorHotkey < 400)
+{
+   Send ^{w}
+}
+Sleep 0
+KeyWait Ctrl
+return
