@@ -60,8 +60,8 @@ Volume_Mute::Send {F6}
 ;; https://autohotkey.com/board/topic/17314-how-to-switch-next-and-previous-window/
 switcher:
 	;;tooltip, in switcher...
-	Input, key, M I C T2,{Esc}, n,f,i,s,c,k, ,	;either wait 2 seconds to timeout, or press Esc to cancel
-	tooltip,ErrorLevel: %ErrorLevel%`n-%key%- was pressed...
+	Input, key, M I C T2,{Esc}, n,f,i,s,c,k, ,Q,r	;either wait 2 seconds to timeout, or press Esc to cancel
+	;;tooltip,ErrorLevel: %ErrorLevel%`n-%key%- was pressed...
 	If(ErrorLevel = Timeout)
 	{	Return
 
@@ -73,15 +73,21 @@ switcher:
 	Else If(key = "n" || key = " "){
 	Send {Alt down}{Tab}{Alt up}
 	}
-	Else If(key = "f"){
+	Else If(key == "f"){
 	Gosub ror_firefox
 	}
-	Else If(key = "s"){
+Else If(key == "Q"){
+	Gosub only
+	}
+	Else If(key == "s"){
 	Gosub ror_scintilla
-	}	Else If(key = "i"){
+	}	Else If(key == "i"){
 	Gosub ror_sts
-	}	Else If(key = "c"){
+	}	Else If(key == "c"){
 	Gosub ror_console
+	}	Else If(key == "r"){
+	Gosub contextSensitiveRefresh
+
 }
 	
 
@@ -122,4 +128,18 @@ return
 kill:
 	;Send {Alt down}{F4}{Alt up}
 	WinClose, A
+return
+only:
+	;Send {Alt down}{F4}{Alt up}
+	WinMaximize, A
+return
+
+contextSensitiveRefresh:
+	If WinActive ("ahk_exe firefox.exe"){
+		Send ^{F5}
+	}Else{
+	
+		WinClose, A
+	}
+
 return
