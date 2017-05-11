@@ -7,3 +7,4 @@ alias uml2png='java -jar /home/guru/Downloads/plantuml.jar'
 alias minify='minify --no-comments'
 
 alias cvlc='cvlc --play-and-exit'
+alias aria2c='aria2c --seed-time=0'

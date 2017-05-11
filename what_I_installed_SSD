@@ -59,3 +59,22 @@ sudo apt install git
 
 git config credential.helper cache
 git config credential.helper "cache --timeout=3600"
+
+10/05/2017
+
+#downloaded STS (spring tool suite)
+
+sudo apt install scite   #for autohotkey formatting, VIM doesn't indent when autoformat, ...
+#... but it donen't have it by default
+sudo apt install dos2unix
+
+11/05/2017
+sudo apt install r-base-core r-base
+
+sudo apt install gfortran 
+#install.packages("quantmod")
+#install.packages("jsonlite")
+sudo apt install libcurl4-openssl-dev
+#install.packages("curl")
+
+#installed rust
