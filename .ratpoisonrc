@@ -67,3 +67,5 @@ definekey top s-Right nextscreen
 definekey top s-Left prevscreen
 
 set fwcolor red
+
+bind r exec xdotool key Ctrl+F5
