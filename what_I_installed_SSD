@@ -78,3 +78,8 @@ sudo apt install libcurl4-openssl-dev
 #install.packages("curl")
 
 #installed rust
+
+12/05/2017
+#installed pathogen for vim
+#added rust.vim 
+#added Syntastic.vim
