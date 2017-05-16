@@ -6,3 +6,5 @@ clear mod1
 add mod1 = Alt_L
 add mod3 = Hyper_R
 	
+keycode 106 = KP_Divide colon
+keycode 91 = comma KP_Decimal
