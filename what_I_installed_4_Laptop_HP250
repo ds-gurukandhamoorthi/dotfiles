@@ -517,3 +517,14 @@ sudo apt remove rust-lldb
 
 #installed vim pathogen
 #installed rust.vim using pathogen
+
+11/05/2017
+
+#install.packages("quantmod")
+
+17/05/2017
+sudo apt install mkvtoolnix
+
+18/05/2017
+ssh-keygen 
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@ds-gurukandhamoorthi.com

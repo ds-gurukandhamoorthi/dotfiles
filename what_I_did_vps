@@ -1,0 +1,95 @@
+apt-get update
+apt-get install tomcat7
+apt-get install tomcat7-admin
+apt-get install default-jdk
+apt-get install ant git
+apt-get install tomcat7-examples tomcat7-docs
+
+
+08/10/2016
+iptables -L -n #to see if it contains lines with port 80 and 8080
+iptables -I input 1 -p tcp --dport 80 -j ACCEPT
+iptables -I input 1 -p tcp --dport 8080 -j ACCEPT
+iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDRIRECT --to-port  8080
+
+06/11/2016
+# tomcat manager webapp not functioning
+apt-get remove tomcat7
+apt-get remove tomcat7-admin
+apt-get remove tomcat7-examples
+apt-get remove tomcat7-docs
+apt-get purge tomcat7
+
+#I HOPE THAT WHEN I INSTALL IT NEXT TIME IT WOULD FUNCTION
+
+wget http://download.jboss.org/wildfly/10.1.0.Final/wildfly-10.1.0.Final.tar.gz
+
+
+sudo apt install chkconfig
+sudo apt remove chkconfig #it's for CentOs
+
+07/11/2016
+
+apt purge openjdk-7-jre openjdk-7-jdk openjdk-7-jre-headless
+
+#installed jdk 8 from oracle. to download the zip let the download start using firefox and then copy link stop download, wget ... (direct link didn't function'
+#update-alternatives to make jdk oracle system default
+
+
+22/12/2016
+
+#UNINSTALL Postgres
+
+#ps -C postgres #to find processes and kill them
+
+
+apt-get --purge remove postgresql\*
+
+#rm -r /etc/postgresql  #not needed in my case
+#rm -r /etc/postgresql-common  #not needed in my case
+rm -r /var/lib/postgresql
+userdel -r postgres
+groupdel postgres
+
+apt-get install postgresql
+
+apt install unzip
+
+#glassfish
+wget 'http://download.java.net/glassfish/4.1.1/release/glassfish-4.1.1.zip'
+
+apt install lsof
+
+#a script copied at /etc/init.d/ to help start stop restart
+
+#in the bin directory of glassfish
+#./asadmin change-admin-password --user admin   #the DEFAULT PASSWORD BEING BLANK
+
+#./adadmin --host localhost --port 4848 enable-secureadmin
+
+
+23/12/2016
+apt install tree
+ 
+
+26/12/2016
+# -Djboss.http.port=80    passed to standalon.sh of /opt/wildfly/bin   to be able to run programs without specifying port... so there is no more need to do it with iptables...
+
+02/01/2017
+sudo apt update
+sudo apt upgrade
+
+16/02/2017
+sudo apt install sysbench
+
+03/05/2017
+sudo apt install speedtest-cli
+
+16/05/2017
+sudo apt install aria2
+
+17/05/2017
+sudo apt update
+sudo apt upgrade
+sudo apt install vlc
+sudo apt install mplayer
