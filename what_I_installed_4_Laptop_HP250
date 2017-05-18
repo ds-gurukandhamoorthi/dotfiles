@@ -531,3 +531,5 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@ds-gurukandhamoorthi.com
 
 #github
 #added laptop's is_rsa.pub
+#github    remote changed form https to git   for dotfiles
+#OK
