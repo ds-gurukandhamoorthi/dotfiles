@@ -528,3 +528,6 @@ sudo apt install mkvtoolnix
 18/05/2017
 ssh-keygen 
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@ds-gurukandhamoorthi.com
+
+#github
+#added laptop's is_rsa.pub
