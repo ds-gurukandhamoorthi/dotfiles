@@ -83,3 +83,19 @@ sudo apt install libcurl4-openssl-dev
 #installed pathogen for vim
 #added rust.vim 
 #added Syntastic.vim
+#
+
+19/05/2017
+sudo apt update
+sudo apt upgrade
+
+20/05/2017
+sudo apt install sshfs
+
+ssh-keygen 
+ssh-copy-id root@ds-gurukandhamoorthi.com
+
+#github
+#added BigOcto is_rsa.pub
+#github    remote changed form https to git   for dotfiles
+#OK
