@@ -63,8 +63,11 @@ alias pwd exec xdotool type password
 alias show-date-time exec /home/guru/bin/show-date-time.sh
 bind a show-date-time
 
-definekey top s-Right nextscreen
-definekey top s-Left prevscreen
+#definekey top s-Right nextscreen
+#definekey top s-Left prevscreen
+#later make this more roubst   AND what is sdump and sfdump  ... can they be used to create a eterm scratchpad and then return to that previous `blissful :-)` state
+definekey top s-Right sselect 1
+definekey top s-Left sselect 0
 
 set fwcolor red
 
