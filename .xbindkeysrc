@@ -11,3 +11,6 @@
 
 "ratpoison -c other"
     mod4 + b:1 
+
+"xdotool key --clearmodifiers  ctrl+w"
+   mod4 + b:2 
