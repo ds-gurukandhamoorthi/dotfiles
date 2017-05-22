@@ -1,0 +1,541 @@
+14/09/2016
+sudo apt-get update
+sudo apt-get upgrade
+
+
+sudo apt-get install xmonad ratpoison
+sudo apt-get install vim
+sudo apt-get install lxterminal eterm
+sudo apt-get install suckless-tools #(for wmname)
+sudo apt-get install feh
+sudo apt-get install aria2
+sudo apt-get install zathura fbreader
+sudo apt-get install xdotool xbacklight numlockx
+sudo apt-get install calibre xpdf
+sudo apt-get install xbindkeys xautomation
+
+sudo apt-get install dzen2
+sudo apt-get install haskell-platform
+sudo apt-get install libxrandr-dev
+cabal update
+cabal install X11
+sudo apt-get install libxft-dev
+cabal install xmonad
+cabal install xmonad-contrib
+
+
+15/09/2016
+sudo apt-get install bootchart
+sudo apt-get install pybootchartgui
+
+17/09/2016
+sudo apt-get update
+sudo apt-get upgrade
+
+#downloaded jdk from oracle...  made jdk system default using sudo update-alternatives
+#java plugin firefox : a link ... then verified in firefox browser that java is correctly installed
+
+#for android studio as per the instruction in its official page
+sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6
+sudo apt-get install cpu-checker #to execute kvm-ok
+sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+sudo adduser guru kvm
+sudo adduser guru libvirtd
+sudo virsh -c qemu:///system list
+
+#android studio   AVM
+
+sudo apt-get install postgresql postgresql-contrib
+
+19/09/2016
+sudo apt install pcmanfm
+sudo apt install udiskie
+#install.packages("httr")
+
+23/09/2016
+sudo apt install xchm
+
+24/09/2016
+#installed netbeans
+sudo apt-get install python-pygments #for generating syntax colour html
+#firefox autorefresh on local file change for html ...
+
+25/09/2016
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install nodejs npm
+npm install -g less
+npm install -g less-plugin-clean-css
+
+
+26/09/2016
+sudo apt-get install nodejs-legacy #to get node
+sudo npm install -g node-sass
+
+27/09/2016
+sudo npm install -g htmllint htmllint-cli
+
+29/09/2016
+sudo apt-get install graphviz
+
+02/10/2016
+sudo apt-get install entr # to watch a file's modif and execute a command
+
+sudo apt-get install gem
+sudo apt-get install ruby
+sudo gem install sass
+sudo apt-get install csstidy
+
+#installed scss vim plugin
+sudo gem install directory_watcher
+
+sudo gem update --system
+sudo gem update
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo npm install -g csslint
+#downloaded css validator java  #NOT FUNCTIONING
+sudo apt-get install w3c-markup-validator #NOT FUNCTIONING AS command line... ~localhost/w3c...
+
+08/10/2016
+sudo apt-get install tomcat7
+sudo apt-get install tomcat7-docs tomcat7-examples tomcat7-admin
+#changing port 8080 to 80 servers.xml of tomcat didn't function. The following line does
+sudo iptables -t nat -A OUTPUT -o lo -p tcp --dport 80 -j REDIRECT --to-port 8080
+
+sudo apt-get remove tomcat7*
+
+sudo apt install xclip
+
+#installed rel (relevant)
+
+09/10/2016
+sudo apt install netbeans #removed as it installs only base ide
+
+#installed wildfly 10
+
+14/10/2016
+sudo apt update
+sudo ap upgrade
+
+sudo apt install git-core
+
+16/10/2016
+sudo apt install rxvt-unicode
+sudo apt install surfraw
+sudo apt install w3m
+sudo apt install links
+
+21/10/2016
+sudo apt install gfms 
+
+
+22/10/2016
+sudo apt install colordiff
+sudo apt install cloc
+
+23/10/2016
+sudo cabal install hlint
+sudo apt install hlint
+sudo cabal install hlint
+
+# haskell.vim syntax file adds a little more to the default ...
+
+sudo apt update
+sudo apt upgrade
+
+sudo apt install emacs
+
+27/10/2016
+sudo apt install evince
+
+29/10/2016
+sudo apt install lighttpd
+
+#uninstalled netbeans as it didn't function
+
+#reinstalled netbeans
+#as I had a problem with loading enterprise application, found a solution in youtube, commented jdk_home line in netbeans/etc/netbeans.conf  AND IT FUNCTIONS
+
+#downloaded postgresql jdbc driver  
+#chmod  755 postgresql...jar
+
+30/10/2016
+sudo apt update
+sudo apt upgrade
+sudo apt install mysql-server
+
+#ugly fonts in netbeans following options added to DEFAULT OPTIONS netbeans.conf in ~/netbeans-8.2/etc/ directory # there was another netbeans.conf in /etc/ directory too
+-J-Dswing.aatext=true -J-Dawt.useSystemAAFontSettings=lcd
+
+10/11/2016
+sudo apt install eom
+
+11/11/2016
+#netbeans gradle support plugin
+sudo apt install gradle
+
+sudo npm install free-mobile-sms-api
+
+sudo apt install node-express-generator
+sudo npm install -g express
+sudo npm install npm -g
+
+13/11/2016
+sudo apt install r-base-core
+sudo apt install r-base
+
+#install.packages("rvest") #SOME OTHER PACKAGES NEEDED
+sudo apt install libxml2-dev
+#install.packages("xml2")
+sudo apt install libcurl4-openssl-dev
+#install.packages("curl")
+#install.packages("httr")
+#install.packages("rvest") # OK 
+#install.packages("XML")
+
+14/11/2016
+sudo apt install gv
+
+15/11/2016
+sudo cabal update
+sudo apt install libghc-bzlib-dev #needed for haste-compiler
+sudo cabal install haste-compiler
+haste-boot #some errors FAILED
+
+#ANOTHER WAY
+git clone https://github.com/valderman/haste-compiler.git
+cd haste-compiler
+cabal install
+
+
+sudo cabal install shellmate
+
+20/11/2016
+sudo apt update
+sudo apt upgrade
+
+21/11/2016
+sudo npm install bootlint -g
+
+22/11/2016
+#installed intellij idea for Gradle support ... but I don't understand it either
+
+# so as to not to start netbeans with sudo
+# sudo chown -R guru:guru ~/.cache/netbeans/8.2/
+# sudo chown -R guru:guru ~/.netbeans/8.2/
+
+#vim plantuml plugin
+
+#To make the gradle plugin in Netbeans function I first tried /usr/share/gradle... but it didn't function.
+#So downloaded gradle unzipped in Downloads put the link in Netbeans options for gradle. Now OK
+
+#Netbeans
+#in /src/main 
+#mkdir webapp
+#cd webapp
+#mkdir resources WEB-INF
+#cd WEB-INF
+#touch test.jsp
+#Reload project in netbeans to get Web Pages
+
+
+sudo cabal install gtk2hs-buildtools
+
+23/11/2016
+sudo npm install typescript -g
+sudo npm install tslint -g
+sudo npm install express
+sudo apt install libgtksourceview-3.0-dev libwebkitgtk-3.0-dev
+
+sudo cabal install cairo
+
+24/11/2016
+sudo apt install tomcat8
+
+27/11/2016
+sudo apt install pdftk
+
+01/12/2016
+sudo apt install chromium-bsu
+sudo apt install xosd-bin #to get osd_cat
+sudo apt install uzbl
+
+02/12/2016
+sudo apt install unclutter
+sudo apt install nmap
+
+03/12/2016
+sudo apt install clementine
+sudo apt install picard
+
+sudo cabal install HSH
+
+06/12/2016
+sudo npm install thymol-node-server -g
+sudo npm install thymol-node -g
+
+09/12/2016
+sudo npm install localtunnel -g #after googling "access your local host from internet"
+
+10/12/2016
+sudo apt install wordnet
+
+11/12/2016
+sudo cabal install cheatsheet
+
+#installed pathogen for vim
+#using pathogen installed Tabularize
+
+sudo apt install pandoc
+
+sudo apt install wine
+sudo apt install ganyremote
+
+13/12/2016
+sudo apt install gsimplecal
+
+sudo apt install groff # to get man pages show in a browser
+
+sudo apt install autokey-gtk
+
+16/12/2016
+sudo apt install tidy
+sudo apt remove tidy
+#downloaded tidy-5.2.0-64bit.deb
+sudo apt remove libtidy-0.99-0 
+sudo dpkg -i tidy-5.2.0-64bit.deb
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install texlive-full
+
+17/12/2016
+# postgre sql jdbc driver put in tomcat8/lib
+# then thanks to 'ps -ef' found the /var/lib/tomcat8 directory moved the driver there as the passwords file etc were there
+
+22/12/2016
+#installed vmtouch
+sudo apt install xsel
+sudo apt install scrot
+
+23/12/2016
+sudo apt install tree
+
+sudo apt install boxes
+
+28/12/2016
+sudo apt install exiftool
+
+30/12/2016
+sudo apt install scite
+
+07/01/2017
+sudo apt install x11vnc
+
+11/01/2017
+sudo apt update
+sudo apt upgrage
+sudo apt install libtidy-0.99-0
+
+18/10/2017
+#sudo dpkg -i StarUml ...
+sudo apt install libgpg-error-dev
+sudo apt install libgcrypt20-dev
+sudo apt install libgcrypt11-dev
+#Still unable to make StarUml function
+sudo dpkg -i libgcrypt11_1.5.3-2ubuntu4.2_amd64.deb 
+#Now I am able to install staruml
+
+sudo apt install jstest-gtk
+
+19/01/2017
+sudo apt install aspell-fr
+
+23/01/2017
+sudo npm install lighthouse -g
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo npm install npm@latest -g
+
+#UPGRADED TO LINUX SERENA
+#THEN INSTALLED KERNEL 4.8 FROM mintupdate
+sudo npm cache clean -f
+sudo npm install n -g
+sudo n stable
+
+#downloaded google chrome
+#dpkg -i ...
+
+24/01/2017
+sudo apt install zopfli
+
+sudo apt install qrencode
+#use:    qrencode -o- 'Guru' | feh -. -
+sudo apt install zbar-tools
+
+25/01/2017
+sudo npm install -g minifier
+sudo npm install -g uglify-js
+sudo npm install -g critical
+
+26/01/2017
+sudo apt install advancecomp #from wikipedia found that zopfli algorithm has been implemented in it
+sudo apt install brotli
+
+27/01/2017
+sudo apt install inkscape
+
+29/01/2017
+sudo apt update
+sudo apt upgrade
+
+30/01/2017
+sudo apt install stardict
+sudo apt install sdcv
+#downloaded  french to english dictionary
+
+04/02/2017
+sudo apt install gwenview
+
+07/02/2017
+sudo apt install gparted
+
+09/02/2017
+sudo apt install odt2txt
+
+11/02/2017
+sudo apt install k3b
+
+sudo apt install winetricks # ( as I wanted to execute chryzode my early prog, missing dll in wine...)
+
+winetricks vb6run
+
+16/02/2017
+sudo apt install povray
+sudo apt install wings3d
+sudo apt install sysbench
+
+13/03/2017
+sudo npm install -g yarn
+yarn global add yo
+sudo yarn global add yo
+sudo yarn global add bower
+sudo yarn global add gulp-cli
+sudo yarn global add generator-jhipster
+
+19/03/2017
+sudo npm install -g git-it
+
+20/03/2017
+sudo npm install -g how-to-npm
+
+sudo npm intall npm -g
+
+24/03/2017
+sudo npm install npm -g
+sudo npm install learnyounode
+
+sudo apt update
+sudo apt upgrade
+
+25/03/2017
+sudo npm install jshint
+
+26/03/2017
+sudo npm install bl
+sudo npm install strftime
+sudo npm i -g npm
+
+sudo npm install through2-map
+
+sudo npm install -g expressworks
+sudo npm install -g express
+
+sudo npm install -g pug
+
+01/04/2017
+sudo npm install -g body-parser
+sudo npm install -g stylus
+
+02/04/2017
+sudo npm install -g crypto
+
+sudo apt-get install mongodb
+
+sudo apt update
+sudo apt upgrade
+
+sudo npm install -g mongodb
+
+07/04/2017
+#downloaded STS
+sudo npm install -g yarn
+
+08/04/2017
+#downloaded gradle and uninstalled it in /opt directory
+
+sudo update-alternatives --install /usr/bin/gradle gradle /opt/gradle-3.4.1/bin/gradle 1
+
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt install grc
+
+09/04/2017
+sudo apt install read-edid
+
+16/04/2017
+sudo apt install expect
+sudo apt install jq
+
+29/04/2017
+#installed STS
+
+sudo apt install eclipse
+sudo apt remove eclipse
+
+#installed eclipse from eclipse.org    then chose eclipse JEE
+sudo apt install html-xml-utils
+
+03/05/2017
+sudo apt install speedtest-cli
+
+06/05/2017
+#downloaded xmonad package
+
+cabal install X11
+sudo apt install sqlite
+sudo apt install sqlite3
+
+sudo apt install rust-lldb
+sudo apt install rustc
+sudo apt remove rustc
+sudo apt remove rust-lldb
+
+#installed vim pathogen
+#installed rust.vim using pathogen
+
+11/05/2017
+
+#install.packages("quantmod")
+
+17/05/2017
+sudo apt install mkvtoolnix
+
+18/05/2017
+ssh-keygen 
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@ds-gurukandhamoorthi.com
+
+#github
+#added laptop's is_rsa.pub
+#github    remote changed form https to git   for dotfiles
+#OK
+
+21/05/2017
+googler installed.
+
+sudp npm install html-to-text -g
+sudo npm i -g npm
