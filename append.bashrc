@@ -8,5 +8,5 @@ alias minify='minify --no-comments'
 
 alias cvlc='cvlc --play-and-exit'
 alias aria2c='aria2c --seed-time=0'
-alias googler='/opt/googler-3.1/googler -n 3 --noprompt'
+alias googler='googler -n 3 --noprompt'
 alias g='googler'
