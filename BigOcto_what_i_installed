@@ -99,3 +99,24 @@ ssh-copy-id root@ds-gurukandhamoorthi.com
 #added BigOcto is_rsa.pub
 #github    remote changed form https to git   for dotfiles
 #OK
+
+22/05/2017
+#installed googler
+
+sudo apt install xclip
+
+02/06/2017
+sudo apt install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo npm install npm@latest -g
+sudo npm install n
+sudo n latest
+
+sudo apt install comix
+sudo apt install mongodb
+
+sudo npm install -g mongodb
+
+sudo npm -g install jshint
+sudo npm install --save react react-dom express body-parser express-react-views babel
+sudo npm install babel@5.8.23

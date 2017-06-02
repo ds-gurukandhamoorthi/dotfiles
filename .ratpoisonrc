@@ -72,3 +72,5 @@ definekey top s-Left sselect 0
 set fwcolor red
 
 bind r exec xdotool key Ctrl+F5
+
+alias close-tab  exec xdotool key --clearmodifiers  ctrl+w
