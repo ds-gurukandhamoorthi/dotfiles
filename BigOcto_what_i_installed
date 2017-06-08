@@ -118,5 +118,33 @@ sudo apt install mongodb
 sudo npm install -g mongodb
 
 sudo npm -g install jshint
-sudo npm install --save react react-dom express body-parser express-react-views babel
-sudo npm install babel@5.8.23
+# there was no -g option used in the two following commands
+# This is just for learn you react
+sudo npm install --save react react-dom express body-parser express-react-views@0.9.0 babel@5.8.23
+
+03/06/2017
+
+#pathogen installed vim-commentary
+#pathogen installed vim-jsx
+sudo npm install -g eslint
+#pathogen vim-javascript
+sudo npm install -g jshint-jsx
+sudo npm i -g npm
+sudo npm install -g eslint-plugin-react
+sudo npm install browserify babelify babel-preset-react babel-preset-es2015
+
+05/06/2017
+sudo add-apt-repository "deb https://cli-assets.heroku.com/branches/stable/apt ./" 
+curl -L https://cli-assets.heroku.com/apt/release.key | sudo apt-key add - 
+
+sudo apt-get update
+sudo apt-get install heroku
+
+sudo npm install -g datejs
+
+06/06/2017
+# vim installed `unimpaired.vim'  ; add shortcuts :   [ or ] followed by a letter to move ...
+
+07/06/2017
+sudo apt install tree
+sudo apt install html-xml-utils
