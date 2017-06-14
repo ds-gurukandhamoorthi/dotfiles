@@ -148,3 +148,12 @@ sudo npm install -g datejs
 07/06/2017
 sudo apt install tree
 sudo apt install html-xml-utils
+sudo npm install -g html-to-text
+
+12/06/2017
+sudo apt update
+sudo apt upgrade
+
+14/06/2017
+sudo apt update
+sudo apt upgrade

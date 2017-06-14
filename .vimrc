@@ -38,3 +38,10 @@ let g:javascript_conceal_underscore_arrow_function = "🞅"
 "set wildmode=longest,list
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+cnoremap w!! w !sudo tee > /dev/null %
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
