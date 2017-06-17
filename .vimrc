@@ -1,8 +1,10 @@
 "filetype indent on
 
+set nocompatible
 set smartindent
 set tabstop=4
 set history=500
+
 
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -45,3 +47,10 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+inoremap jk <esc>
+cnoremap jk <esc>
+
+filetype plugin  on
+"packadd! matchit
+"runtime macros/matchit.vim

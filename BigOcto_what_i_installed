@@ -157,3 +157,11 @@ sudo apt upgrade
 14/06/2017
 sudo apt update
 sudo apt upgrade
+sudo apt install ack-grep
+
+15/06/2017
+#installed surround.vim repeat.vim
+
+17/06/2017
+sudo apt update
+sudo apt upgrade
