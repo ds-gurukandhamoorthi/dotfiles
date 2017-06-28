@@ -336,7 +336,7 @@ sudo apt install x11vnc
 
 11/01/2017
 sudo apt update
-sudo apt upgrage
+sudo apt upgrade
 sudo apt install libtidy-0.99-0
 
 18/10/2017
@@ -539,3 +539,13 @@ googler installed.
 
 sudp npm install html-to-text -g
 sudo npm i -g npm
+
+13/06/2017
+sudo apt install pv
+sudo apt update
+sudo apt upgrade
+
+
+17/06/2017
+sudo apt update
+sudo apt upgrade

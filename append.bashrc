@@ -17,3 +17,4 @@ alias npm='/usr/local/bin/npm'
 shopt -s globstar
 
 eval "$(fasd --init auto)"
+alias l='ls -ltr'
