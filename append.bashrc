@@ -15,3 +15,5 @@ alias n='/usr/local/bin/n'
 alias npm='/usr/local/bin/npm'
 
 shopt -s globstar
+
+eval "$(fasd --init auto)"

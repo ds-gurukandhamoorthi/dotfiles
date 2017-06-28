@@ -165,3 +165,17 @@ sudo apt install ack-grep
 17/06/2017
 sudo apt update
 sudo apt upgrade
+
+18/06/2017
+sudo apt install vim-gtk  # to get vim clipboard support
+
+22/06/2017
+#vim textobj lastpat    and to make it function   vim textobj user
+
+24/06/2017
+#vim abolish
+
+27/06/2017
+sudo apt update
+sudo apt upgrade
+sudo apt install shellcheck

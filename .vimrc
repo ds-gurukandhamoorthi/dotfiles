@@ -22,6 +22,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "set hlsearch
+nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set conceallevel=1
 let g:javascript_conceal_function             = "ƒ"
@@ -54,3 +55,15 @@ cnoremap jk <esc>
 filetype plugin  on
 "packadd! matchit
 "runtime macros/matchit.vim
+
+set hidden
+
+"set path+=/work
+"
+
+"set ignorecase
+"set smartcase
+
+set incsearch
+
+set shortmess+=I

@@ -14,7 +14,10 @@ definekey top F13 other
 
 
 bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
-bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
+#bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
+
+alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf"
+bind b most-recent-book
 bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
 bind c exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind C exec Eterm
