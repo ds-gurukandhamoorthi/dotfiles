@@ -186,3 +186,6 @@ sudo apt install exuberant-ctags
 sudo npm install -g gulp-cli
 
 #installed Argumentative vim
+
+29/06/2017
+sudo npm install nodelint -g

@@ -67,3 +67,6 @@ set hidden
 set incsearch
 
 set shortmess+=I
+set nu
+
+autocmd BufRead *BigOcto_what_i_installed*  :$;
