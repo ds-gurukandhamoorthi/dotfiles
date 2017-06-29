@@ -179,3 +179,10 @@ sudo apt install vim-gtk  # to get vim clipboard support
 sudo apt update
 sudo apt upgrade
 sudo apt install shellcheck
+
+28/06/2017
+sudo apt install ffmpeg
+sudo apt install exuberant-ctags
+sudo npm install -g gulp-cli
+
+#installed Argumentative vim
