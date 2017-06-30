@@ -189,3 +189,7 @@ sudo npm install -g gulp-cli
 
 29/06/2017
 sudo npm install nodelint -g
+
+30/06/2017
+
+sudo apt update && sudo apt upgrade
