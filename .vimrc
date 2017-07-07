@@ -63,6 +63,7 @@ set hidden
 
 "set ignorecase
 "set smartcase
+"set infercase
 
 set incsearch
 
@@ -70,3 +71,11 @@ set shortmess+=I
 set nu
 
 autocmd BufRead *BigOcto_what_i_installed*  :$;
+
+"Just to make it skip to exact occurrence instead of just  the line containing
+"the occurence
+set grepprg=ack\ --nogroup\ --column\ $*
+set grepformat=%f:%l:%c:%m
+
+"JSX
+let g:jsx_ext_required=0

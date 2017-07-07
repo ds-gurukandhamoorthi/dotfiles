@@ -1,3 +1,4 @@
+#!/bin/bash
 PATH=$PATH:/home/guru/bin
 PATH=$PATH:/home/guru/.cabal/bin
 PATH=$PATH:/home/guru/.cargo/bin
@@ -66,8 +67,27 @@ PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "   # '#' for root, else '$'
 export PS1
 
-alias v='f -e vim'  
+alias e='f -e vim'  
 
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
 stty -ixon
+
+
+function v(){
+		FN="$(f -n1 $*)"
+		case "$FN" in
+				*pdf)
+						zathura "$FN"
+						;;
+				*)      view "$FN"
+						;;
+		esac
+
+}
+
+export ANDROID_HOME=$HOME/Android/Sdk/
+export PATH=$PATH:$ANDROID_HOME/tools
+export JAVA_HOME=/opt/java/jdk1.8.0_131
+
+export PATH=$PATH:/opt/gradle/gradle-4.0/bin/

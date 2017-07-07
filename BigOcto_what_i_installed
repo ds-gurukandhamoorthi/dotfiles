@@ -193,3 +193,27 @@ sudo npm install nodelint -g
 30/06/2017
 
 sudo apt update && sudo apt upgrade
+#installed rel
+
+05/07/2017
+sudo apt update
+sudo apt upgrade
+
+06/07/2017
+sudo apt install build-essential libtool
+#installed watchman from github
+#To avoid erros --without-python
+sudo npm install -g flow-bin
+sudo npm install -g react-native-cli
+sudo npm i -g npm
+sudo apt install android-tools-adb
+
+07/07/2017
+sudo apt update
+sudo apt upgrade
+# MINT UPGRADE SONYA   sudo mintupdate  Edit menu  -> update to ...
+sudo apt update
+sudo apt upgrade
+#Kerner update two times 
+
+#installed gradle  to /opt 1) to avoid openjdk installing 2) to get the latest version

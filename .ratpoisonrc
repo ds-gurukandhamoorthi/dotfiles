@@ -17,6 +17,7 @@ bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
 #bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf"
+alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
 bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
 alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
