@@ -247,3 +247,4 @@ sudo npm install -g eslint
 sudo npm -g install eslint-scope
 sudo npm -g install eslint-plugin-react-native
 sudo npm install prop-types -g
+sudo npm install -g babel-eslint
