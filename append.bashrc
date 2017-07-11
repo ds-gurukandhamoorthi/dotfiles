@@ -95,4 +95,4 @@ export JAVA_HOME=/opt/java/jdk1.8.0_131
 
 export PATH=$PATH:/opt/gradle/gradle-4.0/bin/
 
-complete -A file -X !*.@(mp4|mp3|mkv) cvlc
+complete -A file -X !*.@(mp4|mp3|mkv|avi) cvlc
