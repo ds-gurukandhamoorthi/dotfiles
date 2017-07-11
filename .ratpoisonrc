@@ -17,8 +17,10 @@ bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
 #bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf"
+alias second-most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -n2 -e zathura -f pdf"
 alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
+bind B second-most-frecent-book
 bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
 alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
@@ -80,3 +82,14 @@ set fwcolor red
 bind r exec xdotool key Ctrl+F5
 
 alias close-tab  exec xdotool key --clearmodifiers  ctrl+w
+
+bind KP_0 select 0
+bind KP_1 select 1
+bind KP_2 select 2
+bind KP_3 select 3
+bind KP_4 select 4
+bind KP_5 select 5
+bind KP_6 select 6
+bind KP_7 select 7
+bind KP_8 select 8
+bind KP_9 select 9

@@ -217,3 +217,33 @@ sudo apt upgrade
 #Kerner update two times 
 
 #installed gradle  to /opt 1) to avoid openjdk installing 2) to get the latest version
+sudo apt install xchm
+
+08/07/2017
+sudo apt install libglew-dev
+sudo apt install libglm-dev
+
+09/07/2017
+sudo apt install rxvt-unicode
+sudo apt install gem
+sudo gem install vimgolf
+echo sudo gem install vimgolf
+sudo apt install mpd
+sudo apt install mpc
+
+10/07/2017
+sudo apt install flac
+
+11/07/2017
+sudo npm install -g eslint
+sudo npm install -g eslint-plugin-react
+sudo update-alternatives --install /usr/bin/node node /usr/local/bin/node 2
+sudo update-alternatives --install /usr/bin/npm npm /usr/local/bin/npm 2
+sudo update-alternatives --install /usr/bin/nodejs nodejs /usr/local/bin/node 2
+sudo update-alternatives --install /usr/bin/n n /usr/local/bin/n 2
+sudo npm install npm@latest -g
+sudo npm update -g
+sudo npm install -g eslint
+sudo npm -g install eslint-scope
+sudo npm -g install eslint-plugin-react-native
+sudo npm install prop-types -g

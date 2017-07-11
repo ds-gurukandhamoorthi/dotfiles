@@ -11,9 +11,12 @@ alias cvlc='cvlc --play-and-exit'
 alias aria2c='aria2c --seed-time=0'
 alias googler='googler -n 3 --noprompt'
 alias g='googler'
-alias node='/usr/local/bin/node'
-alias n='/usr/local/bin/n'
-alias npm='/usr/local/bin/npm'
+#update-alternative used ...
+#alias node='/usr/local/bin/node'
+#alias n='/usr/local/bin/n'
+#alias npm='/usr/local/bin/npm'
+#alias nodejs='node'
+alias js='node'
 
 shopt -s globstar
 
@@ -91,3 +94,4 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export JAVA_HOME=/opt/java/jdk1.8.0_131
 
 export PATH=$PATH:/opt/gradle/gradle-4.0/bin/
+

@@ -3,6 +3,8 @@
 set nocompatible
 set smartindent
 set tabstop=4
+set shiftwidth=4
+set expandtab
 set history=500
 
 
@@ -21,6 +23,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_javascript_checkers=['eslint']
+
 "set hlsearch
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
@@ -37,6 +41,7 @@ let g:javascript_conceal_super                = "Ω"
 let g:javascript_conceal_arrow_function       = "⇒"
 let g:javascript_conceal_noarg_arrow_function = "🞅"
 let g:javascript_conceal_underscore_arrow_function = "🞅"
+
 
 "set wildmode=longest,list
 
@@ -79,3 +84,10 @@ set grepformat=%f:%l:%c:%m
 
 "JSX
 let g:jsx_ext_required=0
+
+"Run/Execute
+autocmd BufRead *.js  map <F5> :!react-native run-android<CR>
+autocmd BufRead *.vim  map <F5>  :source %<CR>
+autocmd BufRead .vimrc  map <F5> :source %<CR>
+
+set runtimepath+=/home/guru/testmpc/
