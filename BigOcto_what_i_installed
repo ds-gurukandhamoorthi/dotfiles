@@ -248,3 +248,20 @@ sudo npm -g install eslint-scope
 sudo npm -g install eslint-plugin-react-native
 sudo npm install prop-types -g
 sudo npm install -g babel-eslint
+sudo npm install -g react-native-git-upgrade
+react-native-git-upgrade
+
+14/07/2017
+sudo npm install -g graceful-fs
+sudo npm install -g minimatch
+sudo npm install -g javascript-ctags
+
+#This one functions
+sudo npm install -g es-ctags
+sudo npm install -g lodash
+
+15/07/2017
+sudo apt install jq
+
+16/07/2017
+#firefox auto reload plugin

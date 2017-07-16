@@ -90,4 +90,23 @@ autocmd BufRead *.js  map <F5> :!react-native run-android<CR>
 autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
 
+
 set runtimepath+=/home/guru/testmpc/
+
+function! CloseTagInJSX()
+    let _ft = &filetype
+    execute "set filetype=xml"
+    execute "gg"
+    execute "set filetype=" . _ft
+
+endfunction
+
+"Close HTML tags
+""FIXME : make something more robust
+iabbrev </ <C-o>:set omnifunc=xmlcomplete#CompleteTags<CR></<C-X><C-O>
+
+""FIXME : make something more robust
+au VimEnter * SwapList flexbox flex flexDirection
+au VimEnter * SwapList orientation row column
+au VimEnter * SwapList flexalign flex-start center flex-end
+
