@@ -1,1 +1,2 @@
 map <BackSpace> navigate previous
+map <Space> navigate next

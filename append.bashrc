@@ -15,7 +15,7 @@ alias g='googler'
 #alias node='/usr/local/bin/node'
 #alias n='/usr/local/bin/n'
 #alias npm='/usr/local/bin/npm'
-#alias nodejs='node'
+alias nodejs='node'
 alias js='node'
 
 shopt -s globstar

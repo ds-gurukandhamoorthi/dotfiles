@@ -87,8 +87,10 @@ let g:jsx_ext_required=0
 
 "Run/Execute
 autocmd BufRead *.js  map <F5> :!react-native run-android<CR>
+autocmd BufRead test.js  map <F5> :w <CR>:!node %<CR>
 autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
+autocmd BufRead *.html  map <F5> :!firefox %<CR>
 
 
 set runtimepath+=/home/guru/testmpc/
@@ -110,3 +112,8 @@ au VimEnter * SwapList flexbox flex flexDirection
 au VimEnter * SwapList orientation row column
 au VimEnter * SwapList flexalign flex-start center flex-end
 
+"enable keyboard shortcuts for tern
+let g:tern_map_keys=1
+"show argument hints
+"let g:tern_show_argument_hints='on_hold'
+"

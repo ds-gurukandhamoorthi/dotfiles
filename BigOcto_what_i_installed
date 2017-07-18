@@ -265,3 +265,11 @@ sudo apt install jq
 
 16/07/2017
 #firefox auto reload plugin
+sudo apt update && sudo apt upgrade
+
+17/07/2017
+sudo apt install uzbl
+sudo npm i -g npm
+
+18/07/2017
+sudo npm install -g create-react-app
