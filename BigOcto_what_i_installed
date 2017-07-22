@@ -273,3 +273,7 @@ sudo npm i -g npm
 
 18/07/2017
 sudo npm install -g create-react-app
+
+22/07/2017
+sudo npm -g install watchman
+sudo apt install zopfli
