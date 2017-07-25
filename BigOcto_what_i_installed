@@ -277,3 +277,15 @@ sudo npm install -g create-react-app
 22/07/2017
 sudo npm -g install watchman
 sudo apt install zopfli
+sudo npm install -g yarn
+#create-react-app understands that yarn is installed and proposes     yarn start   instead of the usual npm start
+
+23/07/2017
+sudo apt update
+sudo apt upgrade
+
+24/07/2017
+sudo npm install -g webpack
+sudo apt install pigz
+sudo npm install uglify-js -g
+sudo npm install -g localtunnel
