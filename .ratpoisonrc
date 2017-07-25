@@ -25,7 +25,7 @@ bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-stud
 alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind c term-most-frecent-directory
-bind C exec Eterm
+bind C exec urxvt
 
 
 #exec xmodmap -e 'remove Lock = Caps_Lock' -e 'keysym Caps_Lock = F13' &
