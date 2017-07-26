@@ -1,14 +1,32 @@
 !fake transparency
 urxvt*inheritPixmap: true
 urxvt*transparent: true
-urxvt*shading:  125
+urxvt*shading:  70
 
 !urxvt*depth: 32
 !urxvt*background: rgba:0000/0000/0000/c800
 
 
 !URxvt.font: 9x15bold
-URxvt.font: xft:Monospace:size=12
-
+URxvt.font: xft:Monospace:size=12:antialias=true
+#so as to have spaces between letters (kerning...)
 URxvt.letterSpace: -1 
-URxvt.keysym.M-u: perl:url-select:select_next
+
+URxvt*background: black
+URxvt*foreground : white
+
+URxvt.scrollBar: false
+
+URxvt.perl-ext: default,matcher
+URxvt.matcher.button: 1
+URxvt.keysym.M-u: perl:matcher:last
+URxvt.keysym.M-U: perl:matcher:list
+
+URxvt*matcher.pattern.2: \\B(/\\S+?)
+URxvt*matcher.launcher.2: scite $1
+URxvt*matcher.rend.2: Uline fg6
+
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+#URxvt.perl-ext-common: ...,tabbed,...

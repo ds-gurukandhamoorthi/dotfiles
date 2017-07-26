@@ -5,10 +5,12 @@
         "node": true
     },
     "extends": ["eslint:recommended",    "plugin:react/recommended"],
+    "parser": "babel-eslint",
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
-            "jsx": true
+            "jsx": true,
+            "classes" : true
         },
         "sourceType": "module"
     },
