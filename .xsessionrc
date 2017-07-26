@@ -1,10 +1,11 @@
-#for some reason this is overrided in ratpoison
-#xmodmap $HOME/.xmodmaprc
-	
 setxkbmap -option compose:paus 
 
-
 numlockx on
+
+#for some reason this is overrided in ratpoison
+xmodmap /home/guru/.xmodmaprc
+
+
 
 #make touchpad freeze when we are typing
 syndaemon -d -K -i 0.7
@@ -20,4 +21,5 @@ syndaemon -d -K -i 0.7
 #exec ratpoison
 #exec xmonad
 ##exec /home/guru/.cabal/bin/xmonad
-exec /opt/ratpoison-1.4.9/src/ratpoison
+exec /opt/ratpoison-1.4.9/src/ratpoison 
+
