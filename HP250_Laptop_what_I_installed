@@ -549,3 +549,10 @@ sudo apt upgrade
 17/06/2017
 sudo apt update
 sudo apt upgrade
+
+15/07/2017
+sudo npm i -g npm
+sudo npm install -g babel
+sudo npm install -g babel-cli
+sudo npm uninstall -g babel
+sudo npm install -g babel-core
