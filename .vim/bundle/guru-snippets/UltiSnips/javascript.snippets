@@ -30,7 +30,7 @@ class ${1} extends Component{
 }
 endsnippet
 snippet ed
-export default ${1};
+export default ${1:`!v expand('%:t:r')`};
 endsnippet
 snippet ren
 render() {
@@ -43,3 +43,40 @@ constructor(props){
 	$1
 }
 endsnippet
+
+snippet im
+import ${1} from '`!p snip.rv=getRelevantModule(t[1])`';
+
+endsnippet
+
+global !p
+from os import  path
+
+def getWorkingDirectory():
+	return vim.eval('expand("%:p:h")')
+
+def getTagsFile():
+	wd = getWorkingDirectory()
+	if path.exists(wd + '/tags'):
+		return wd + '/tags'
+	if path.exists(wd + '/src/tags'):
+		return wd + '/src/tags'
+	srcdirec = wd[:wd.rfind("src/")+3]
+	if path.exists(srcdirec + '/tags'):
+		return srcdirec + '/tags'
+	return ""
+
+def getRelevantModule(nameComponent):
+	if nameComponent == "":
+		return ""
+	tagFile = getTagsFile()
+	if tagFile == "" :
+		return ""
+	with open(tagFile) as f:
+		for line in f:
+			if line.startswith(nameComponent):
+				filenamepath=line.split('\t')[1]
+				return filenamepath.replace(getWorkingDirectory(),".")
+	return ""
+endglobal
+

@@ -295,3 +295,6 @@ sudo apt install xcompmgr
 sudo apt-get install -y python-software-properties software-properties-common
 sudo apt update
 sudo apt update
+
+27/07/2017
+sudo npm install -g tern
