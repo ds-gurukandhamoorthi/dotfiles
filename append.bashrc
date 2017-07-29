@@ -99,3 +99,5 @@ complete -A file -X !*.@(mp4|mp3|mkv|avi) cvlc
 
 alias gzip='pigz'  
 alias gunzip='unpigz'  
+
+alias cloc='/usr/local/bin/cloc'

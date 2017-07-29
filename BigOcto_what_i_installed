@@ -298,3 +298,10 @@ sudo apt update
 
 27/07/2017
 sudo npm install -g tern
+
+28/07/2017
+sudo apt update && sudo apt upgrade
+sudo apt install nmap
+
+29/07/2017
+sudo apt install cloc

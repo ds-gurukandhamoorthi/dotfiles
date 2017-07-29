@@ -14,8 +14,16 @@ snippet bind
 this.${1}=this.$1.bind(this);
 
 endsnippet
+
 snippet cwm
 componentWillMount(){
+	$1
+}
+$0
+endsnippet
+
+snippet cwrp
+componentWillReceiveProps(nextProps){
 	$1
 }
 $0
@@ -25,7 +33,7 @@ import fetch from 'isomorphic-fetch';
 
 endsnippet
 snippet cc
-class ${1} extends Component{
+class ${1:`!v expand('%:t:r')`} extends Component{
 	$0
 }
 endsnippet
@@ -44,10 +52,61 @@ constructor(props){
 }
 endsnippet
 
-snippet im
-import ${1} from '`!p snip.rv=getRelevantModule(t[1])`';
+snippet ec
+export const `!p snip.rv=upperCaseUnderscore(t[1])`="${1/.*/\U$0\E/}"; //$1
 
 endsnippet
+
+
+
+snippet im
+import ${1} from '`!p snip.rv=getRelevantModule(getSingleWord(t[1])).replace('.js','')`';
+
+endsnippet
+
+
+
+
+global !p
+from os import  path
+
+def getWorkingDirectory():
+	return vim.eval('expand("%:p:h")')
+
+def getTagsFile():
+	wd = getWorkingDirectory()
+	if path.exists(wd + '/tags'):
+		return wd + '/tags'
+	if path.exists(wd + '/src/tags'):
+		return wd + '/src/tags'
+	srcdirec = wd[:wd.rfind("src/")+3]
+	if path.exists(srcdirec + '/tags'):
+		return srcdirec + '/tags'
+	return ""
+
+def getRelevantModule(nameComponent):
+	if nameComponent == "":
+		return ""
+	tagFile = getTagsFile()
+	if tagFile == "" :
+		return ""
+	with open(tagFile) as f:
+		for line in f:
+			if line.startswith(nameComponent):
+				filenamepath=line.split('\t')[1]
+				return filenamepath.replace(getWorkingDirectory(),".")
+	return ''
+
+def getSingleWord(nameComponent):
+	return nameComponent.split(',')[0].replace('{','')
+
+def upperCaseUnderscore(text):
+	return text.upper().replace(' ','_')
+endglobal
+
+
+
+
 
 global !p
 from os import  path
@@ -78,5 +137,10 @@ def getRelevantModule(nameComponent):
 				filenamepath=line.split('\t')[1]
 				return filenamepath.replace(getWorkingDirectory(),".")
 	return ""
+
+def upperCaseUnderscore(text):
+	return text.upper().replace(' ','_')
 endglobal
+
+
 
