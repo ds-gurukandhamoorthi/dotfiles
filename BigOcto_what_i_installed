@@ -304,4 +304,13 @@ sudo apt update && sudo apt upgrade
 sudo apt install nmap
 
 29/07/2017
-sudo apt install cloc
+sudo npm install -g cloc
+
+30/07/2017
+sudo npm update -g
+sudo npm install -g json2yaml
+sudo yarn global add jest
+
+31/07/2017
+sudo yarn global add code-to-test-ratio
+sudo yarn global add jsctags

@@ -53,14 +53,14 @@ constructor(props){
 endsnippet
 
 snippet ec
-export const `!p snip.rv=upperCaseUnderscore(t[1])`="${1/.*/\U$0\E/}"; //$1
+export const `!p snip.rv=upperCaseUnderscore(t[1])`="`!p snip.rv=upperCaseUnderscore(t[1])`"; //$1
 
 endsnippet
 
 
 
 snippet im
-import ${1} from '`!p snip.rv=getRelevantModule(getSingleWord(t[1])).replace('.js','')`';
+import ${1} from '${2}`!p snip.rv=getRelevantModule(getSingleWord(t[1]))`';
 
 endsnippet
 
@@ -98,7 +98,7 @@ def getRelevantModule(nameComponent):
 	return ''
 
 def getSingleWord(nameComponent):
-	return nameComponent.split(',')[0].replace('{','')
+	return nameComponent.split(',')[0].replace('{','').replace('}','')
 
 def upperCaseUnderscore(text):
 	return text.upper().replace(' ','_')
@@ -135,7 +135,11 @@ def getRelevantModule(nameComponent):
 		for line in f:
 			if line.startswith(nameComponent):
 				filenamepath=line.split('\t')[1]
-				return filenamepath.replace(getWorkingDirectory(),".")
+				result=os.path.relpath(filenamepath, getWorkingDirectory())
+				result=result if result.startswith('.') else "./" + result
+				result=result.replace('.js','')
+				result = result[:-6] if result.endswith('/index') else result
+				return result
 	return ""
 
 def upperCaseUnderscore(text):
