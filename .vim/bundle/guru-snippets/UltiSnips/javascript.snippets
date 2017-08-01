@@ -14,8 +14,16 @@ snippet bind
 this.${1}=this.$1.bind(this);
 
 endsnippet
+
 snippet cwm
 componentWillMount(){
+	$1
+}
+$0
+endsnippet
+
+snippet cwrp
+componentWillReceiveProps(nextProps){
 	$1
 }
 $0
@@ -25,7 +33,7 @@ import fetch from 'isomorphic-fetch';
 
 endsnippet
 snippet cc
-class ${1} extends Component{
+class ${1:`!v expand('%:t:r')`} extends Component{
 	$0
 }
 endsnippet
@@ -44,10 +52,20 @@ constructor(props){
 }
 endsnippet
 
-snippet im
-import ${1} from '`!p snip.rv=getRelevantModule(t[1])`';
+snippet ec
+export const `!p snip.rv=upperCaseUnderscore(t[1])`="`!p snip.rv=upperCaseUnderscore(t[1])`"; //$1
 
 endsnippet
+
+
+
+snippet im
+import ${1} from '${2}`!p snip.rv=getRelevantModule(getSingleWord(t[1]))`';
+
+endsnippet
+
+
+
 
 global !p
 from os import  path
@@ -77,6 +95,56 @@ def getRelevantModule(nameComponent):
 			if line.startswith(nameComponent):
 				filenamepath=line.split('\t')[1]
 				return filenamepath.replace(getWorkingDirectory(),".")
-	return ""
+	return ''
+
+def getSingleWord(nameComponent):
+	return nameComponent.split(',')[0].replace('{','').replace('}','')
+
+def upperCaseUnderscore(text):
+	return text.upper().replace(' ','_')
 endglobal
+
+
+
+
+
+global !p
+from os import  path
+
+def getWorkingDirectory():
+	return vim.eval('expand("%:p:h")')
+
+def getTagsFile():
+	wd = getWorkingDirectory()
+	if path.exists(wd + '/tags'):
+		return wd + '/tags'
+	if path.exists(wd + '/src/tags'):
+		return wd + '/src/tags'
+	srcdirec = wd[:wd.rfind("src/")+3]
+	if path.exists(srcdirec + '/tags'):
+		return srcdirec + '/tags'
+	return ""
+
+def getRelevantModule(nameComponent):
+	if nameComponent == "":
+		return ""
+	tagFile = getTagsFile()
+	if tagFile == "" :
+		return ""
+	with open(tagFile) as f:
+		for line in f:
+			if line.startswith(nameComponent):
+				filenamepath=line.split('\t')[1]
+				result=os.path.relpath(filenamepath, getWorkingDirectory())
+				result=result if result.startswith('.') else "./" + result
+				result=result.replace('.js','')
+				result = result[:-6] if result.endswith('/index') else result
+				return result
+	return ""
+
+def upperCaseUnderscore(text):
+	return text.upper().replace(' ','_')
+endglobal
+
+
 
