@@ -67,43 +67,6 @@ endsnippet
 
 
 
-global !p
-from os import  path
-
-def getWorkingDirectory():
-	return vim.eval('expand("%:p:h")')
-
-def getTagsFile():
-	wd = getWorkingDirectory()
-	if path.exists(wd + '/tags'):
-		return wd + '/tags'
-	if path.exists(wd + '/src/tags'):
-		return wd + '/src/tags'
-	srcdirec = wd[:wd.rfind("src/")+3]
-	if path.exists(srcdirec + '/tags'):
-		return srcdirec + '/tags'
-	return ""
-
-def getRelevantModule(nameComponent):
-	if nameComponent == "":
-		return ""
-	tagFile = getTagsFile()
-	if tagFile == "" :
-		return ""
-	with open(tagFile) as f:
-		for line in f:
-			if line.startswith(nameComponent):
-				filenamepath=line.split('\t')[1]
-				return filenamepath.replace(getWorkingDirectory(),".")
-	return ''
-
-def getSingleWord(nameComponent):
-	return nameComponent.split(',')[0].replace('{','').replace('}','')
-
-def upperCaseUnderscore(text):
-	return text.upper().replace(' ','_')
-endglobal
-
 
 
 
@@ -125,7 +88,7 @@ def getTagsFile():
 		return srcdirec + '/tags'
 	return ""
 
-def getRelevantModule(nameComponent):
+def getRelevantModuleFromTags(nameComponent):
 	if nameComponent == "":
 		return ""
 	tagFile = getTagsFile()
@@ -142,9 +105,33 @@ def getRelevantModule(nameComponent):
 				return result
 	return ""
 
+def getSingleWord(nameComponent):
+	return nameComponent.split(',')[0].replace('{','').replace('}','')
+
 def upperCaseUnderscore(text):
 	return text.upper().replace(' ','_')
+
+def getSrcDirec():
+	wd = getWorkingDirectory()
+	if(wd.endswith('src')):
+		return wd
+	if path.exists(wd + '/src'):
+		return wd + '/src'
+	srcdirec = wd[:wd.rfind("src/")+3]
+	return srcdirec
+
+def getRelevantModule(nameComponent):
+	if nameComponent == "":
+		return ""
+	proc =os.popen('ack -l -m1 --js' + ' ^export[^=]*'+nameComponent +'[^=]* ' + getSrcDirec());
+	res = proc.read()
+	proc.close()
+	res = res.replace('\n','');
+	if res == "":
+		return ""
+	cmnpathprfx=os.path.commonprefix([res,getWorkingDirectory()]);
+	return os.path.relpath(res,cmnpathprfx)
+
+
+
 endglobal
-
-
-
