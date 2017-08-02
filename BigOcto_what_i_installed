@@ -314,3 +314,14 @@ sudo yarn global add jest
 31/07/2017
 sudo yarn global add code-to-test-ratio
 sudo yarn global add jsctags
+
+01/08/2017
+#camelcasemotion plugin makes comma not responsive ... uninstalled it, 
+#word-motion plugin installed
+
+#was able to connect to laptop from BigOcto : ssh  ; Needed to install openssh server in the laptop
+sudo apt install pcmanfm
+sudo apt install djmount
+sudo apt install nautilus
+sudo apt install samba
+sudo yarn global add babel-cli

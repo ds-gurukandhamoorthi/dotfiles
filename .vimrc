@@ -119,3 +119,8 @@ let g:tern_map_keys=1
 
 "semi-colon has special meaning : upwards up to ...
 set tags=./tags;,tags;
+
+let g:wordmotion_prefix = '<Leader>'
+let g:wordmotion_mappings={
+            \ '<C-R><C-W>' : ''
+            \ }
