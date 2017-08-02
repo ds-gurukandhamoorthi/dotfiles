@@ -556,3 +556,7 @@ sudo npm install -g babel
 sudo npm install -g babel-cli
 sudo npm uninstall -g babel
 sudo npm install -g babel-core
+
+01/08/2017
+sudo apt install openssh-server
+sudo ufw allow 22
