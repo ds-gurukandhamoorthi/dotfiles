@@ -54,7 +54,8 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-inoremap jk <esc>
+"It slows down when typing j.. And it is irritating.
+"inoremap jk <esc>
 cnoremap jk <esc>
 
 filetype plugin  on
@@ -92,6 +93,8 @@ autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
 autocmd BufRead *.html  map <F5> :!firefox %<CR>
 
+syntax match Ramda "R." conceal
+
 
 set runtimepath+=/home/guru/testmpc/
 
@@ -111,6 +114,7 @@ iabbrev </ <C-o>:set omnifunc=xmlcomplete#CompleteTags<CR></<C-X><C-O>
 au VimEnter * SwapList flexbox flex flexDirection
 au VimEnter * SwapList orientation row column
 au VimEnter * SwapList flexalign flex-start center flex-end
+au VimEnter * SwapList position absolute relative
 
 "enable keyboard shortcuts for tern
 let g:tern_map_keys=1
@@ -124,3 +128,9 @@ let g:wordmotion_prefix = '<Leader>'
 let g:wordmotion_mappings={
             \ '<C-R><C-W>' : ''
             \ }
+
+let g:slime_target="tmux"
+let g:slime_paste_file="$HOME/.slime_paste"
+"let g:slime_default_config={"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+                 
+

@@ -329,3 +329,58 @@ sudo yarn global add babel-cli
 02/08/2017
 sudo apt install silversearcher-ag
 sudo apt install sift
+sudo apt install evince
+sudo apt install tmux
+sudo apt install mpack
+
+03/08/2017
+sudo apt-get install nodejs-legacy
+sudo yarn global add babel-cli
+sudo yarn global add es6-repl
+sudo apt install links
+
+04/08/2017
+sudo yarn global add jsonlint
+
+05/08/2017
+sudo apt install libsdl2-dev
+sudo apt install povray
+sudo apt install povray-includes
+
+07/08/2017
+sudo apt update
+sudo apt upgrade
+
+08/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+09/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+10/08/2017
+sudo apt update
+sudo apt upgrade
+#No firefox 55 yet for Linux mint
+sudo yarn global add express
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+11/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo yarn global add eslint-plugin-jasmine
+sudo apt update
+sudo apt upgrade
