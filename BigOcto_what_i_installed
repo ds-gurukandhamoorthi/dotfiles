@@ -384,3 +384,49 @@ sudo apt upgrade
 sudo yarn global add eslint-plugin-jasmine
 sudo apt update
 sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+12/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+#finally got firefox 55
+
+13/08/2017
+sudo apt update
+sudo apt upgrade
+
+15/08/2017
+sudo apt install wine
+
+19/08/2017
+sudo apt install tidy
+sudo apt remove tidy
+sudo apt install cmake
+#tidy installed from github source with cmake. (latest version)
+sudo apt update
+sudo apt upgrade
+
+20/08/2017
+sudo yarn global add react-devtools
+
+21/08/2017
+sudo apt update
+sudo apt upgrade
+
+sudo apt install inkscape
+sudo apt install librsvg2-bin
+sudo apt install freetype2-demos
+
+22/08/2017
+sudo yarn global add svgo
+sudo apt update
+sudo apt upgrade
+sudo yarn global add rnpm
+
+25/08/2017
+sudo apt install scrot

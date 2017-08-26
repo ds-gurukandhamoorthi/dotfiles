@@ -101,3 +101,5 @@ alias gzip='pigz'
 alias gunzip='unpigz'  
 
 alias cloc='/usr/local/bin/cloc'
+
+function emulator { cd "$(dirname "$(which emulator)")" && ./emulator "$@"; }
