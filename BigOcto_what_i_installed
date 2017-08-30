@@ -430,3 +430,8 @@ sudo yarn global add rnpm
 
 25/08/2017
 sudo apt install scrot
+
+29/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt install youtube-dl
