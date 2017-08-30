@@ -18,6 +18,18 @@ snippet imcr
 import {createRenderer} from 'react-test-renderer/shallow';
 $0
 endsnippet
+snippet imbac
+import {bindActionCreators} from 'redux';
+$0
+endsnippet
+snippet imc
+import {connect} from 'react-redux';
+$0
+endsnippet
+snippet im*
+import * as ${1} from '${2}';
+$0
+endsnippet
 
 snippet imfh "import from here (same directory)" b
 import $1 from './${1}';
@@ -64,6 +76,9 @@ endsnippet
 snippet ed
 export default ${1:`!v expand('%:t:r')`};
 endsnippet
+snippet edc "export default connect"
+export default connect(mapStateToProps,mapDispatchToProps)(${1:`!v expand('%:t:r')`});
+endsnippet
 snippet ren
 render() {
 	$0
@@ -78,7 +93,7 @@ endsnippet
 
 snippet ec
 export const `!p snip.rv=upperCaseUnderscore(t[1])`='`!p snip.rv=upperCaseUnderscore(t[1])`'; //$1
-
+$0
 endsnippet
 
 snippet eeq
@@ -168,7 +183,7 @@ def getRelevantModule(nameComponent):
 	if res == "":
 		return ""
 	cmnpathprfx=os.path.commonprefix([res,getWorkingDirectory()]);
-	return os.path.relpath(res,cmnpathprfx)
+	return os.path.relpath(res,cmnpathprfx).replace('.js','')
 
 
 
@@ -216,11 +231,11 @@ const $1 = {
 };
 $0
 endsnippet
-snippet drf "Declare result of a function" b
+snippet nfr "Name a function's result" b
 const $1 = ${2}();
 $0
 endsnippet
-snippet drm "Declare result of a method" b
+snippet nmr "Name a method's result" b
 const $1 = ${2:obj}.${3:methd}();
 $0
 endsnippet
@@ -284,9 +299,31 @@ snippet .p "properties children" i
 .props$0
 endsnippet
 
+
 snippet .pc "properties children" i
 .props.children$0
+endsnippet
+snippet .pv "properties value" i
+.props.value$0
 endsnippet
 snippet .pcn "properties className" i
 .props.className$0
 endsnippet
+snippet .pt "PropTypes" i
+.propTypes ={
+	$1: $2
+};
+endsnippet
+snippet msp "map state to props" b
+const mapStateToProps = state => ({
+	${1:props}: state.${2},
+});
+$0
+endsnippet
+snippet mdp "map dispatch to props" b
+const mapDispatchToProps = dispatch => ({
+	${1:props}: ${2},
+});
+$0
+endsnippet
+
