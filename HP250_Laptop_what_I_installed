@@ -560,3 +560,14 @@ sudo npm install -g babel-core
 01/08/2017
 sudo apt install openssh-server
 sudo ufw allow 22
+
+11/08/2017
+sudo apt update
+sudo apt upgrade
+
+12/08/2017
+sudo apt update
+sudo apt upgrade
+
+21/08/2017
+sudo apt install pigz
