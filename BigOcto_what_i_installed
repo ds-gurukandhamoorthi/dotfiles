@@ -314,3 +314,124 @@ sudo yarn global add jest
 31/07/2017
 sudo yarn global add code-to-test-ratio
 sudo yarn global add jsctags
+
+01/08/2017
+#camelcasemotion plugin makes comma not responsive ... uninstalled it, 
+#word-motion plugin installed
+
+#was able to connect to laptop from BigOcto : ssh  ; Needed to install openssh server in the laptop
+sudo apt install pcmanfm
+sudo apt install djmount
+sudo apt install nautilus
+sudo apt install samba
+sudo yarn global add babel-cli
+
+02/08/2017
+sudo apt install silversearcher-ag
+sudo apt install sift
+sudo apt install evince
+sudo apt install tmux
+sudo apt install mpack
+
+03/08/2017
+sudo apt-get install nodejs-legacy
+sudo yarn global add babel-cli
+sudo yarn global add es6-repl
+sudo apt install links
+
+04/08/2017
+sudo yarn global add jsonlint
+
+05/08/2017
+sudo apt install libsdl2-dev
+sudo apt install povray
+sudo apt install povray-includes
+
+07/08/2017
+sudo apt update
+sudo apt upgrade
+
+08/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+09/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+10/08/2017
+sudo apt update
+sudo apt upgrade
+#No firefox 55 yet for Linux mint
+sudo yarn global add express
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+11/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo yarn global add eslint-plugin-jasmine
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+
+12/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+#finally got firefox 55
+
+13/08/2017
+sudo apt update
+sudo apt upgrade
+
+15/08/2017
+sudo apt install wine
+
+19/08/2017
+sudo apt install tidy
+sudo apt remove tidy
+sudo apt install cmake
+#tidy installed from github source with cmake. (latest version)
+sudo apt update
+sudo apt upgrade
+
+20/08/2017
+sudo yarn global add react-devtools
+
+21/08/2017
+sudo apt update
+sudo apt upgrade
+
+sudo apt install inkscape
+sudo apt install librsvg2-bin
+sudo apt install freetype2-demos
+
+22/08/2017
+sudo yarn global add svgo
+sudo apt update
+sudo apt upgrade
+sudo yarn global add rnpm
+
+25/08/2017
+sudo apt install scrot
+
+29/08/2017
+sudo apt update
+sudo apt upgrade
+sudo apt install youtube-dl

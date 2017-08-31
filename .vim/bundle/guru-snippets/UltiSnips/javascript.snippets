@@ -1,14 +1,43 @@
-snippet imr
+snippet imr "import React" b
 import React from 'react';
-
+$0
 endsnippet
 snippet imrc
 import React, {Component} from 'react';
-
+$0
 endsnippet
 snippet impt
 import PropTypes from 'prop-types';
+$0
+endsnippet
+snippet imcn
+import classnames from 'classnames';
+$0
+endsnippet
+snippet imcr
+import {createRenderer} from 'react-test-renderer/shallow';
+$0
+endsnippet
+snippet imbac
+import {bindActionCreators} from 'redux';
+$0
+endsnippet
+snippet imc
+import {connect} from 'react-redux';
+$0
+endsnippet
+snippet im*
+import * as ${1} from '${2}';
+$0
+endsnippet
 
+snippet imfh "import from here (same directory)" b
+import $1 from './${1}';
+$0
+endsnippet
+snippet imfp "import from parent directory" b
+import $1 from '../${1}';
+$0
 endsnippet
 snippet bind
 this.${1}=this.$1.bind(this);
@@ -17,6 +46,13 @@ endsnippet
 
 snippet cwm
 componentWillMount(){
+	$1
+}
+$0
+endsnippet
+
+snippet cwum
+componentWillUnmount(){
 	$1
 }
 $0
@@ -40,6 +76,9 @@ endsnippet
 snippet ed
 export default ${1:`!v expand('%:t:r')`};
 endsnippet
+snippet edc "export default connect"
+export default connect(mapStateToProps,mapDispatchToProps)(${1:`!v expand('%:t:r')`});
+endsnippet
 snippet ren
 render() {
 	$0
@@ -53,8 +92,12 @@ constructor(props){
 endsnippet
 
 snippet ec
-export const `!p snip.rv=upperCaseUnderscore(t[1])`="`!p snip.rv=upperCaseUnderscore(t[1])`"; //$1
+export const `!p snip.rv=upperCaseUnderscore(t[1])`='`!p snip.rv=upperCaseUnderscore(t[1])`'; //$1
+$0
+endsnippet
 
+snippet eeq
+expect($1).toEqual($2);
 endsnippet
 
 
@@ -64,11 +107,25 @@ import ${1} from '${2}`!p snip.rv=getRelevantModule(getSingleWord(t[1]))`';
 
 endsnippet
 
+snippet des
+describe('$1', ()=>{
+	$0
+});
+endsnippet
+
+snippet it
+it('$1', ()=>{
+	$2
+});
+$0
+endsnippet
 
 
 
 global !p
 from os import  path
+
+dictPropTypes = {'a' : 'array', 'b': 'bool'}
 
 def getWorkingDirectory():
 	return vim.eval('expand("%:p:h")')
@@ -84,48 +141,7 @@ def getTagsFile():
 		return srcdirec + '/tags'
 	return ""
 
-def getRelevantModule(nameComponent):
-	if nameComponent == "":
-		return ""
-	tagFile = getTagsFile()
-	if tagFile == "" :
-		return ""
-	with open(tagFile) as f:
-		for line in f:
-			if line.startswith(nameComponent):
-				filenamepath=line.split('\t')[1]
-				return filenamepath.replace(getWorkingDirectory(),".")
-	return ''
-
-def getSingleWord(nameComponent):
-	return nameComponent.split(',')[0].replace('{','').replace('}','')
-
-def upperCaseUnderscore(text):
-	return text.upper().replace(' ','_')
-endglobal
-
-
-
-
-
-global !p
-from os import  path
-
-def getWorkingDirectory():
-	return vim.eval('expand("%:p:h")')
-
-def getTagsFile():
-	wd = getWorkingDirectory()
-	if path.exists(wd + '/tags'):
-		return wd + '/tags'
-	if path.exists(wd + '/src/tags'):
-		return wd + '/src/tags'
-	srcdirec = wd[:wd.rfind("src/")+3]
-	if path.exists(srcdirec + '/tags'):
-		return srcdirec + '/tags'
-	return ""
-
-def getRelevantModule(nameComponent):
+def getRelevantModuleFromTags(nameComponent):
 	if nameComponent == "":
 		return ""
 	tagFile = getTagsFile()
@@ -142,9 +158,172 @@ def getRelevantModule(nameComponent):
 				return result
 	return ""
 
+def getSingleWord(nameComponent):
+	return nameComponent.split(',')[0].replace('{','').replace('}','')
+
 def upperCaseUnderscore(text):
 	return text.upper().replace(' ','_')
+
+def getSrcDirec():
+	wd = getWorkingDirectory()
+	if(wd.endswith('src')):
+		return wd
+	if path.exists(wd + '/src'):
+		return wd + '/src'
+	srcdirec = wd[:wd.rfind("src/")+3]
+	return srcdirec
+
+def getRelevantModule(nameComponent):
+	if nameComponent == "":
+		return ""
+	proc =os.popen('ag -l --js' + ' ^export[^=]*'+nameComponent +'[^=]* ' + getSrcDirec());
+	res = proc.read()
+	proc.close()
+	res = res.split('\n')[0];
+	if res == "":
+		return ""
+	cmnpathprfx=os.path.commonprefix([res,getWorkingDirectory()]);
+	return os.path.relpath(res,cmnpathprfx).replace('.js','')
+
+
+
 endglobal
 
+global !p
+dictPropTypes = {
+	'a' : 'array',
+	'b': 'bool',
+	'f': 'func',
+	'n': 'number',
+	'o': 'object',
+	's': 'string',
+	'no': 'node',
+	'nd' : 'node',
+	'e': 'element',
+	'io': 'instanceOf',
+	'1o': 'oneOf',
+	'1ot': 'oneOfType',
+	'ao': 'arrayOf',
+	'oo': 'objectOf',
+	'sh': 'shape',
+}
+endglobal
+snippet ": *p(\S+)" "PropTypes. and first letter preceded by p" r
+: PropTypes.`!p key=match.group(1);snip.rv=dictPropTypes[key]`${1:.isRequired},
+$0
+endsnippet
 
+snippet ={
+${1}={$1}
+endsnippet
+
+snippet "(\S+)={" "variable = {variable}" r
+`!p snip.rv = match.group(1) + '={' + match.group(1)+'}'`$0
+endsnippet
+
+snippet df "Declare Arrow function" b
+const $1 = ($2)=> {$3};
+$0
+endsnippet
+snippet do "Declare Object" b
+const $1 = {
+	$2
+};
+$0
+endsnippet
+snippet nfr "Name a function's result" b
+const $1 = ${2}();
+$0
+endsnippet
+snippet nmr "Name a method's result" b
+const $1 = ${2:obj}.${3:methd}();
+$0
+endsnippet
+
+snippet ": *{" "declare object" r
+: {
+	$1
+},$0
+endsnippet
+
+snippet n "number" b
+${1:key} : ${2:numericvalue},
+$0
+endsnippet
+snippet s "number" b
+${1:key} : '${2:string}',
+$0
+endsnippet
+
+snippet b "boolean" b
+${1:key} : ${2:false},
+$0
+endsnippet
+
+snippet o "obj" b
+{
+	${VISUAL}$0
+},
+endsnippet
+snippet c "const" b
+const $1 = $2; $0
+endsnippet
+snippet cl "console.log" b
+console.log(${1:${VISUAL}});
+$0
+endsnippet
+snippet cljs "console.log" b
+console.log(JSON.stringify(${1:${VISUAL}}));
+$0
+endsnippet
+snippet jf "jest functions" b
+${1:${VISUAL:function-name}} : jest.fn(),
+$0
+endsnippet
+snippet dsp "destructure props" b
+const {${1:properties}} = this.props;
+$0
+endsnippet
+snippet dso "destructure object" b
+const {${1:properties}} = ${2:obj};
+$0
+endsnippet
+snippet dsa "destructure array" b
+const [${1:elements}] = ${2:obj};
+$0
+endsnippet
+snippet eb' "expect to be the constant string" b
+expect($1).toBe('${2:string-value}');$0
+endsnippet
+snippet .p "properties children" i
+.props$0
+endsnippet
+
+
+snippet .pc "properties children" i
+.props.children$0
+endsnippet
+snippet .pv "properties value" i
+.props.value$0
+endsnippet
+snippet .pcn "properties className" i
+.props.className$0
+endsnippet
+snippet .pt "PropTypes" i
+.propTypes ={
+	$1: $2
+};
+endsnippet
+snippet msp "map state to props" b
+const mapStateToProps = state => ({
+	${1:props}: state.${2},
+});
+$0
+endsnippet
+snippet mdp "map dispatch to props" b
+const mapDispatchToProps = dispatch => ({
+	${1:props}: ${2},
+});
+$0
+endsnippet
 
