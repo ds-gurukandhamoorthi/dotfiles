@@ -103,3 +103,5 @@ alias gunzip='unpigz'
 alias cloc='/usr/local/bin/cloc'
 
 function emulator { cd "$(dirname "$(which emulator)")" && ./emulator "$@"; }
+
+alias em='emulator -avd test -use-system-libs'

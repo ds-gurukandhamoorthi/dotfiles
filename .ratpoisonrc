@@ -1,6 +1,8 @@
 escape less
 msgwait 2
 
+exec xinput --test-xi2 --root  > /home/guru/$(date +"%Y%m%d_%H%M").events
+
 exec xrandr --output DVI-0 --rotate left
 # somehow the configuration in xessionrc doesn't get executed
 # it seems to get executed now so I comment the following line
@@ -74,7 +76,7 @@ bind a show-date-time
 
 #definekey top s-Right nextscreen
 #definekey top s-Left prevscreen
-#later make this more roubst   AND what is sdump and sfdump  ... can they be used to create a eterm scratchpad and then return to that previous `blissful :-)` state
+#later make this more robust   AND what is sdump and sfdump  ... can they be used to create a eterm scratchpad and then return to that previous `blissful :-)` state
 definekey top s-Right sselect 1
 definekey top s-Left sselect 0
 

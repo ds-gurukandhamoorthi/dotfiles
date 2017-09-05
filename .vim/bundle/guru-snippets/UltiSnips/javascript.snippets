@@ -18,6 +18,10 @@ snippet imcr
 import {createRenderer} from 'react-test-renderer/shallow';
 $0
 endsnippet
+snippet imrd
+import {combineReducers} from 'redux';
+$0
+endsnippet
 snippet imbac
 import {bindActionCreators} from 'redux';
 $0
@@ -120,6 +124,13 @@ it('$1', ()=>{
 $0
 endsnippet
 
+snippet its "it should"
+it('should $1', ()=>{
+	$2
+});
+$0
+endsnippet
+
 
 
 global !p
@@ -184,7 +195,6 @@ def getRelevantModule(nameComponent):
 		return ""
 	cmnpathprfx=os.path.commonprefix([res,getWorkingDirectory()]);
 	return os.path.relpath(res,cmnpathprfx).replace('.js','')
-
 
 
 endglobal
@@ -273,7 +283,7 @@ console.log(${1:${VISUAL}});
 $0
 endsnippet
 snippet cljs "console.log" b
-console.log(JSON.stringify(${1:${VISUAL}}));
+console.log(JSON.stringify(${1:${VISUAL}},null,'\t'));
 $0
 endsnippet
 snippet jf "jest functions" b
@@ -326,4 +336,22 @@ const mapDispatchToProps = dispatch => ({
 });
 $0
 endsnippet
+# snippet fora "for loop for array" b
+# for(let ${1:i} = 0; $1 < ${2}.length; $1++){
+# 	${0:${VISUAL}}
+# }
+# endsnippet
 
+snippet "for([a-z]+)([0-9]+)" "for loop with count : fori10 forj14" br
+for(let ${1:`!p snip.rv=match.group(1)`} = 0; $1 < ${2:`!p snip.rv=match.group(2)`}; $1++){
+	${0:${VISUAL}}
+}
+endsnippet
+snippet "for([a-z]+)" "for loop for array : fori10 forj14" br
+for(let ${1:`!p snip.rv=match.group(1)`} = 0; $1 < ${2:array}.length; $1++){
+	${0:${VISUAL}}
+}
+endsnippet
+# snippet "(\S+)={" "variable = {variable}" r
+# `!p snip.rv = match.group(1) + '={' + match.group(1)+'}'`$0
+# endsnippet

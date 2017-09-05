@@ -435,3 +435,30 @@ sudo apt install scrot
 sudo apt update
 sudo apt upgrade
 sudo apt install youtube-dl
+
+31/08/2017
+sudo apt install pandoc
+sudo apt install sbcl
+
+01/09/2017
+rustup toolchain add nightly
+rustup target add asmjs-unknown-emscripten --toolchain nightly
+rustup target add wasm32-unknown-emscripten --toolchain nightly
+
+wget https://s3.amazonaws.com/mozilla-games/emscripten/releases/emsdk-portable.tar.gz
+tar xvf emsdk-portable.tar.gz
+cd emsdk-portable
+./emsdk update
+./emsdk install sdk-incoming-64bit
+
+03/09/2017
+sudo yarn global add mocha
+sudo yarn global add node-inspect
+sudo apt update && sudo apt upgrade
+
+04/09/2017
+sudo apt install entr
+
+05/09/2017
+sudo apt update
+sudo apt upgrade
