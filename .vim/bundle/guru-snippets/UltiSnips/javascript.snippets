@@ -352,6 +352,13 @@ for(let ${1:`!p snip.rv=match.group(1)`} = 0; $1 < ${2:array}.length; $1++){
 	${0:${VISUAL}}
 }
 endsnippet
-# snippet "(\S+)={" "variable = {variable}" r
-# `!p snip.rv = match.group(1) + '={' + match.group(1)+'}'`$0
-# endsnippet
+snippet fin "for in"
+for(let ${1:prop} in ${2:object}){
+	${0:${VISUAL}}
+}
+endsnippet
+snippet fof "for of"
+for(const ${1:value} of ${2:iterable}){
+	${0:${VISUAL}}
+}
+endsnippet

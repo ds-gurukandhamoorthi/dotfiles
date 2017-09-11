@@ -1,0 +1,10 @@
+snippet ims "import sys" b
+import sys
+endsnippet
+
+snippet "sa([0-9]+)" "sys arg" br
+${1:arg`!p snip.rv=match.group(1)`} = sys.argv[`!p snip.rv=match.group(1)`]
+endsnippet
+snippet "isa([0-9]+)" "sys arg" br
+${1:arg`!p snip.rv=match.group(1)`} = int(sys.argv[`!p snip.rv=match.group(1)`])
+endsnippet
