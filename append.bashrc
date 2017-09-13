@@ -105,4 +105,4 @@ alias cloc='/usr/local/bin/cloc'
 function emulator { cd "$(dirname "$(which emulator)")" && ./emulator "$@"; }
 
 alias em='emulator -avd test -use-system-libs'
-alias python='python3.5'
+alias python='python3.5 -q'

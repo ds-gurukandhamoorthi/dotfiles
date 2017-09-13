@@ -468,3 +468,9 @@ sudo apt install colordiff
 
 10/09/2017
 sudo apt update && sudo apt upgrade
+
+11/09/2017
+sudo apt install pylint
+
+12/09/2017
+sudo apt update && sudo apt upgrade

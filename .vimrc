@@ -136,3 +136,5 @@ let g:user_emmet_settings = {
 \       'quote_char' : "'",
 \   },
 \}
+
+let g:syntastic_python_pylint_exe = 'pylint3'
