@@ -14,7 +14,19 @@ def forLoop(variable, start, end):
 		return res + end + '):'
 	if(end == ""):
 		return res + start + '):'
+
+def getPreviousLine():
+	# line = vim.current.window.cursor[0] #<-this causes error ... cyclic error
+	line = snip.snippet_start[0]
+	res = vim.current.window.buffer[line-1]
+	return res 
+
+def getLastReadArgument(line):
+	regexp = r'argv\[(\d+)\]'
+	num = re.search(regexp, line).group(1)
+	return int(num) + 1
 endglobal
+	
 snippet "im(\S+)" "import..." br
 `!p snip.rv=getImports(match.group(1))`
 endsnippet
@@ -27,14 +39,17 @@ import sys
 import math
 endsnippet
 
-snippet "a([0-9]+)" "sys arg" br
-${1:arg`!p snip.rv=match.group(1)`} = sys.argv[`!p snip.rv=match.group(1)`]
+snippet "a([0-9]+)?" "sys arg" br
+`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = sys.argv[`!p snip.rv=match.group(1) or n`]
 endsnippet
-snippet "ia([0-9]+)" "sys arg" br
-${1:arg`!p snip.rv=match.group(1)`} = int(sys.argv[`!p snip.rv=match.group(1)`])
+snippet "ia([0-9]+)?" "sys arg" br
+`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = int(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
-snippet "fa([0-9]+)" "sys arg" br
-${1:arg`!p snip.rv=match.group(1)`} = float(sys.argv[`!p snip.rv=match.group(1)`])
+snippet "fa([0-9]+)?" "sys arg" br
+`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = float(sys.argv[`!p snip.rv=match.group(1) or n`])
+endsnippet
+snippet testnother
+`!p snip.rv=getPreviousLine()`
 endsnippet
 
 snippet "for([a-z]+)([0-9]+)([0-9a-zA-Z]?)" "for range with count : fori10 forj14" br
