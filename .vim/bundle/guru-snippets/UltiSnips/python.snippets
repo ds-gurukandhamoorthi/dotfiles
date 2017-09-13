@@ -23,8 +23,20 @@ def getPreviousLine():
 
 def getLastReadArgument(line):
 	regexp = r'argv\[(\d+)\]'
-	num = re.search(regexp, line).group(1)
-	return int(num) + 1
+	srchRes = re.search(regexp, line)
+	if srchRes:
+		num = srchRes.group(1)
+		return int(num) + 1
+	return 1
+
+def getIntegerMatrix(l,c):
+	res=[[0]*c for i in range(l)]
+	count = 0
+	for i in range(l):
+		for j in range(c):
+			res[i][j] = count
+			count += 1
+	return res
 endglobal
 	
 snippet "im(\S+)" "import..." br
@@ -52,7 +64,16 @@ snippet testnother
 `!p snip.rv=getPreviousLine()`
 endsnippet
 
-snippet "for([a-z]+)([0-9]+)([0-9a-zA-Z]?)" "for range with count : fori10 forj14" br
+snippet "for([a-z]+)([0-9]+)(([0-9a-zA-Z]+)?)" "for range with count : fori10 forj14" br
 `!p snip.rv=forLoop(match.group(1), match.group(2), match.group(3))`
 	${0:${VISUAL}}
+endsnippet
+snippet "(\[.*\])\*([^*]+)\*([^*]+)" "[0]*m*n" r
+[`!p snip.rv=match.group(1) + '*' + match.group(2) + ' for i in range(' +match.group(3) +')'`]
+endsnippet
+
+snippet "intmatr([1-9])([1-9])" "integer matrix" r
+`!p l = int(match.group(1)); c= int(match.group(2))`
+`!p if not snip.c:
+		snip.rv=getIntegerMatrix(l,c)`
 endsnippet
