@@ -29,6 +29,15 @@ def getLastReadArgument(line):
 		return int(num) + 1
 	return 1
 
+def getLHS(expression):
+	sides = expression.split('=') 
+	if(len(sides)>1):
+		return sides[0].strip()
+	return ''
+
+def getVariable(line):
+	return getLHS(line)
+
 def getIntegerMatrix(l,c):
 	res=[[0]*c for i in range(l)]
 	count = 0
@@ -52,28 +61,51 @@ import math
 endsnippet
 
 snippet "a([0-9]+)?" "sys arg" br
-`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = sys.argv[`!p snip.rv=match.group(1) or n`]
+${1:arg`!p
+line=getPreviousLine()
+n=getLastReadArgument(line)
+snip.rv=match.group(1) or n`} = sys.argv[`!p snip.rv=match.group(1) or n`]
 endsnippet
-snippet "ia([0-9]+)?" "sys arg" br
-`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = int(sys.argv[`!p snip.rv=match.group(1) or n`])
+snippet "ia([0-9]+)?" "sys arg as int" br
+${1:arg`!p
+line=getPreviousLine()
+n=getLastReadArgument(line)
+snip.rv=match.group(1) or n`} = int(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
-snippet "fa([0-9]+)?" "sys arg" br
-`!p line=getPreviousLine();n=getLastReadArgument(line);`${1:arg`!p snip.rv=match.group(1) or n`} = float(sys.argv[`!p snip.rv=match.group(1) or n`])
-endsnippet
-snippet testnother
-`!p snip.rv=getPreviousLine()`
+snippet "fa([0-9]+)?" "sys arg as float" br
+${1:arg`!p
+line=getPreviousLine()
+n=getLastReadArgument(line)
+snip.rv=match.group(1) or n`} = float(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
 
 snippet "for([a-z]+)([0-9]+)(([0-9a-zA-Z]+)?)" "for range with count : fori10 forj14" br
-`!p snip.rv=forLoop(match.group(1), match.group(2), match.group(3))`
+`!p
+var = match.group(1)
+start = match.group(2)
+end = match.group(3)
+snip.rv=forLoop(var,start,end)`
 	${0:${VISUAL}}
 endsnippet
 snippet "(\[.*\])\*([^*]+)\*([^*]+)" "[0]*m*n" r
-[`!p snip.rv=match.group(1) + '*' + match.group(2) + ' for i in range(' +match.group(3) +')'`]
+[`!p
+content = match.group(1)
+colmns = match.group(2)
+lines = match.group(3)
+res = content + '*' + colmns + ' for i in range(' + lines +')'
+snip.rv=res`]
 endsnippet
 
 snippet "intmatr([1-9])([1-9])" "integer matrix" r
-`!p l = int(match.group(1)); c= int(match.group(2))`
-`!p if not snip.c:
-		snip.rv=getIntegerMatrix(l,c)`
+`!p
+l = int(match.group(1))
+c= int(match.group(2))
+snip.rv=getIntegerMatrix(l,c)`
+endsnippet
+snippet lgv "log variable"
+print(`!p
+line=getPreviousLine()
+var=getVariable(line)
+res='"' + var + '", ' + var
+snip.rv=res`)
 endsnippet

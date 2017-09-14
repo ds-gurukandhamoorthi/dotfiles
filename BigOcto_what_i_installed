@@ -474,3 +474,6 @@ sudo apt install pylint
 
 12/09/2017
 sudo apt update && sudo apt upgrade
+
+14/09/2017
+sudo apt update && sudo apt  upgrade
