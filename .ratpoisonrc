@@ -98,4 +98,6 @@ bind KP_8 select 8
 bind KP_9 select 9
 
 alias ramda-console exec urxvt -e /home/guru/bin/ramda-console.sh
+alias python-console exec urxvt -e /home/guru/bin/python-console.sh
 definekey top H-c ramda-console
+definekey top H-p python-console

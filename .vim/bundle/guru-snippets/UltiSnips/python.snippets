@@ -6,6 +6,8 @@ def getImports(mnemo):
 		return 'import sys'
 	if(mnemo == "m"):
 		return 'import math'
+	if(mnemo == "ap"):
+		return 'import argparse'
 	return 'import'
 
 def forLoop(variable, start, end):
@@ -14,12 +16,15 @@ def forLoop(variable, start, end):
 		return res + end + '):'
 	if(end == ""):
 		return res + start + '):'
+	if(start == ""):
+		return res + end + '):'
 
 def getPreviousLine():
 	# line = vim.current.window.cursor[0] #<-this causes error ... cyclic error
 	line = snip.snippet_start[0]
-	res = vim.current.window.buffer[line-1]
-	return res 
+	if line >= 1 :
+		return vim.current.window.buffer[line-1]
+	return "" 
 
 def getLastReadArgument(line):
 	regexp = r'argv\[(\d+)\]'
@@ -79,7 +84,21 @@ n=getLastReadArgument(line)
 snip.rv=match.group(1) or n`} = float(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
 
-snippet "for([a-z]+)([0-9]+)(([0-9a-zA-Z]+)?)" "for range with count : fori10 forj14" br
+
+snippet dap "declare argument parser" b
+parser = argparse.ArgumentParser(description='$1')
+endsnippet
+snippet dargs "declare args" b
+args = parser.parse_args()
+endsnippet
+snippet pai "parse argument as integer" b
+parser.add_argument('$1', type=int, help='${2:help for }')
+endsnippet
+snippet paf "parse argument as float" b
+parser.add_argument('$1', type=float, help='${2:help for }')
+endsnippet
+
+snippet "for([a-z]+) ?([0-9]*)(([0-9a-zA-Z]+)?)" "for range with count : fori10 forj14" br
 `!p
 var = match.group(1)
 start = match.group(2)

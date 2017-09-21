@@ -97,6 +97,13 @@ autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
 autocmd BufRead *.html  map <F5> :!firefox %<CR>
 
+autocmd BufRead *.py  map <F5> :w <CR>:!python3.5 -q %<CR>
+
+autocmd VimEnter *.py NERDTree
+autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
+
+autocmd BufEnter * lcd %:p:h
+
 "autocmd VimEnter :syntax match Ramda /R\./ conceal
 
 
