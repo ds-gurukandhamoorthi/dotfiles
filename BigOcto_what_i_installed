@@ -496,3 +496,17 @@ sudo apt install python3-tk
 
 21/09/2017
 sudo apt install graphviz
+sudo pip3 install GoogleScraper
+sudo pip3 install --upgrade pip
+sudo pip3 install pandas
+sudo apt install sqlite3
+
+22/09/2017
+sudo pip3 install scipy
+
+23/09/2017
+sudo pip3 install mpmath
+sudo pip3 install matplotlib
+sudo apt update
+sudo apt upgrade
+sudo pip3 install sympy

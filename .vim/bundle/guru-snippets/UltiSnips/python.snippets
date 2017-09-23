@@ -8,6 +8,8 @@ def getImports(mnemo):
 		return 'import math'
 	if(mnemo == "ap"):
 		return 'import argparse'
+	if(mnemo == "mp"):
+		return 'import matplotlib.pyplot as plt'
 	return 'import'
 
 def forLoop(variable, start, end):
@@ -94,6 +96,9 @@ endsnippet
 snippet pai "parse argument as integer" b
 parser.add_argument('$1', type=int, help='${2:help for }')
 endsnippet
+snippet pab "parse argument as boolean" b
+parser.add_argument('$1', help='${2:help for }', action='store_true')
+endsnippet
 snippet paf "parse argument as float" b
 parser.add_argument('$1', type=float, help='${2:help for }')
 endsnippet
@@ -127,4 +132,7 @@ line=getPreviousLine()
 var=getVariable(line)
 res='"' + var + '", ' + var
 snip.rv=res`)
+endsnippet
+snippet # "env" b
+#!/usr/bin/env python3
 endsnippet
