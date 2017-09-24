@@ -510,3 +510,4 @@ sudo pip3 install matplotlib
 sudo apt update
 sudo apt upgrade
 sudo pip3 install sympy
+sudo pip3 install pysrt
