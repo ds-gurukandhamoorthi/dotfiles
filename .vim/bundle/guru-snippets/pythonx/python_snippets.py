@@ -1,18 +1,21 @@
 from common_func import *
 import re
+from fuzzywuzzy import fuzz, process
+
+IMPORTS= [
+        'sys',
+        'math',
+        'random',
+        'argparse',
+        'matplotlib.pyplot as plt',
+        'functools',
+        'itertools',
+        'numpy as np',
+        ]
 
 def getImports(mnemo):
-    if(mnemo == "r"):
-        return 'import random'
-    if(mnemo == "s"):
-        return 'import sys'
-    if(mnemo == "m"):
-        return 'import math'
-    if(mnemo == "ap"):
-        return 'import argparse'
-    if(mnemo == "mp"):
-        return 'import matplotlib.pyplot as plt'
-    return 'import'
+    lib = process.extractOne(mnemo, IMPORTS)[0]
+    return 'import ' + lib
 
 def forLoop(variable, start, end):
     res = 'for ' + variable + ' in range('

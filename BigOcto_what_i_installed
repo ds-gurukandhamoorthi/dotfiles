@@ -511,3 +511,8 @@ sudo apt update
 sudo apt upgrade
 sudo pip3 install sympy
 sudo pip3 install pysrt
+
+24/09/2017
+sudo pip3 install fuzzywuzzy
+sudo apt update && sudo apt  upgrade
+sudo pip3 install python-Levenshtein
