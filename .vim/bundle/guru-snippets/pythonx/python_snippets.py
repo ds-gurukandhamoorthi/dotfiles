@@ -1,3 +1,6 @@
+from common_func import *
+import re
+
 def getImports(mnemo):
     if(mnemo == "r"):
         return 'import random'
@@ -19,13 +22,6 @@ def forLoop(variable, start, end):
         return res + start + '):'
     if(start == ""):
         return res + end + '):'
-
-def getPreviousLine():
-    # line = vim.current.window.cursor[0] #<-this causes error ... cyclic error
-        line = snip.snippet_start[0]
-        if line >= 1 :
-            return vim.current.window.buffer[line-1]
-        return "" 
 
 def getLastReadArgument(line):
     regexp = r'argv\[(\d+)\]'

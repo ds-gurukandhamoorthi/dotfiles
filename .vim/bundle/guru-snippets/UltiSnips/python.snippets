@@ -16,19 +16,19 @@ endsnippet
 
 snippet "a([0-9]+)?" "sys arg" br
 ${1:arg`!p
-line=getPreviousLine()
+line=getPreviousLine(snip)
 n=getLastReadArgument(line)
 snip.rv=match.group(1) or n`} = sys.argv[`!p snip.rv=match.group(1) or n`]
 endsnippet
 snippet "ia([0-9]+)?" "sys arg as int" br
 ${1:arg`!p
-line=getPreviousLine()
+line=getPreviousLine(snip)
 n=getLastReadArgument(line)
 snip.rv=match.group(1) or n`} = int(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
 snippet "fa([0-9]+)?" "sys arg as float" br
 ${1:arg`!p
-line=getPreviousLine()
+line=getPreviousLine(snip)
 n=getLastReadArgument(line)
 snip.rv=match.group(1) or n`} = float(sys.argv[`!p snip.rv=match.group(1) or n`])
 endsnippet
@@ -75,7 +75,7 @@ snip.rv=getIntegerMatrix(l,c)`
 endsnippet
 snippet lgv "log variable"
 print(`!p
-line=getPreviousLine()
+line=getPreviousLine(snip)
 var=getVariable(line)
 res='"' + var + '", ' + var
 snip.rv=res`)

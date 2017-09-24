@@ -1,6 +1,7 @@
 import os
 import vim
 from os import  path
+from common_func import *
 
 dictPropTypes = {
         'a' : 'array',
@@ -20,8 +21,6 @@ dictPropTypes = {
         'sh': 'shape',
         }
 
-def getWorkingDirectory():
-    return vim.eval('expand("%:p:h")')
 
 def getTagsFile():
     wd = getWorkingDirectory()
@@ -50,12 +49,6 @@ def getRelevantModuleFromTags(nameComponent):
                 result = result[:-6] if result.endswith('/index') else result
                 return result
         return ""
-
-def getSingleWord(nameComponent):
-    return nameComponent.split(',')[0].replace('{','').replace('}','')
-
-def upperCaseUnderscore(text):
-    return text.upper().replace(' ','_')
 
 def getSrcDirec():
     wd = getWorkingDirectory()
