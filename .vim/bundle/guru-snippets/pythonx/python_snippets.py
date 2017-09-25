@@ -11,11 +11,21 @@ IMPORTS= [
         'functools',
         'itertools',
         'numpy as np',
+        'subprocess',
+        ]
+
+STATIC_IMPORTS= [
+        'math import cos',
+        'numpy.random import choice',
         ]
 
 def getImports(mnemo):
     lib = process.extractOne(mnemo, IMPORTS)[0]
     return 'import ' + lib
+
+def getStaticImports(mnemo):
+    lib = process.extractOne(mnemo, STATIC_IMPORTS)[0]
+    return 'from ' + lib
 
 def forLoop(variable, start, end):
     res = 'for ' + variable + ' in range('

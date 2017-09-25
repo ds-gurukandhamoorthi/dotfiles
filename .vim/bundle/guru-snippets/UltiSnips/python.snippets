@@ -6,6 +6,9 @@ endglobal
 snippet "im(\S+)" "import..." br
 `!p snip.rv=getImports(match.group(1))`
 endsnippet
+snippet "sim(\S+)" "static import..." br
+`!p snip.rv=getStaticImports(match.group(1))`
+endsnippet
 
 #PARSE ARGUMENTS
 snippet "a([0-9]+)?" "sys arg" br
@@ -29,7 +32,7 @@ ${1:arg`!p
 line=getPreviousLine(snip)
 n=getLastReadArgument(line)
 mtch=match.group(1)
-snip.rv=match or n`} = float(sys.argv[`!p snip.rv=mtch or n`])
+snip.rv=mtch or n`} = float(sys.argv[`!p snip.rv=mtch or n`])
 endsnippet
 
 #ARGUMENTS PARSER
@@ -45,12 +48,20 @@ snippet pai "parse argument as integer" b
 parser.add_argument('$1', type=int, help='${2:help for }')
 endsnippet
 
+snippet pai+ "parse argument as integer" b
+parser.add_argument('$1', type=int, nargs='+',  help='${2:help for }')
+endsnippet
+
 snippet pab "parse argument as boolean" b
 parser.add_argument('$1', help='${2:help for }', action='store_true')
 endsnippet
 
 snippet paf "parse argument as float" b
 parser.add_argument('$1', type=float, help='${2:help for }')
+endsnippet
+
+snippet paf+ "parse argument as float" b
+parser.add_argument('$1', type=float, nargs='+', help='${2:help for }')
 endsnippet
 
 #LOOPS
