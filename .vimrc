@@ -97,7 +97,9 @@ autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
 autocmd BufRead *.html  map <F5> :!firefox %<CR>
 
-autocmd BufRead *.py  map <F5> :w <CR>:!python3.5 -q %<CR>
+autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.5 -q %<CR>
+autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
+
 
 autocmd VimEnter *.py NERDTree
 autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
@@ -145,3 +147,6 @@ let g:user_emmet_settings = {
 \}
 
 let g:syntastic_python_pylint_exe = 'pylint3'
+
+let g:jedi#popup_on_dot = 0
+autocmd FileType python setlocal completeopt-=preview
