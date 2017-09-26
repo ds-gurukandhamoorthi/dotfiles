@@ -109,3 +109,5 @@ alias python='python3.5 -q'
 alias bc='bc -ql'
 
 alias cal='cal -NMC'
+
+export PYTHONSTARTUP=$HOME/.pythonrc

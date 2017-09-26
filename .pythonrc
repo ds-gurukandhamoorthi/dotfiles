@@ -1,0 +1,10 @@
+import sys
+from pprint import pprint
+
+
+def hook_show(value):
+    if value != None:
+        __builtins__._ = value
+        pprint(value)
+
+setattr(sys, 'displayhook', hook_show)
