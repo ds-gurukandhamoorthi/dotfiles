@@ -8,6 +8,8 @@ IMPORTS= [
         'random',
         'argparse',
         'matplotlib.pyplot as plt',
+        'matplotlib.patches as patches',
+        'matplotlib.collections',
         'functools',
         'itertools',
         'numpy as np',
@@ -17,6 +19,7 @@ IMPORTS= [
 STATIC_IMPORTS= [
         'math import cos',
         'numpy.random import choice',
+        'collections import Counter',
         ]
 
 def getImports(mnemo):

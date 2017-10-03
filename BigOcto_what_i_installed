@@ -519,3 +519,10 @@ sudo pip3 install python-Levenshtein
 
 25/09/2017
 #jedi-vim
+sudo pip3 install bs4
+sudo pip3 install mf2py
+
+01/01/2017
+sudo apt install ipython
+sudo apt install ipython3
+sudo apt-get install ipython3-notebook
