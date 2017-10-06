@@ -73,13 +73,19 @@ end = match.group(3)
 snip.rv=forLoop(var,start,end)`
 	${0:${VISUAL}}
 endsnippet
+snippet "iot([0-9a-z]+)" "iota(n) : range(1, n+1)" r
+`!p
+var = match.group(1)
+snip.rv=iota(var)`
+	${0:${VISUAL}}
+endsnippet
 
 #MATRIX
-snippet "(\[.*\])\*([^*]+)\*([^*]+)" "[0]*m*n" r
+snippet "(\[.*\])\*([^*]+)\*([^*]+)" "[0]*r*c" r
 [`!p
 content = match.group(1)
-colmns = match.group(2)
-lines = match.group(3)
+lines = match.group(2)
+colmns = match.group(3)
 res = content + '*' + colmns + ' for i in range(' + lines +')'
 snip.rv=res`]
 endsnippet
@@ -118,4 +124,23 @@ endsnippet
 snippet p0 "plot off" b
 plt.axis('off')
 endsnippet
+snippet xlim "xlim" b
+ax.set_xlim($1,$2)
+endsnippet
+snippet ylim "ylim" b
+ax.set_ylim($1,$2)
+endsnippet
+snippet mem "memoize" b
+@functools.lru_cache(maxsize=128)
+endsnippet
+snippet xlab "xlab" b
+plt.xlabel('$1')
+endsnippet
+snippet ylab "ylab" b
+plt.ylabel('$1')
+endsnippet
+snippet title "title" b
+plt.title('$1')
+endsnippet
+
 

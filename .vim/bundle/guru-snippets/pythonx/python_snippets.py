@@ -64,3 +64,9 @@ def getIntegerMatrix(l,c):
             res[i][j] = count
             count += 1
     return res
+
+def iota(variable):
+    res = 'range(1,'
+    res += variable + '+1'
+    return res + ')'
+

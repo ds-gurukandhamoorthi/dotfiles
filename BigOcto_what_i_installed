@@ -522,7 +522,16 @@ sudo pip3 install python-Levenshtein
 sudo pip3 install bs4
 sudo pip3 install mf2py
 
-01/01/2017
+01/10/2017
 sudo apt install ipython
 sudo apt install ipython3
 sudo apt-get install ipython3-notebook
+
+05/10/2017
+sudo pip3 install pynverse
+sudo apt update
+sudo apt upgrade
+
+
+
+
