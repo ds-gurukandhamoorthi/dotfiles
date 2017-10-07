@@ -70,3 +70,8 @@ def iota(variable):
     res += variable + '+1'
     return res + ')'
 
+def gen_range(variable):
+    res = 'range('
+    res += variable 
+    return res + ')'
+

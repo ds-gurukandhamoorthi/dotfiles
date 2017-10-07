@@ -533,5 +533,5 @@ sudo apt update
 sudo apt upgrade
 
 
-
-
+07/01/2017
+sudo pip3 install colored

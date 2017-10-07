@@ -59,6 +59,9 @@ endsnippet
 snippet paf "parse argument as float" b
 parser.add_argument('$1', type=float, help='${2:help for }')
 endsnippet
+snippet pas "parse argument as string" b
+parser.add_argument('$1',  help='${2:help for }')
+endsnippet
 
 snippet paf+ "parse argument as float" b
 parser.add_argument('$1', type=float, nargs='+', help='${2:help for }')
@@ -73,11 +76,15 @@ end = match.group(3)
 snip.rv=forLoop(var,start,end)`
 	${0:${VISUAL}}
 endsnippet
+snippet "rng([0-9a-z]+)" "range(n) : range(0, n)" r
+`!p
+var = match.group(1)
+snip.rv=gen_range(var)`
+endsnippet
 snippet "iot([0-9a-z]+)" "iota(n) : range(1, n+1)" r
 `!p
 var = match.group(1)
 snip.rv=iota(var)`
-	${0:${VISUAL}}
 endsnippet
 
 #MATRIX

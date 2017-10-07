@@ -36,10 +36,10 @@ def getTagsFile():
 def getRelevantModuleFromTags(nameComponent):
     if nameComponent == "":
         return ""
-    tagFile = getTagsFile()
-    if tagFile == "" :
+    tag_file = getTagsFile()
+    if tag_file == "" :
         return ""
-    with open(tagFile) as f:
+    with open(tag_file) as f:
         for line in f:
             if line.startswith(nameComponent):
                 filenamepath=line.split('\t')[1]
