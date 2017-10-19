@@ -112,4 +112,7 @@ alias bc='bc -ql'
 alias cal='cal -NMC'
 
 export PYTHONSTARTUP=$HOME/.pythonrc
+alias cclip='xclip -sel clip'
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export FZF_DEFAULT_COMMAND='ag -g ""'

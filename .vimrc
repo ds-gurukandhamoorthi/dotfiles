@@ -20,10 +20,17 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_enable_signs = 0
+let g:syntastic_echo_current_error = 0
+let g:syntastic_enable_balloons = 0
+let g:syntastic_enable_highlighting = 0
+
 let g:syntastic_javascript_checkers=['eslint']
+
+
 
 "set hlsearch
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
@@ -97,6 +104,7 @@ autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
 autocmd BufRead *.html  map <F5> :!firefox %<CR>
 
+autocmd BufRead *.py  map <F7> :SyntasticCheck<CR>
 autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.5 -q %<CR>
 autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
 
@@ -149,4 +157,5 @@ let g:user_emmet_settings = {
 let g:syntastic_python_pylint_exe = 'pylint3'
 
 let g:jedi#popup_on_dot = 0
+" let g:jedi#auto_initialization = 0
 autocmd FileType python setlocal completeopt-=preview

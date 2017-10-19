@@ -1,0 +1,158 @@
+global !p
+from python_snippets import *
+endglobal
+	
+#IMPORTS
+snippet "im(\S+)" "import..." br
+`!p snip.rv=getImports(match.group(1))`
+endsnippet
+snippet "sim(\S+)" "static import..." br
+`!p snip.rv=getStaticImports(match.group(1))`
+endsnippet
+
+#PARSE ARGUMENTS
+snippet "a([0-9]+)?" "sys arg" br
+${1:arg`!p
+line=getPreviousLine(snip)
+n=getLastReadArgument(line)
+mtch=match.group(1)
+snip.rv=mtch or n`} = sys.argv[`!p snip.rv=mtch or n`]
+endsnippet
+
+snippet "ia([0-9]+)?" "sys arg as int" br
+${1:arg`!p
+line=getPreviousLine(snip)
+n=getLastReadArgument(line)
+mtch=match.group(1)
+snip.rv=mtch or n`} = int(sys.argv[`!p snip.rv=mtch or n`])
+endsnippet
+
+snippet "fa([0-9]+)?" "sys arg as float" br
+${1:arg`!p
+line=getPreviousLine(snip)
+n=getLastReadArgument(line)
+mtch=match.group(1)
+snip.rv=mtch or n`} = float(sys.argv[`!p snip.rv=mtch or n`])
+endsnippet
+
+#ARGUMENTS PARSER
+snippet dap "declare argument parser" b
+parser = argparse.ArgumentParser(description='$1')
+endsnippet
+
+snippet dargs "declare args" b
+args = parser.parse_args()
+endsnippet
+
+snippet pai "parse argument as integer" b
+parser.add_argument('$1', type=int, help='${2:help for }')
+endsnippet
+
+snippet pai+ "parse argument as integer" b
+parser.add_argument('$1', type=int, nargs='+',  help='${2:help for }')
+endsnippet
+
+snippet pab "parse argument as boolean" b
+parser.add_argument('$1', help='${2:help for }', action='store_true')
+endsnippet
+
+snippet paf "parse argument as float" b
+parser.add_argument('$1', type=float, help='${2:help for }')
+endsnippet
+snippet pas "parse argument as string" b
+parser.add_argument('$1',  help='${2:help for }')
+endsnippet
+
+snippet paf+ "parse argument as float" b
+parser.add_argument('$1', type=float, nargs='+', help='${2:help for }')
+endsnippet
+
+#LOOPS
+snippet "for([a-z]+) ?([0-9]*)(([0-9a-zA-Z]+)?)" "for range with count : fori10 forj14" br
+`!p
+var = match.group(1)
+start = match.group(2)
+end = match.group(3)
+snip.rv=forLoop(var,start,end)`
+	${0:${VISUAL}}
+endsnippet
+snippet "rng([0-9a-z]+)" "range(n) : range(0, n)" r
+`!p
+var = match.group(1)
+snip.rv=gen_range(var)`
+endsnippet
+snippet "iot([0-9a-z]+)" "iota(n) : range(1, n+1)" r
+`!p
+var = match.group(1)
+snip.rv=iota(var)`
+endsnippet
+
+#MATRIX
+snippet "(\[.*\])\*([^*]+)\*([^*]+)" "[0]*r*c" r
+[`!p
+content = match.group(1)
+lines = match.group(2)
+colmns = match.group(3)
+res = content + '*' + colmns + ' for i in range(' + lines +')'
+snip.rv=res`]
+endsnippet
+
+snippet "intmatr([1-9])([1-9])" "integer matrix" r
+`!p
+l = int(match.group(1))
+c= int(match.group(2))
+snip.rv=getIntegerMatrix(l,c)`
+endsnippet
+
+#LOGGING
+snippet lgv "log variable"
+print(`!p
+line=getPreviousLine(snip)
+var=getVariable(line)
+res='"' + var + '", ' + var
+snip.rv=res`)
+endsnippet
+
+#SHEBANG
+snippet # "env" b
+#!/usr/bin/env python3
+endsnippet
+
+snippet rr "return res" b
+return res
+endsnippet
+
+snippet f,a "figure ax" b
+fig, ax = plt.subplots()
+endsnippet
+snippet ps "plot show" b
+plt.show()
+endsnippet
+snippet p0 "plot off" b
+plt.axis('off')
+endsnippet
+snippet xlim "xlim" b
+ax.set_xlim($1,$2)
+endsnippet
+snippet ylim "ylim" b
+ax.set_ylim($1,$2)
+endsnippet
+snippet mem "memoize" b
+@functools.lru_cache(maxsize=128)
+endsnippet
+snippet xlab "xlab" b
+plt.xlabel('$1')
+endsnippet
+snippet ylab "ylab" b
+plt.ylabel('$1')
+endsnippet
+snippet title "title" b
+plt.title('$1')
+endsnippet
+snippet =a "args" b
+$1 = args.`!p snip.rv=t[1]`
+endsnippet
+snippet ax= "axis equal" b
+ax.axis('equal')
+endsnippet
+
