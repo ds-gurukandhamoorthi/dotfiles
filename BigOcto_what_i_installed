@@ -552,3 +552,6 @@ sudo pip3 install colormath
 19/10/2017
 #ALE for vim installed instead of Pathogen
 #vim pathogen bundle moved to vim8 pack
+#pathogen uninstalled
+sudo apt update
+sudo apt upgrade
