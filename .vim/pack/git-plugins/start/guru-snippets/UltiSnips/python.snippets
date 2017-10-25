@@ -155,4 +155,10 @@ endsnippet
 snippet ax= "axis equal" b
 ax.axis('equal')
 endsnippet
-
+snippet "init([0-9a-z,]+)" "__init__" br
+def __init__(self, `!p
+variables = match.group(1)
+snip.rv = variables`)
+`!p
+snip.rv=gen_init(variables)`
+endsnippet

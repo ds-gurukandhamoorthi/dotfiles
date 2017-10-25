@@ -162,3 +162,9 @@ autocmd FileType python setlocal completeopt-=preview
 let g:ale_python_pylint_executable = 'pylint3'
 
 let g:ale_linters = {'python' : ['pylint']}
+
+let g:AutoCloseExpandSpace = 0
+abbrev this self
+
+autocmd FileType python noremap <buffer> <F12> :call Autopep8()<CR>
+let g:autopep8_disable_show_diff=1
