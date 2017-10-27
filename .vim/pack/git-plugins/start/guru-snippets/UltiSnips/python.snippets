@@ -158,7 +158,12 @@ endsnippet
 snippet "init([0-9a-z,]+)" "__init__" br
 def __init__(self, `!p
 variables = match.group(1)
-snip.rv = variables`)
+snip.rv = variables`):
 `!p
 snip.rv=gen_init(variables)`
+endsnippet
+snippet _+= "__iadd__" b
+def __iadd__(self, ${1:val}):
+$0
+	return self
 endsnippet
