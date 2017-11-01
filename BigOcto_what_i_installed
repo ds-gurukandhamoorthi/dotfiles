@@ -571,6 +571,9 @@ sudo pip3 install pytest
 sudo apt update && sudo apt upgrade
 
 30/10/2017
+#in the file bash.keybinding in the fzf directory
 # CTRL-R - Paste the selected command from history into the command line
 # bind '"\C-r": " \C-e\C-u`__fzf_history__`\e\C-e\e^\er"'
 bind '"\er": " \C-e\C-u`__fzf_history__`\e\C-e\e^\er"'
+sudo apt update
+sudo apt upgrade
