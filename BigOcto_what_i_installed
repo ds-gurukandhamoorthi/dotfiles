@@ -577,3 +577,46 @@ sudo apt update && sudo apt upgrade
 bind '"\er": " \C-e\C-u`__fzf_history__`\e\C-e\e^\er"'
 sudo apt update
 sudo apt upgrade
+
+02/11/2017
+sudo pip3 install nltk
+sudo apt update
+sudo apt upgrade
+
+03/11/2017
+sudo pip3 install bintrees
+
+05/11/2017
+sudo pip3 install pymonad
+sudo apt update
+sudo apt upgrade
+
+06/11/2017
+sudo pip3 install yahoo-finance --upgrade
+pip3 list --outdated
+sudo pip3 install urllib3 --upgrade
+sudo pip3 install selenium --upgrade
+sudo pip3 install python-debian --upgrade
+sudo pip3 install ipython --upgrade
+sudo pip3 install httplib2 --upgrade
+sudo pip3 install numpy --upgrade
+sudo pip3 install scipy --upgrade
+sudo pip3 install PyYAML --upgrade
+sudo pip3 install lxml --upgrade
+sudo pip3 install pandas --upgrade
+sudo pip3 install requests --upgrade
+sudo pip3 install fix-yahoo-finance
+sudo pip3 install yarl --upgrade
+sudo pip3 install udiskie --upgrade
+sudo pip3 install tornado --upgrade
+sudo pip3 install stevedore --upgrade
+sudo pip3 install aiohttp async-timeout blinker --upgrade
+sudo pip3 install cryptography Jinja2 logilab-common Mako MarkupSafe matplotlib mpmath oautlib --upgrade
+sudo pip3 install cryptography Jinja2 logilab-common Mako MarkupSafe matplotlib mpmath --upgrade
+sudo pip3 install oauthlib --upgrade
+sudo pip3 install reportlab --upgrade
+sudo pip3 install SQLAlchemy --upgrade
+sudo pip3 install parso psutil pyzmq setproctitle --upgrade
+sudo pip3 install pyasn1 --upgrade
+sudo pip3 install PyJWT --upgrade
+sudo pip3 install PyOpenGL --upgrade

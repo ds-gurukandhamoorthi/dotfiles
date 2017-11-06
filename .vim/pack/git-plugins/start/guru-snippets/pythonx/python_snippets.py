@@ -24,6 +24,7 @@ STATIC_IMPORTS = [
     'math import cos',
     'numpy.random import choice',
     'collections import Counter',
+    'collections import defaultdict',
     'bs4 import BeautifulSoup',
 ]
 
