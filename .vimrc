@@ -37,7 +37,7 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set conceallevel=1
 let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
+let g:javascript_conceal_null                 = "∅"
 let g:javascript_conceal_this                 = "@"
 let g:javascript_conceal_return               = "⇚"
 let g:javascript_conceal_undefined            = "¿"
@@ -168,3 +168,45 @@ abbrev this self
 
 autocmd FileType python noremap <buffer> <F12> :call Autopep8()<CR>
 let g:autopep8_disable_show_diff=1
+let g:autopep8_ignore='E731'
+
+" add this to vim-cute-python
+" syntax match pyNiceOperator "!=" conceal cchar=≠
+" syntax keyword pyNiceOperator None conceal cchar=∅
+" syntax keyword pyNiceOperator yield conceal cchar=↢
+" syntax keyword pyNiceOperator while conceal cchar=⟳
+" " syntax keyword pyNiceOperator from conceal cchar=⥺
+" syntax keyword pyNiceOperator from conceal cchar=⊂
+" syntax keyword pyNiceOperator for conceal cchar=∀
+" syntax keyword pyNiceOperator if conceal cchar=⁇
+" syntax keyword pyNiceOperator else conceal cchar=‼
+" syntax keyword pyNiceOperator elif conceal cchar=⁉
+" syntax keyword pyNiceOperator def conceal cchar=ƒ
+" syntax keyword pyNiceOperator product conceal cchar=∏
+" syntax keyword pyNiceOperator len conceal cchar=⍴
+" syntax keyword pyNiceOperator range conceal cchar=Я
+" syntax keyword pyNiceOperator all conceal cchar=∀
+" syntax keyword pyNiceOperator any conceal cchar=∃
+" syntax keyword pyNiceOperator self conceal cchar=@
+" syntax keyword pyNiceOperator int conceal cchar=ℤ
+" syntax keyword pyNiceOperator float conceal cchar=ℝ
+" syntax keyword pyNiceOperator complex conceal cchar=ℂ
+" syntax keyword pyNiceOperator return conceal cchar=⇦
+" syntax keyword pyNiceOperator import conceal cchar=⇲
+" syntax match pyNiceOperator "\<contains\>" conceal cchar=∋
+"  syntax keyword pyNiceOperator from conceal cchar=⊆
+" syntax keyword pyNiceOperator print conceal cchar=⎙
+" syntax keyword pyNiceOperator str conceal cchar=𝕊
+" syntax keyword pyNiceOperator tuple conceal cchar=𝕋
+" syntax keyword pyNiceOperator True conceal cchar=Ｔ
+" syntax keyword pyNiceOperator False conceal cchar=Ｆ
+" syntax match pyNiceOperator "\[0\]" conceal cchar=₀
+" syntax match pyNiceOperator "\[1\]" conceal cchar=₁
+" syntax match pyNiceOperator "\[2\]" conceal cchar=₂
+" syntax match pyNiceOperator "\[3\]" conceal cchar=₃
+" syntax match pyNiceOperator "\[4\]" conceal cchar=₄
+" syntax match pyNiceOperator "\[5\]" conceal cchar=₅
+" syntax match pyNiceOperator "\[6\]" conceal cchar=₆
+" syntax match pyNiceOperator "\[7\]" conceal cchar=₇
+" syntax match pyNiceOperator "\[8\]" conceal cchar=₈
+" syntax match pyNiceOperator "\[9\]" conceal cchar=₉
