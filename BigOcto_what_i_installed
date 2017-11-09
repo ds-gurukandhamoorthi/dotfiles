@@ -620,3 +620,14 @@ sudo pip3 install parso psutil pyzmq setproctitle --upgrade
 sudo pip3 install pyasn1 --upgrade
 sudo pip3 install PyJWT --upgrade
 sudo pip3 install PyOpenGL --upgrade
+sudo pip3 install quandl
+
+# R
+# install.pakages('Quandl')
+
+
+08/11/2017
+sudo apt install ascii
+sudo apt install unicode
+sudo apt update
+sudo apt upgrade

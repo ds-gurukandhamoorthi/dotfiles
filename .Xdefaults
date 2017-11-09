@@ -8,7 +8,10 @@ urxvt*shading:  70
 
 
 !URxvt.font: 9x15bold
-URxvt.font: xft:Monospace:size=12:antialias=true
+URxvt.font: xft:Monospace:size=12:antialias=true,\
+xft:Symbola,\
+xft:Source Code Pro:pixelsize=18:style=medium,antialias=true,\
+-*-unifont-*-*-*-*-*-*-*-*-*-*-*-*
 #so as to have spaces between letters (kerning...)
 URxvt.letterSpace: -1 
 
@@ -30,5 +33,8 @@ URxvt*matcher.rend.2: Uline fg6
 
 URxvt.iso14755: false
 URxvt.iso14755_52: false
+
+#Neon green
+URxvt*cursorColor: #32cd32
 
 #URxvt.perl-ext-common: ...,tabbed,...
