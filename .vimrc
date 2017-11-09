@@ -234,10 +234,15 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator enumerate conceal cchar=𝕖
 " syntax keyword pyNiceOperator zip conceal cchar=𝕫
 " syntax keyword pyNiceOperator next conceal cchar=≺
-" syntax keyword pyNiceOperator join conceal cchar=⨁
-" " division times symbol : divide and multiply : splitting is dividing and
-" " multiplying the number of results
-" syntax keyword pyNiceOperator split conceal cchar=⋇
+""returns one result symbolized by the circle
+"syntax keyword pyNiceOperator join conceal cchar=⨁
+""returns many values  symbolized by the dots..
+"syntax keyword pyNiceOperator split conceal cchar=⁜
 " syntax keyword pyNiceOperator other conceal cchar=Ö
 " syntax match pyNiceKeyword "\<\%(math\.\)\?exp\>" conceal cchar=ℯ
 " syntax keyword pyNiceOperator assert conceal cchar=⊦
+" syntax keyword pyNiceOperator reversed conceal cchar=ᴙ
+" syntax keyword pyNiceOperator sorted conceal cchar=⇅
+" syntax keyword pyNiceOperator help conceal cchar=❔
+" syntax keyword pyNiceOperator description conceal cchar=¿
+" the inverted ¿ resembles the symbol d in 'd'escription
