@@ -204,17 +204,17 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator iter conceal cchar=𝕚
 " syntax keyword pyNiceOperator True conceal cchar=Ｔ
 " syntax keyword pyNiceOperator False conceal cchar=Ｆ
-syntax match pyNiceOperator "[a-zA-Z]\zs\[0\]\ze" conceal cchar=₀
-syntax match pyNiceOperator "[a-zA-Z]\zs\[1\]\ze" conceal cchar=₁
-syntax match pyNiceOperator "[a-zA-Z]\zs\[2\]\ze" conceal cchar=₂
-syntax match pyNiceOperator "[a-zA-Z]\zs\[3\]\ze" conceal cchar=₃
-syntax match pyNiceOperator "[a-zA-Z]\zs\[4\]\ze" conceal cchar=₄
-syntax match pyNiceOperator "[a-zA-Z]\zs\[5\]\ze" conceal cchar=₅
-syntax match pyNiceOperator "[a-zA-Z]\zs\[6\]\ze" conceal cchar=₆
-syntax match pyNiceOperator "[a-zA-Z]\zs\[7\]\ze" conceal cchar=₇
-syntax match pyNiceOperator "[a-zA-Z]\zs\[8\]\ze" conceal cchar=₈
-syntax match pyNiceOperator "[a-zA-Z]\zs\[9\]\ze" conceal cchar=₉
-syntax match pyNiceOperator "[a-zA-Z]\zs\[-1\]\ze" conceal cchar=₋
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[0\]\ze" conceal cchar=₀
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[1\]\ze" conceal cchar=₁
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[2\]\ze" conceal cchar=₂
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[3\]\ze" conceal cchar=₃
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[4\]\ze" conceal cchar=₄
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[5\]\ze" conceal cchar=₅
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[6\]\ze" conceal cchar=₆
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[7\]\ze" conceal cchar=₇
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[8\]\ze" conceal cchar=₈
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[9\]\ze" conceal cchar=₉
+" syntax match pyNiceOperator "[a-zA-Z)]\zs\[-1\]\ze" conceal cchar=₋
 " syntax match pyNiceOperator "\[a\]" conceal cchar=ₐ
 " syntax match pyNiceOperator "\[e\]" conceal cchar=ₑ
 " syntax match pyNiceOperator "\[h\]" conceal cchar=ₕ
@@ -240,7 +240,8 @@ syntax match pyNiceOperator "[a-zA-Z]\zs\[-1\]\ze" conceal cchar=₋
 "syntax keyword pyNiceOperator join conceal cchar=⨁
 ""returns many values  symbolized by the dots..
 "syntax keyword pyNiceOperator split conceal cchar=⁜
-" syntax keyword pyNiceOperator other conceal cchar=Ö
+"" syntax keyword pyNiceOperator other conceal cchar=Ö
+" syntax keyword pyNiceOperator other conceal cchar=⅋
 " syntax match pyNiceKeyword "\<\%(math\.\)\?exp\>" conceal cchar=ℯ
 " syntax keyword pyNiceOperator assert conceal cchar=⊢
 " syntax keyword pyNiceOperator reversed conceal cchar=ᴙ
@@ -251,13 +252,23 @@ syntax match pyNiceOperator "[a-zA-Z]\zs\[-1\]\ze" conceal cchar=₋
 " syntax keyword pyNiceOperator help conceal cchar=ℹ
 " syntax keyword pyNiceOperator description conceal cchar=¿
 " the inverted ¿ resembles the symbol d in 'd'escription
-" syntax keyword pyNiceOperator min conceal cchar=⋀
-" syntax keyword pyNiceOperator max conceal cchar=⋁
-" syntax keyword pyNiceOperator map conceal cchar=⊚
+"" syntax keyword pyNiceOperator min conceal cchar=⋀
+"" syntax keyword pyNiceOperator max conceal cchar=⋁
+""As in APL ⌊⌈ are not visible 
+"syntax keyword pyNiceOperator min conceal cchar=⎣
+"" we would use brackets ⎡⎣
+"syntax keyword pyNiceOperator max conceal cchar=⎡
+""As in APL
+"syntax keyword pyNiceOperator map conceal cchar=¨
 " syntax keyword pyNiceOperator filter conceal cchar=⊢
 " syntax keyword pyNiceOperator filterfalse conceal cchar=⊬
-" syntax keyword pyNiceOperator reduce conceal cchar=⊍
-" syntax keyword pyNiceOperator starmap conceal cchar=✪
+" syntax keyword pyNiceOperator reduce conceal cchar=⩀
+" " the idea of every paire ¨  reduced to one
+" syntax keyword pyNiceOperator reduce conceal cchar=⍢
+" syntax keyword pyNiceOperator groupby conceal cchar=⩞
+"" syntax keyword pyNiceOperator starmap conceal cchar=✪
+""As in APL (Though the meaning may differ... in python : map ¨/starmap⍣
+"syntax keyword pyNiceOperator starmap conceal cchar=⍣
 " syntax keyword pyNiceOperator action conceal cchar=⚡
 " syntax keyword pyNiceOperator res conceal cchar=𝖗
 " syntax match pyNiceOperator "\<\%(np\.\)\?zeros\>" conceal cchar=𝟘
@@ -309,5 +320,29 @@ syntax match pyNiceOperator "[a-zA-Z]\zs\[-1\]\ze" conceal cchar=₋
 " syntax match hsNiceOperator "\(\*\*\)7\ze\_W" conceal cchar=⁷
 " syntax match hsNiceOperator "\(\*\*\)8\ze\_W" conceal cchar=⁸
 " syntax match hsNiceOperator "\(\*\*\)9\ze\_W" conceal cchar=⁹
-
-
+" syntax keyword pyNiceOperator most_common conceal cchar=∇
+"" syntax keyword pyNiceOperator Exception conceal cchar=⚠
+" syntax keyword pyNiceOperator Exception conceal cchar=❗
+"" syntax keyword pyNiceOperator raise conceal cchar=☞
+""resembles speed bump
+"syntax keyword pyNiceOperator raise conceal cchar=≏
+" syntax keyword pyNiceOperator count conceal cchar=＃
+" syntax keyword pyNiceOperator Counter conceal cchar=＃
+"" syntax keyword pyNiceOperator items conceal cchar=＊
+"" syntax keyword pyNiceOperator keys conceal cchar=⟜
+"" syntax keyword pyNiceOperator values conceal cchar=⊸
+" syntax keyword pyNiceOperator values conceal cchar=＊
+" " syntax keyword pyNiceOperator keys conceal cchar=☌
+" syntax keyword pyNiceOperator keys conceal cchar=⚷
+" syntax keyword pyNiceOperator items conceal cchar=☍
+" syntax keyword pyNiceOperator repeat conceal cchar=↻
+" syntax keyword pyNiceOperator cycle conceal cchar=⥁
+" syntax keyword pyNiceOperator compress conceal cchar=⨝
+" syntax keyword pyNiceOperator tee conceal cchar=¦
+" " as in APL
+" syntax match pyNiceOperator "\<\%(random\.\)\?sample\>" conceal cchar=⍰
+" syntax keyword pyNiceOperator xs conceal cchar=Ẍ
+" syntax keyword pyNiceOperator ys conceal cchar=Ÿ
+" syntax keyword pyNiceOperator ts conceal cchar=ẗ
+" " as in APL
+" syntax match pyNiceOperator "\<\%(re\.\)\?search\>" conceal cchar=⍷

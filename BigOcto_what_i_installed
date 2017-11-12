@@ -631,3 +631,6 @@ sudo apt install ascii
 sudo apt install unicode
 sudo apt update
 sudo apt upgrade
+
+12/11/2017
+sudo apt install wordnet
