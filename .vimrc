@@ -164,7 +164,6 @@ let g:ale_python_pylint_executable = 'pylint3'
 let g:ale_linters = {'python' : ['pylint']}
 
 let g:AutoCloseExpandSpace = 0
-abbrev this self
 
 autocmd FileType python noremap <buffer> <F12> :call Autopep8()<CR>
 let g:autopep8_disable_show_diff=1
@@ -359,3 +358,4 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator words conceal cchar=⫼
 " syntax match pyNiceOperator "\<nb_" conceal cchar=ᴺ
 " syntax match pyNiceOperator "_count\>" conceal cchar=#
+" syntax keyword pyNiceOperator strip conceal cchar=︺

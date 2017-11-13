@@ -1,4 +1,5 @@
 import re
+from itertools import product, count
 from common_func import *
 from fuzzywuzzy import process
 
@@ -18,6 +19,8 @@ IMPORTS = [
     'pandas as pd',
     'subprocess',
     'requests',
+    'seaborn as sns',
+    'statsmodels as sm',
 ]
 
 STATIC_IMPORTS = [
@@ -71,11 +74,8 @@ def getVariable(line):
 
 def getIntegerMatrix(l, c):
     res = [[0] * c for i in range(l)]
-    count = 0
-    for i in range(l):
-        for j in range(c):
-            res[i][j] = count
-            count += 1
+    for (i, j), ind in zip(product(range(l), range(c)), count()):
+        res[i][j] = ind
     return res
 
 
@@ -94,7 +94,7 @@ def gen_range(variable):
 def gen_init(variables_str):
     variables = variables_str.split(',')
     res = ''
-    TAB='    '
+    TAB = '    '
     for v in variables:
         res += TAB
         res += 'self._'
