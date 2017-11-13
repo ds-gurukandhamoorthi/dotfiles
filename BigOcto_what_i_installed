@@ -634,3 +634,13 @@ sudo apt upgrade
 
 12/11/2017
 sudo apt install wordnet
+
+13/11/2017
+sudo apt install ipython-notebook
+sudo npm i -g npm
+sudo yarn global add ijavascript
+sudo apt update
+sudo apt upgrade
+sudo add-apt-repository ppa:jonathonf/python-3.6
+sudo apt update
+sudo apt install python3.6

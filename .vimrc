@@ -188,6 +188,7 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator range conceal cchar=…
 " syntax keyword pyNiceOperator all conceal cchar=∀
 " syntax keyword pyNiceOperator any conceal cchar=∃
+" syntax match pyNiceOperator "\<not any\>" conceal cchar=∄
 " syntax keyword pyNiceOperator self conceal cchar=@
 " syntax keyword pyNiceOperator int conceal cchar=ℤ
 " syntax keyword pyNiceOperator float conceal cchar=ℝ
@@ -233,15 +234,17 @@ let g:autopep8_ignore='E731'
 " syntax match pyNiceOperator "\[v\]" conceal cchar=ᵥ
 " syntax match pyNiceOperator "\[x\]" conceal cchar=ₓ
 " syntax keyword pyNiceOperator abs conceal cchar=|
-" syntax keyword pyNiceOperator enumerate conceal cchar=𝕖
-" syntax keyword pyNiceOperator zip conceal cchar=𝕫
+""enumerating is applying an index i to every ¨ element
+""one can think of it as 'indexed'
+"syntax keyword pyNiceOperator enumerate conceal cchar=ϊ
+" syntax keyword pyNiceOperator zip conceal cchar=𝈄
 " syntax keyword pyNiceOperator next conceal cchar=≺
 ""returns one result symbolized by the circle
 "syntax keyword pyNiceOperator join conceal cchar=⨁
 ""returns many values  symbolized by the dots..
 "syntax keyword pyNiceOperator split conceal cchar=⁜
-"" syntax keyword pyNiceOperator other conceal cchar=Ö
-" syntax keyword pyNiceOperator other conceal cchar=⅋
+" " syntax keyword pyNiceOperator other conceal cchar=Ö ⅋
+" syntax keyword pyNiceOperator other conceal cchar=Ѻ
 " syntax match pyNiceKeyword "\<\%(math\.\)\?exp\>" conceal cchar=ℯ
 " syntax keyword pyNiceOperator assert conceal cchar=⊢
 " syntax keyword pyNiceOperator reversed conceal cchar=ᴙ
@@ -262,10 +265,12 @@ let g:autopep8_ignore='E731'
 "syntax keyword pyNiceOperator map conceal cchar=¨
 " syntax keyword pyNiceOperator filter conceal cchar=⊢
 " syntax keyword pyNiceOperator filterfalse conceal cchar=⊬
-" syntax keyword pyNiceOperator reduce conceal cchar=⩀
-" " the idea of every paire ¨  reduced to one
-" syntax keyword pyNiceOperator reduce conceal cchar=⍢
-" syntax keyword pyNiceOperator groupby conceal cchar=⩞
+" " the idea of every pair ¨  reduced to one ⍢ or Ÿ
+" " or rather the idea of multiple values reduced to one 𐅱
+" syntax keyword pyNiceOperator reduce conceal cchar=𐅱
+""every element is verified using a criteriion (K) and is put in a group(bin) ж
+""or every element is filtered by criterion to be put in a group(bin) ѫ
+"syntax keyword pyNiceOperator groupby conceal cchar=ѫ
 "" syntax keyword pyNiceOperator starmap conceal cchar=✪
 ""As in APL (Though the meaning may differ... in python : map ¨/starmap⍣
 "syntax keyword pyNiceOperator starmap conceal cchar=⍣
@@ -346,3 +351,11 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator ts conceal cchar=ẗ
 " " as in APL
 " syntax match pyNiceOperator "\<\%(re\.\)\?search\>" conceal cchar=⍷
+" " as in Haskell
+" syntax keyword pyNiceOperator isinstance conceal cchar=∷
+" " syntax keyword pyNiceOperator line conceal cchar=−
+" syntax keyword pyNiceOperator lines conceal cchar=≣
+" " syntax keyword pyNiceOperator word conceal cchar=⫾
+" syntax keyword pyNiceOperator words conceal cchar=⫼
+" syntax match pyNiceOperator "\<nb_" conceal cchar=ᴺ
+" syntax match pyNiceOperator "_count\>" conceal cchar=#
