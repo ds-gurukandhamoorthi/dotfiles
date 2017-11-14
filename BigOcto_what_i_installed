@@ -660,3 +660,7 @@ sudo pip3.6 install yahoo-finance
 sudo pip3.6 install bs4
 sudo pip3.6 install autopep8
 sudo pip3 install fuzzywuzzy
+
+14/11/2017
+sudo pip3.6 install pynput
+sudo pip3.6 install jupyter

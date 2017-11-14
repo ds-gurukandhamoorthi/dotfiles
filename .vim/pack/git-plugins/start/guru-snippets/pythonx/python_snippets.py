@@ -80,15 +80,11 @@ def getIntegerMatrix(l, c):
 
 
 def iota(variable):
-    res = 'range(1,'
-    res += variable + '+1'
-    return res + ')'
+    return 'range(%s+1)' % variable
 
 
 def gen_range(variable):
-    res = 'range('
-    res += variable
-    return res + ')'
+    return 'range(%s)' % variable
 
 
 def gen_init(variables_str):
