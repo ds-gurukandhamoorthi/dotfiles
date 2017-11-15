@@ -89,13 +89,6 @@ def gen_range(variable):
 
 def gen_init(variables_str):
     variables = variables_str.split(',')
-    res = ''
     TAB = '    '
-    for v in variables:
-        res += TAB
-        res += 'self._'
-        res += v.strip()
-        res += ' = '
-        res += v.strip() + '\n'
-        res += TAB
-    return res
+    templ = lambda var: (TAB + 'self._%s = %s\n' + TAB) % (var, var)
+    return ''.join(templ(v.strip()) for v in variables)
