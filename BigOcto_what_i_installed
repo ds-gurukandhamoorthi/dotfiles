@@ -664,3 +664,16 @@ sudo pip3 install fuzzywuzzy
 14/11/2017
 sudo pip3.6 install pynput
 sudo pip3.6 install jupyter
+
+15/11/2017
+sudo apt update
+sudo apt upgrade
+#No firefox Quantum yet for Linux mint and I'm reluctuant to add the repository to aptitude
+sudo apt-get install ttf-anonymous-pro
+sudo fc-cache -fv
+sudo apt install fonts-inconsolata
+sudo apt install fonts-droid-fallback
+sudo apt install ttf-unifont
+sudo apt update
+sudo apt upgrade
+sudo apt update && sudo apt upgrade

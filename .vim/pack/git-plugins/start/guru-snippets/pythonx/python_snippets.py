@@ -1,5 +1,5 @@
 import re
-from itertools import product, count
+from itertools import count
 from common_func import *
 from fuzzywuzzy import process
 
@@ -43,13 +43,13 @@ def getStaticImports(mnemo):
 
 
 def forLoop(variable, start, end):
-    res = 'for ' + variable + ' in range('
+    templ = 'for ' + variable + ' in range(%s)'
     if start == '0':
-        return res + end + '):'
+        return templ % end
     if end == "":
-        return res + start + '):'
+        return templ % start
     if start == "":
-        return res + end + '):'
+        return templ % end
 
 
 def getLastReadArgument(line):
@@ -73,10 +73,8 @@ def getVariable(line):
 
 
 def getIntegerMatrix(l, c):
-    res = [[0] * c for i in range(l)]
-    for (i, j), ind in zip(product(range(l), range(c)), count()):
-        res[i][j] = ind
-    return res
+    ind = count()
+    return [[next(ind) for j in range(c)] for i in range(l)]
 
 
 def iota(variable):
