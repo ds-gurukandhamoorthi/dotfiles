@@ -113,7 +113,8 @@ autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
 
 autocmd BufEnter * lcd %:p:h
 
-"autocmd VimEnter :syntax match Ramda /R\./ conceal
+" autocmd VimEnter :syntax match Ramda "R\." conceal
+syntax match Ramda "R\." conceal
 
 
 set runtimepath+=/home/guru/testmpc/
@@ -184,6 +185,7 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator product conceal cchar=∏
 " syntax keyword pyNiceOperator len conceal cchar=⍴
 " syntax keyword pyNiceOperator shape conceal cchar=⍴
+" syntax keyword pyNiceOperator reshape conceal cchar=⍴
 " syntax keyword pyNiceOperator range conceal cchar=…
 " syntax keyword pyNiceOperator all conceal cchar=∀
 " syntax keyword pyNiceOperator any conceal cchar=∃
@@ -362,10 +364,12 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator encode conceal cchar=⭳
 " syntax keyword pyNiceOperator decode conceal cchar=⭱
 " syntax keyword pyNiceOperator replace conceal cchar=⇝
+" syntax match pyNiceOperator "\<\%(re\.\)\?sub\>" conceal cchar=⇝
 " syntax keyword pyNiceOperator group conceal cchar=ɠ
-" syntax keyword pyNiceOperator groupby conceal cchar=ǵ
 " syntax keyword pyNiceOperator or_ conceal cchar=∨
 " syntax keyword pyNiceOperator and_ conceal cchar=∧
 " syntax keyword pyNiceOperator not_ conceal cchar=¬
 " syntax keyword pyNiceOperator union conceal cchar=∪
 " syntax keyword pyNiceOperator intersection conceal cchar=∩
+" syntax keyword pyNiceOperator T conceal cchar=ᵀ
+" syntax keyword pyNiceOperator transpose conceal cchar=ᵀ

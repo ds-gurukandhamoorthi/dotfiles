@@ -677,3 +677,18 @@ sudo apt install ttf-unifont
 sudo apt update
 sudo apt upgrade
 sudo apt update && sudo apt upgrade
+sudo pip3.6 install funcy
+sudo apt update
+sudo apt upgrade
+
+16/11/2017
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+#15:54  installed Firefox Quantum
+
