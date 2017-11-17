@@ -36,18 +36,18 @@ set statusline+=%*
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set conceallevel=1
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "∅"
-let g:javascript_conceal_this                 = "@"
-let g:javascript_conceal_return               = "⇚"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_NaN                  = "ℕ"
-let g:javascript_conceal_prototype            = "¶"
-let g:javascript_conceal_static               = "•"
-let g:javascript_conceal_super                = "Ω"
-let g:javascript_conceal_arrow_function       = "⇒"
-let g:javascript_conceal_noarg_arrow_function = "🞅"
-let g:javascript_conceal_underscore_arrow_function = "🞅"
+" let g:javascript_conceal_function             = "ƒ"
+" let g:javascript_conceal_null                 = "∅"
+" let g:javascript_conceal_this                 = "@"
+" let g:javascript_conceal_return               = "⇚"
+" let g:javascript_conceal_undefined            = "¿"
+" let g:javascript_conceal_NaN                  = "ᴎ"
+" let g:javascript_conceal_prototype            = "¶"
+" let g:javascript_conceal_static               = "•"
+" let g:javascript_conceal_super                = "Ω"
+" let g:javascript_conceal_arrow_function       = "⇒"
+" let g:javascript_conceal_noarg_arrow_function = "🞅"
+" let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 let g:javascript_plugin_flow = 1
 
@@ -143,6 +143,9 @@ let g:wordmotion_mappings={
 let g:slime_target="tmux"
 let g:slime_paste_file="$HOME/.slime_paste"
 "let g:slime_default_config={"socket_name": split($TMUX, ",")[0], "target_pane": ":.2"}
+let g:slime_default_config={"socket_name": "default", "target_pane": ":.0"}
+let g:slime_dont_ask_default = 1
+let g:slime_python_ipython = 1
                  
 "Otherwise it cripples the backward search .. '?'
 let NERDTreeMapHelp='<f1>'
@@ -278,6 +281,7 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator action conceal cchar=⚡
 " syntax keyword pyNiceOperator res conceal cchar=𝖗
 " syntax match pyNiceOperator "\<\%(np\.\)\?zeros\>" conceal cchar=𝟘
+" syntax match pyNiceOperator "\<\%(np\.\)\?ones\>" conceal cchar=𝟙
 " syntax match pyNiceOperator "\<\%(np\.\)\?array\>" conceal cchar=𝔸
 " syntax match pyNiceOperator "\<\%(np\.\)\?dot\>" conceal cchar=•
 " syntax match pyNiceOperator "\<\%(np\.\)\?arange\>" conceal cchar=…
@@ -358,6 +362,7 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator lines conceal cchar=≣
 " " syntax keyword pyNiceOperator word conceal cchar=⫾
 " syntax keyword pyNiceOperator words conceal cchar=⫼
+" syntax keyword pyNiceOperator columns conceal cchar=⫼
 " syntax match pyNiceOperator "\<nb_" conceal cchar=ᴺ
 " syntax match pyNiceOperator "_count\>" conceal cchar=#
 " syntax keyword pyNiceOperator strip conceal cchar=︺
@@ -373,3 +378,27 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator intersection conceal cchar=∩
 " syntax keyword pyNiceOperator T conceal cchar=ᵀ
 " syntax keyword pyNiceOperator transpose conceal cchar=ᵀ
+" syntax keyword pyNiceOperator maximum conceal cchar=⎡
+" syntax keyword pyNiceOperator minimum conceal cchar=⎣
+" syntax keyword pyNiceOperator ceil conceal cchar=⌈
+" syntax keyword pyNiceOperator floor conceal cchar=⌊
+" syntax keyword pyNiceOperator round conceal cchar=≈
+" syntax keyword pyNiceOperator mean conceal cchar=μ
+" syntax keyword pyNiceOperator std conceal cchar=σ
+" syntax keyword pyNiceOperator cumsum conceal cchar=𝝨
+" syntax keyword pyNiceOperator cumprod conceal cchar=𝝥
+" syntax match pyNiceOperator "\<\%(random\.\)\?randrange\>" conceal cchar=Ʀ
+" syntax match pyNiceOperator "\<\%(np\.random\.\)\?randn\>" conceal cchar=⍰
+" " we create an intersection ^ of unique elements
+" syntax keyword pyNiceOperator unique conceal cchar=û
+" syntax match pyNiceOperator " @ " conceal cchar=•
+" syntax keyword pyNiceOperator index conceal cchar=⚷
+" syntax keyword pyNiceOperator isin conceal cchar=⋵
+" syntax keyword pyNiceOperator iloc conceal cchar=⟦
+" syntax keyword pyNiceOperator loc conceal cchar=⦃
+" syntax keyword pyNiceOperator copy conceal cchar=⎘
+" syntax match pyNiceKeyword "\<ascending=True\>" conceal cchar=↗
+" syntax match pyNiceKeyword "\<ascending=False\>" conceal cchar=↘
+" syntax match pyNiceOperator "\<\%(np\.\)\?nan\>" conceal cchar=ᴎ
+" syntax keyword pyNiceOperator is_unique conceal cchar=ƻ
+" syntax keyword pyNiceOperator diff conceal cchar=Δ

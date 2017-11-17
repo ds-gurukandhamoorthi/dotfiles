@@ -692,3 +692,9 @@ sudo apt update
 sudo apt upgrade
 #15:54  installed Firefox Quantum
 
+sudo apt install pypy
+sudo apt remove pypy
+
+17/11/2017
+sudo apt update
+sudo apt upgrade
