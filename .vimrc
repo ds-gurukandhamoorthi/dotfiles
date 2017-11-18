@@ -287,6 +287,7 @@ let g:autopep8_ignore='E731'
 " syntax match pyNiceOperator "\<\%(np\.\)\?arange\>" conceal cchar=…
 " syntax keyword pyNiceOperator read conceal cchar=⇧
 " syntax keyword pyNiceOperator imread conceal cchar=⇧
+" syntax match pyNiceOperator "\<\%(pd\.\)\?read" conceal cchar=⇧
 " syntax keyword pyNiceOperator write conceal cchar=⇩
 " syntax keyword pyNiceOperator imsave conceal cchar=⇩
 " syntax keyword pyNiceOperator args conceal cchar=𝖆
@@ -389,10 +390,9 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator cumprod conceal cchar=𝝥
 " syntax match pyNiceOperator "\<\%(random\.\)\?randrange\>" conceal cchar=Ʀ
 " syntax match pyNiceOperator "\<\%(np\.random\.\)\?randn\>" conceal cchar=⍰
-" " we create an intersection ^ of unique elements
-" syntax keyword pyNiceOperator unique conceal cchar=û
 " syntax match pyNiceOperator " @ " conceal cchar=•
 " syntax keyword pyNiceOperator index conceal cchar=⚷
+" syntax keyword pyNiceOperator index_col conceal cchar=⚷
 " syntax keyword pyNiceOperator isin conceal cchar=⋵
 " syntax keyword pyNiceOperator iloc conceal cchar=⟦
 " syntax keyword pyNiceOperator loc conceal cchar=⦃
@@ -400,5 +400,10 @@ let g:autopep8_ignore='E731'
 " syntax match pyNiceKeyword "\<ascending=True\>" conceal cchar=↗
 " syntax match pyNiceKeyword "\<ascending=False\>" conceal cchar=↘
 " syntax match pyNiceOperator "\<\%(np\.\)\?nan\>" conceal cchar=ᴎ
+" " we create an intersection ^ of unique elements
+" " syntax keyword pyNiceOperator unique conceal cchar=û
+" " no two elements are repeated
+" syntax keyword pyNiceOperator unique conceal cchar=ƻ
 " syntax keyword pyNiceOperator is_unique conceal cchar=ƻ
 " syntax keyword pyNiceOperator diff conceal cchar=Δ
+" syntax keyword pyNiceOperator sep conceal cchar=␣

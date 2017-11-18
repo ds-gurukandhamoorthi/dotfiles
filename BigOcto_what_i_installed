@@ -698,3 +698,34 @@ sudo apt remove pypy
 17/11/2017
 sudo apt update
 sudo apt upgrade
+sudo pip3.6 install pandas_datareader
+
+18/11/2017
+sudo pip3.6 install udiskie
+sudo pip3.6 install gi
+sudo apt install anyremote
+sudo apt install ganyremote
+sudo apt install blueman
+sudo hciconfig hci0 up
+systemctl start bluetooth
+hciconfig hci0 up
+systemctl start bluetooth
+# FROM STACK OVERFLOW
+# bluetoothctl
+# [bluetooth]# discoverable on
+# [bluetooth]# pairable on
+# [bluetooth]# agent NoInputNoOutput
+# [bluetooth]# scan on
+# [bluetooth]# scan off #after you found the device
+# [bluetooth]# trust 44:D8:84:02:A3:17
+# [bluetooth]# pair 44:D8:84:02:A3:17
+# [bluetooth]# connect 44:D8:84:02:A3:17
+# PAIRING SUCCESSFUL
+sudo pip3.6 install lxml
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+sudo apt install libhdf5-dev
+sudo pip3.6 install tables
+sudo pip3.6 install feather-format
+sudo pip3.6 install xlrd
