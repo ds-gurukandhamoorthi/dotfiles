@@ -101,3 +101,7 @@ alias ramda-console exec urxvt -e /home/guru/bin/ramda-console.sh
 alias python-console exec urxvt -e /home/guru/bin/python-console.sh
 definekey top H-c ramda-console
 definekey top H-p python-console
+
+alias borderless set border 0
+bind C-KP_0 borderless
+definekey top C-KP_0 borderless
