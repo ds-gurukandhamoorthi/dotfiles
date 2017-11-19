@@ -729,3 +729,5 @@ sudo apt install libhdf5-dev
 sudo pip3.6 install tables
 sudo pip3.6 install feather-format
 sudo pip3.6 install xlrd
+sudo pip3.6 install openpyxl
+sudo pip3.6 install sqlalchemy
