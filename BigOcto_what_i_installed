@@ -731,3 +731,6 @@ sudo pip3.6 install feather-format
 sudo pip3.6 install xlrd
 sudo pip3.6 install openpyxl
 sudo pip3.6 install sqlalchemy
+
+20/11/2017
+sudo pip3.6 install pyautogui
