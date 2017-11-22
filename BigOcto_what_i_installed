@@ -734,3 +734,13 @@ sudo pip3.6 install sqlalchemy
 
 20/11/2017
 sudo pip3.6 install pyautogui
+
+21/11/2017
+sudo pip3.6 install torrequest
+sudo apt update && sudo apt upgrade
+sudo apt install tor
+
+22/11/2017
+sudo pip3.6 install seaborn
+sudo apt update
+sudo apt upgrade
