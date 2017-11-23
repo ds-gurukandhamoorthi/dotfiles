@@ -20,7 +20,8 @@ IMPORTS = [
     'subprocess',
     'requests',
     'seaborn as sns',
-    'statsmodels as sm',
+    'statsmodels.api as sm',
+    'statsmodels.formula.api as smf',
 ]
 
 STATIC_IMPORTS = [

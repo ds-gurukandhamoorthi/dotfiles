@@ -744,3 +744,7 @@ sudo apt install tor
 sudo pip3.6 install seaborn
 sudo apt update
 sudo apt upgrade
+
+23/11/2017
+sudo apt update
+sudo apt upgrade
