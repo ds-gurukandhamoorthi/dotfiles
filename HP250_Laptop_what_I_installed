@@ -605,3 +605,9 @@ sudo apt remove thunderbird
 16/11/2017
 sudo apt update && sudo apt upgrade
 #Firefox Quantum
+
+23/11/2017
+sudo pip3 install funcy
+
+24/11/2017
+sudo pip3 install ipython
