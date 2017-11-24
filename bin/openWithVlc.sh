@@ -4,6 +4,6 @@ FILE=$(ls | dmenu -i -l 3)
 echo $FILE
 if [ -n "$FILE" ]
 then
-	cvlc "$FILE"
+	cvlc --play-and-exit "$FILE"
 fi
 
