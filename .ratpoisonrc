@@ -80,7 +80,7 @@ bind a show-date-time
 definekey top s-Right sselect 1
 definekey top s-Left sselect 0
 
-set fwcolor red
+set fwcolor limegreen
 
 bind r exec xdotool key Ctrl+F5
 
@@ -98,10 +98,18 @@ bind KP_8 select 8
 bind KP_9 select 9
 
 alias ramda-console exec urxvt -e /home/guru/bin/ramda-console.sh
-alias python-console exec urxvt -e /home/guru/bin/python-console.sh
+"alias python-console exec urxvt -e /home/guru/bin/python-console.sh
+alias python-console exec urxvt -e /home/guru/bin/tmux_ipython.sh
 definekey top H-c ramda-console
 definekey top H-p python-console
 
 alias borderless set border 0
 bind C-KP_0 borderless
 definekey top C-KP_0 borderless
+
+#alias one-line-vim-slime exec ratpoison -c 'meta Escape' -c 'meta S-v' -c 'meta C-c' -c 'meta C-c'
+#alias one-line-vim-slime exec xdotool key V key Ctrl+c key Ctrl+c
+alias one-line-vim-slime exec /home/guru/bin/exec_vim_slime_one_line.py
+alias one-paragraph-vim-slime exec /home/guru/bin/exec_vim_slime_paragraph.py
+definekey top H-e one-line-vim-slime
+definekey top H-E one-paragraph-vim-slime

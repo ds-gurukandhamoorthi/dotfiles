@@ -173,3 +173,11 @@ def main():
 if __name__ == '__main__':
 	main()
 endsnippet
+snippet "(["'])([a-z,A-z]+)\1/" "split string" r
+`!p to_split=match.group(2)
+if ',' in to_split:
+	res=str(to_split.split(','))
+else:
+	res=str(list(to_split))
+snip.rv=res`
+endsnippet

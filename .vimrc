@@ -407,3 +407,4 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator is_unique conceal cchar=ƻ
 " syntax keyword pyNiceOperator diff conceal cchar=Δ
 " syntax keyword pyNiceOperator sep conceal cchar=␣
+" syntax match pyNiceKeyword "\<inplace=True\>" conceal cchar=！
