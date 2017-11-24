@@ -748,3 +748,8 @@ sudo apt upgrade
 23/11/2017
 sudo apt update
 sudo apt upgrade
+sudo pip3.6 install statsmodels
+
+24/11/2014
+sudo apt install most
+sudo apt remove most

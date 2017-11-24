@@ -80,7 +80,7 @@ bind a show-date-time
 definekey top s-Right sselect 1
 definekey top s-Left sselect 0
 
-set fwcolor red
+set fwcolor limegreen
 
 bind r exec xdotool key Ctrl+F5
 
@@ -98,7 +98,8 @@ bind KP_8 select 8
 bind KP_9 select 9
 
 alias ramda-console exec urxvt -e /home/guru/bin/ramda-console.sh
-alias python-console exec urxvt -e /home/guru/bin/python-console.sh
+"alias python-console exec urxvt -e /home/guru/bin/python-console.sh
+alias python-console exec urxvt -e /home/guru/bin/tmux_ipython.sh
 definekey top H-c ramda-console
 definekey top H-p python-console
 
