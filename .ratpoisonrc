@@ -113,3 +113,6 @@ alias one-line-vim-slime exec /home/guru/bin/exec_vim_slime_one_line.py
 alias one-paragraph-vim-slime exec /home/guru/bin/exec_vim_slime_paragraph.py
 definekey top H-e one-line-vim-slime
 definekey top H-E one-paragraph-vim-slime
+
+alias select-video select Vlc
+bind v select-video
