@@ -22,6 +22,7 @@ IMPORTS = [
     'seaborn as sns',
     'statsmodels.api as sm',
     'statsmodels.formula.api as smf',
+    'zipline as zp',
 ]
 
 STATIC_IMPORTS = [

@@ -750,6 +750,51 @@ sudo apt update
 sudo apt upgrade
 sudo pip3.6 install statsmodels
 
-24/11/2014
+24/11/2017
 sudo apt install most
 sudo apt remove most
+
+25/11/2017
+sudo pip3.6 install fix-yahoo-finance
+
+26/11/2017
+sudo apt install python3.6-dev
+sudo pip3.6 install ujson
+sudo pip3.6 install numba
+
+27/11/2017
+sudo pip3.6 install quandl
+sudo pip3.6 install mibian
+sudo pip3.6 install zipline
+sudo pip3.6 install tzlocal
+
+28/11/2017
+sudo apt install libcurl4-gnutls-dev
+sudo apt install librtmp-dev
+sudo pip3.6 uninstall pycurl
+sudo pip3.6 install pycurl
+sudo pip3.6 install setproctitle
+sudo pip3.6 install gi --upgrade
+sudo apt install --reinstall python-gi
+sudo apt install python3-pyside
+sudo pip3.6 install gobject
+sudo apt install --reinstall python-gobject
+sudo pip3.6 uninstall gi
+sudo pip3.6 install gi
+sudo pip3.6 install pgi
+sudo pip3.6 uninstall gi
+sudo pip3.6 install gi
+#mintupdate kernel updated
+#Linux guru-desktop 4.10.0-40-generic #44~16.04.1-Ubuntu SMP Thu Nov 9 15:37:44 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
+
+29/11/2017
+sudo apt update
+sudo apt upgrade
+
+30/11/2017
+sudo apt update
+sudo apt upgrade
+
+07/12/2017
+sudo apt update
+sudo apt upgrade
