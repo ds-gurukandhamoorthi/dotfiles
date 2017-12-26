@@ -798,3 +798,41 @@ sudo apt upgrade
 07/12/2017
 sudo apt update
 sudo apt upgrade
+# wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz
+# and install
+sudo pip3.6 install ta-lib
+
+09/12/2017
+sudo apt install joy2key
+sudo add-apt-repository ppa:nilarimogard/webupd8
+sudo apt update
+sudo apt install antimicro
+sudo apt upgrade
+sudo pip3.6 install stockstats
+
+11/12/2017
+sudo minupdate #kernel
+sudo apt update
+sudo apt upgrade
+
+12/12/2017
+sudo apt update
+sudo apt upgrade
+
+18/12/2017
+sudo npm install -g react-native-git-upgrade
+sudo apt update
+sudo apt upgrade
+
+21/12/2017
+sudo apt update
+sudo apt upgrade
+
+26/12/2017
+sudo apt update
+sudo apt upgrade
+# remove pyhton link to python3.6 replace it with link to python3.5 to execute mintupdate
+# MINT UPGRADE SYLVIA   sudo mintupdate  Edit menu  -> update to ...
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
