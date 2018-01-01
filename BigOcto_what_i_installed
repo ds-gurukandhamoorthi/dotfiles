@@ -836,3 +836,22 @@ sudo apt upgrade
 sudo apt update
 sudo apt upgrade
 sudo apt autoremove
+
+30/12/2017
+sudo apt update
+sudo apt upgrade
+
+31/12/2017
+sudo apt update
+sudo apt upgrade
+sudo pip3.6 install ansible
+sudo apt install virtualbox
+sudo apt install vagrant
+sudo apt install virtualbox-qt
+
+01/01/2018
+#ansible-vim plugin (after installing it single backspace is sufficient...)
+#nginx.vim plugin
+sudo apt update
+sudo apt upgrade
+sudo npm install -g yaml2json

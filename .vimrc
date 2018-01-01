@@ -408,3 +408,5 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator diff conceal cchar=Δ
 " syntax keyword pyNiceOperator sep conceal cchar=␣
 " syntax match pyNiceKeyword "\<inplace=True\>" conceal cchar=！
+
+au BufRead,BufNewFile */playbooks/*.yml set filetype=ansible
