@@ -855,3 +855,8 @@ sudo apt install virtualbox-qt
 sudo apt update
 sudo apt upgrade
 sudo npm install -g yaml2json
+
+09/01/2018
+sudo apt install tomcat8
+sudo apt update
+sudo apt upgrade
