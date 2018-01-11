@@ -860,3 +860,11 @@ sudo npm install -g yaml2json
 sudo apt install tomcat8
 sudo apt update
 sudo apt upgrade
+#install tomcat8.5.24 to /opt/tomcat/
+sudo apt install maven
+sudo npm install -g wscat
+sudo npm i -g npm
+
+11/01/2018
+sudo apt install phantomjs
+sudo pip3 install pyvirtualdisplay
