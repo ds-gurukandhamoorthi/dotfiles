@@ -128,3 +128,4 @@ man() {
     command man "$@"
 }
 export PATH=$PATH:/opt/geckodriver/
+export PATH=$PATH:/opt/chromedriver/

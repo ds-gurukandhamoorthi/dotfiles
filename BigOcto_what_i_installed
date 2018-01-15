@@ -868,3 +868,14 @@ sudo npm i -g npm
 11/01/2018
 sudo apt install phantomjs
 sudo pip3 install pyvirtualdisplay
+
+12/01/2018
+sudo npm install -g casperjs
+
+13/01/2018
+sudo apt install whois
+yarn global add myna-parser
+#install hadoop : NOT YET SUCCESSFUL
+#to get xmllint
+sudo apt install libxml2-utils
+sudo apt install ssh

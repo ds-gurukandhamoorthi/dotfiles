@@ -93,3 +93,8 @@ sudo apt update
 sudo apt upgrade
 sudo apt install vlc
 sudo apt install mplayer
+
+11/01/2018
+sudo apt update
+sudo apt upgrade
+sudo apt install iceweasel
