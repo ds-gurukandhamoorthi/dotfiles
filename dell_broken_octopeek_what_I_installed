@@ -1,0 +1,15 @@
+16/01/2018
+#installed Linux Mint 18.1 from USB  (the 18.3 lxde put using netbootin wouldn't function)
+sudo apt update
+sudo apt upgrade
+sudo apt update
+sudo apt upgrade
+#sudo mint update
+#Linux kernel 4.4.0-109.132
+#Edit -> Upgrade to Sylvia 18.3
+sudo apt update
+sudo apt upgrade
+
+
+
+

@@ -879,3 +879,7 @@ yarn global add myna-parser
 #to get xmllint
 sudo apt install libxml2-utils
 sudo apt install ssh
+
+16/010/2018
+sudo apt install unetbootin
+sudo apt install gparted
