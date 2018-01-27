@@ -65,7 +65,7 @@ apt install lsof
 #in the bin directory of glassfish
 #./asadmin change-admin-password --user admin   #the DEFAULT PASSWORD BEING BLANK
 
-#./adadmin --host localhost --port 4848 enable-secureadmin
+#./asadmin --host localhost --port 4848 enable-secureadmin
 
 
 23/12/2016
@@ -73,7 +73,7 @@ apt install tree
  
 
 26/12/2016
-# -Djboss.http.port=80    passed to standalon.sh of /opt/wildfly/bin   to be able to run programs without specifying port... so there is no more need to do it with iptables...
+# -Djboss.http.port=80    passed to standalone.sh of /opt/wildfly/bin   to be able to run programs without specifying port... so there is no more need to do it with iptables...
 
 02/01/2017
 sudo apt update
@@ -98,3 +98,41 @@ sudo apt install mplayer
 sudo apt update
 sudo apt upgrade
 sudo apt install iceweasel
+
+19/01/2018
+sudo apt install maven
+sudo apt install apache2
+
+24/01/2018
+sudo apt install curl
+curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
+sudo apt install nodejs
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update
+sudo apt upgrade
+sudo apt install yarn
+yarn global add yo
+yarn global add generator-jhipster
+
+
+25/01/2018
+apt-get install git libssl-dev libpam0g-dev zlib1g-dev dh-autoreconf
+#git clone https://github.com/shellinabox/shellinabox.git && cd shellinabox
+
+#sudo iptables -A PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDRIRECT --to-port 4200
+#I made the above mistake.
+#to correct the mistake...
+#sudo iptables -D PREROUTING -t nat -i eth0 -p tcp --dport 80 -j REDRIRECT --to-port 4200
+
+26/01/2018
+sudo apt install tcpdump
+
+
+27/01/2018
+#for mosh
+iptables -I INPUT 1 -p udp --dport 60000:61000 -j ACCEPT
+
+

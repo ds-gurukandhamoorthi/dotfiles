@@ -880,6 +880,13 @@ yarn global add myna-parser
 sudo apt install libxml2-utils
 sudo apt install ssh
 
-16/010/2018
+16/01/2018
 sudo apt install unetbootin
 sudo apt install gparted
+
+17/01/2018
+sudo apt install duck
+sudo apt remove duck #because this is not cyberduck
+
+20/01/2018
+sudo yarn global add generator-jhipster
