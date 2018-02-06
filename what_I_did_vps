@@ -134,5 +134,26 @@ sudo apt install tcpdump
 27/01/2018
 #for mosh
 iptables -I INPUT 1 -p udp --dport 60000:61000 -j ACCEPT
+#installed pathogen for vim
+mkdir -p ~/.vim/autoload ~/.vim/bundle
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
+31/01/2018
+sudo apt install tmux
+sudo apt install jq
 
+02/02/2018
+apt install python-pip
+apt install python3-pip
+pip3 install selenium
+pip3 install pyvirtualdisplay
+apt install xvfb
+
+05/02/2018
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch |  apt-key add -
+# apt-get install apt-transport-https
+# apt-transport-https is already installed...
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt update
+sudo apt upgrade
+sudo apt install filebeat

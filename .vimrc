@@ -111,7 +111,9 @@ autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
 autocmd VimEnter *.py NERDTree
 autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
 
-autocmd BufEnter * lcd %:p:h
+" Clashes with vim fugitive
+" autocmd BufEnter * lcd %:p:h
+" set acd
 
 " autocmd VimEnter :syntax match Ramda "R\." conceal
 syntax match Ramda "R\." conceal
