@@ -157,3 +157,6 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | tee -a /e
 sudo apt update
 sudo apt upgrade
 sudo apt install filebeat
+
+09/02/2018
+sudo apt install xclip

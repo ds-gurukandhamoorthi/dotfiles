@@ -923,3 +923,11 @@ echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee 
 sudo apt update
 sudo apt upgrade
 sudo apt install filebeat
+
+10/02/2018
+sudo apt update
+sudo apt upgrade
+
+11/02/2018
+sudo apt update
+sudo apt upgrade
