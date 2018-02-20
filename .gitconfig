@@ -1,0 +1,12 @@
+[user]
+	email = ds.gurukandhamoorthi@gmail.com
+	name = SWAMINATHAN Gurukandhamoorthi
+[push]
+	default = simple
+[credential]
+	helper = cache
+[alias]
+    unstage = reset HEAD --
+    last = log -1 HEAD
+
+
