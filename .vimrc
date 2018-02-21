@@ -410,5 +410,11 @@ let g:autopep8_ignore='E731'
 " syntax keyword pyNiceOperator diff conceal cchar=Δ
 " syntax keyword pyNiceOperator sep conceal cchar=␣
 " syntax match pyNiceKeyword "\<inplace=True\>" conceal cchar=！
+" syntax match pyNiceKeyword "\<\%(time\.\)\?sleep\>" conceal cchar=⌛
+" " The order of the following two elements are important
+" syntax match pyNiceKeyword "\<find_element" conceal cchar=𝟙
+" syntax match pyNiceKeyword "\<find_elements" conceal cchar=＊
+" syntax match pyNiceKeyword "\<get_attribute\>" conceal cchar=∷
+" syntax match pyNiceKeyword "by_id\>" conceal cchar=#
 
 au BufRead,BufNewFile */playbooks/*.yml set filetype=ansible
