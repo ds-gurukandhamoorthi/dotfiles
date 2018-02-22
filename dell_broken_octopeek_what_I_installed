@@ -11,5 +11,8 @@ sudo apt update
 sudo apt upgrade
 
 
+21/02/2018
+There are somethings to be added here... ratpoison...
 
-
+22/02/2018
+sudo apt install feh

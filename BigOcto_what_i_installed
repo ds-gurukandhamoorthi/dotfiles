@@ -940,3 +940,6 @@ sudo apt upgrade
 sudo pip3 install wget
 sudo apt update
 sudo apt upgrade
+
+22/02/2018
+sudo pip3 install autologging
