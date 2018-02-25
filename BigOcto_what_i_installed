@@ -943,3 +943,11 @@ sudo apt upgrade
 
 22/02/2018
 sudo pip3 install autologging
+
+23/02/2018
+sudo apt update
+sudo apt upgrade
+
+25/02/2018
+sudo apt install lighttpd
+sudo apt install gitweb
