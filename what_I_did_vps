@@ -160,3 +160,10 @@ sudo apt install filebeat
 
 09/02/2018
 sudo apt install xclip
+
+27/02/2018
+sudo apt install ipython
+sudo pip3 install ipython
+sudo apt install libxml2-dev
+sudo apt install python3-lxml
+
