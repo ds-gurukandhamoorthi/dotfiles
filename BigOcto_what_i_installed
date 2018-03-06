@@ -951,3 +951,23 @@ sudo apt upgrade
 25/02/2018
 sudo apt install lighttpd
 sudo apt install gitweb
+
+28/02/2018
+sudo gem install gist
+sudo apt update
+sudo apt upgrade
+
+03/03/2018
+#Gist plugin vim , webapi-vim; git config --global github.user ds-gurukandhamoorthi
+sudo apt update
+sudo apt upgrade
+
+sudo apt install libfuse-dev
+
+04/03/2018
+sudo apt install cutycapt
+sudo pip3 install imgur-uploader
+sudo apt install latex2html
+sudo apt install hevea
+sudo apt update
+sudo apt upgrade

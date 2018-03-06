@@ -129,3 +129,6 @@ man() {
 }
 export PATH=$PATH:/opt/geckodriver/
 export PATH=$PATH:/opt/chromedriver/
+export PATH=$PATH:/home/guru/progs/tup/
+alias tidy='tidy -q'
+source /home/guru/GURU_API.sh

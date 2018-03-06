@@ -167,3 +167,10 @@ sudo pip3 install ipython
 sudo apt install libxml2-dev
 sudo apt install python3-lxml
 
+28/02/2018
+sudo apt install gem
+sudo apt install rubygems
+sudo apt remove gem #gem is not what I thought it was... gem command of ruby is provided by rubygems
+
+gem install gist
+#Gist plugin vim , webapi-vim; git config --global github.user ds-gurukandhamoorthi
