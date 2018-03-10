@@ -11,8 +11,29 @@ sudo apt update
 sudo apt upgrade
 
 
+20/02/2018
+#lxterminal
+#ratpoison
+#python
+#rxvt unicode
+
 21/02/2018
-There are somethings to be added here... ratpoison...
+sudo apt install python3-pip
+sudo pip3 install selenium
+sudo pip3 install --upgrade pip3
+#geckodriver
+sudo apt install vim
+sudo apt install git
+
+#vim pathogen
+#vim commentary
+sudo pip3 install --upgrade setuptools
+sudo pip3 install ipython
+sudo apt install silversearcher-ag
 
 22/02/2018
 sudo apt install feh
+
+08/03/2018
+sudo apt install tmux
+pip3 install pyvirtualdisplay

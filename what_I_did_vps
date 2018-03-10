@@ -174,3 +174,14 @@ sudo apt remove gem #gem is not what I thought it was... gem command of ruby is 
 
 gem install gist
 #Gist plugin vim , webapi-vim; git config --global github.user ds-gurukandhamoorthi
+
+07/03/2018
+pip3 install ansible-lint
+apt install libffi-dev
+pip3 install cffi
+
+09/03/2018
+sudo apt install lynx
+
+10/03/2018
+yarn global add mermaid.cli

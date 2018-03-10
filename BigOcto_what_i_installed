@@ -971,3 +971,15 @@ sudo apt install latex2html
 sudo apt install hevea
 sudo apt update
 sudo apt upgrade
+
+10/03/2018
+sudo yarn global add mermaid.cli
+sudo npm upgrade --global yarn
+sudo apt update
+sudo apt upgrade
+sudo yarn global add prettier
+sudo yarn global add @prettier/plugin-python
+sudo npm install -g yarn
+sudo npm i -g npm
+sudo yarn global remove mermaid.cli
+sudo yarn global add mermaid
