@@ -12,3 +12,5 @@
 
 [github]
 	user = ds-gurukandhamoorthi
+[core]
+	excludesfile = /home/guru/.gitignore_global
