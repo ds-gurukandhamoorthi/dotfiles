@@ -993,3 +993,22 @@ sudo apt install screen
 17/03/2018
 sudo apt update
 sudo apt upgrade
+
+18/03/2018
+sudo apt install libreadline-dev
+sudo apt update
+sudo apt upgrade
+
+22/03/2018
+#got firefox 59
+sudo apt update
+sudo apt upgrade
+sudo apt remove --purge alsa-base pulseaudio
+sudo apt install alsa-base pulseaudio
+sudo alsa force-reload
+sudo apt install mplayer
+
+#this solved the sound problem
+alsactl init
+sudo pip install --upgrade pip
+sudo pip3 install tqdm
