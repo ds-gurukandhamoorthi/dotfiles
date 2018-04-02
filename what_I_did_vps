@@ -185,3 +185,20 @@ sudo apt install lynx
 
 10/03/2018
 yarn global add mermaid.cli
+
+30/03/2018
+apt update
+apt upgrade
+apt dist-upgrade #but didn't get the debian 9
+#got debian 9.4
+
+#change jessie to stretch in /etc/apt/sources.list
+apt dist-upgrade
+
+31/03/2018
+pip3 install selenium
+pip3 install pyVirtualdisplay
+pip3 install autologging
+
+01/04/2018
+apt install rabbitmq-server

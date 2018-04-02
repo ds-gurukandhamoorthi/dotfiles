@@ -7,6 +7,7 @@ exec xrandr --output DVI-0 --rotate left
 # somehow the configuration in xessionrc doesn't get executed
 # it seems to get executed now so I comment the following line
 #exec  xmodmap /home/guru/.xmodmaprc 
+exec unclutter &
 exec xbindkeys &
 
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp

@@ -993,6 +993,7 @@ sudo apt install screen
 17/03/2018
 sudo apt update
 sudo apt upgrade
+sudo pip3 install scrapy
 
 18/03/2018
 sudo apt install libreadline-dev
@@ -1012,3 +1013,32 @@ sudo apt install mplayer
 alsactl init
 sudo pip install --upgrade pip
 sudo pip3 install tqdm
+
+30/03/2018
+sudo pip3 install pssh
+sudo pip3 uninstall pssh
+sudo apt install pssh
+sudo apt remove pssh
+
+31/03/2018
+sudo apt install exiftool
+sudo apt update
+sudo apt upgrade
+sudo pip3 install piexif
+sudo pip3 install splinter
+sudo pip3 install zope.testbrowser
+
+01/04/2018
+sudo apt install elasticsearch
+sudo systemctl enable elasticsearch
+sudo apt install unclutter
+sudo apt install rabbitmq-server
+sudo pip3 install pika
+
+02/04/2018
+
+sudo apt remove vagrant
+#download vagrant_2.03_x86_64.deb
+sudo dpkg -i vagrant_2.03_x86_64.deb
+sudo pip3 install ansible-lint
+sudo apt install python3-venv
