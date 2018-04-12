@@ -1042,3 +1042,10 @@ sudo apt remove vagrant
 sudo dpkg -i vagrant_2.03_x86_64.deb
 sudo pip3 install ansible-lint
 sudo apt install python3-venv
+
+08/04/2018
+sudo apt install gnuplot
+sudo apt update
+sudo apt upgrade
+
+

@@ -202,3 +202,10 @@ pip3 install autologging
 
 01/04/2018
 apt install rabbitmq-server
+
+12/04/2018
+wget -O - https://debian.neo4j.org/neotechnology.gpg.key |  apt-key add -
+echo 'deb http://debian.neo4j.org/repo stable/' | tee -a /etc/apt/sources.list.d/neo4j.list
+cat /etc/apt/sources.list.d/neo4j.list
+sudo apt install neo4j
+
