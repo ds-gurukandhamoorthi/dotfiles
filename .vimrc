@@ -177,3 +177,5 @@ let g:autopep8_ignore='E731'
 
 au BufRead,BufNewFile */playbooks/*.yml set filetype=ansible
 set dictionary+=/home/guru/guru-infos/diary/most_used_words
+
+set keywordprg=dict\ -d\ wn

@@ -1049,3 +1049,14 @@ sudo apt update
 sudo apt upgrade
 
 
+
+13/04/2018
+sudo apt install maim
+sudo apt install slop
+
+21/04/2018
+sudo apt install beep #doesn't function
+
+26/04/2018
+sudo apt install dict
+#This time I didn't even install sdcv

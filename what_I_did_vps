@@ -209,3 +209,12 @@ echo 'deb http://debian.neo4j.org/repo stable/' | tee -a /etc/apt/sources.list.d
 cat /etc/apt/sources.list.d/neo4j.list
 sudo apt install neo4j
 
+19/04/2018
+apt install bc
+
+24/04/2018
+apt install wn
+apt install sdcv
+
+26/04/2018
+apt install dict
