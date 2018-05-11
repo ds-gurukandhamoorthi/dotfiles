@@ -1060,3 +1060,38 @@ sudo apt install beep #doesn't function
 26/04/2018
 sudo apt install dict
 #This time I didn't even install sdcv
+sudo apt update
+sudo apt upgrade
+
+01/05/2018
+sudo apt install boxes
+sudo apt update
+sudo apt upgrade
+
+03/05/2018
+sudo apt update
+sudo apt upgrade
+
+04/05/2018
+#Dr Dobb's Navigating Linux Source Code (About ctags...)
+sudo apt install id-utils
+sudo apt remove id-utils
+
+05/05/2018
+sudo modprobe pcskpr #to make beep function
+sudo apt-get install cw
+
+06/05/2018
+#delete the blacklist pcspkr line from /etc/modprobe.d/blacklist.conf
+sudo apt update
+sudo apt upgrade
+
+07/05/2018
+sudo apt update
+sudo apt upgrade
+#downdload ripgregp binary
+sudo dpkg -i ripgrep_0.8.1_amd64.deb
+
+#make firefox to open urls instead of google-chrome
+xdg-settings get default-web-browser # debian-sensible-browser.desktop
+xdg-settings set default-web-browser firefox.desktop

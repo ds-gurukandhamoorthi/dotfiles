@@ -91,7 +91,7 @@ autocmd BufRead *BigOcto_what_i_installed*  :$;
 
 "Just to make it skip to exact occurrence instead of just  the line containing
 "the occurence
-set grepprg=ack\ --nogroup\ --column\ $*
+" set grepprg=ag\ --nogroup\ --column
 set grepformat=%f:%l:%c:%m
 
 "JSX
@@ -102,7 +102,7 @@ autocmd BufRead *.js  map <F5> :!react-native run-android<CR>
 autocmd BufRead test.js  map <F5> :w <CR>:!node %<CR>
 autocmd BufRead *.vim  map <F5>  :source %<CR>
 autocmd BufRead .vimrc  map <F5> :source %<CR>
-autocmd BufRead *.html  map <F5> :!firefox %<CR>
+autocmd BufRead *.html  map <F5> :!xdg-open %:p<CR>
 
 autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.5 -q %<CR>
 autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
@@ -177,5 +177,15 @@ let g:autopep8_ignore='E731'
 
 au BufRead,BufNewFile */playbooks/*.yml set filetype=ansible
 set dictionary+=/home/guru/guru-infos/diary/most_used_words
+set thesaurus+=/usr/share/dict/thes/mthesaur.txt
 
 set keywordprg=dict\ -d\ wn
+
+au VimEnter *.notes set spell
+au VimEnter *_notes set spell
+
+autocmd BufRead,BufNewFile 201* set spell
+
+"Show the modifications made to the original file (snippet found in Vim Doc)
+command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+
