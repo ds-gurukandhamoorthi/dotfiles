@@ -93,3 +93,13 @@ sudo apt update
 sudo apt upgrade
 sudo apt install vlc
 sudo apt install mplayer
+
+19/01/2018
+sudo apt install maven
+sudo apt install apache2
+
+#kill -9 wildfly process
+update-alternatives --config editor #then choose vim
+
+#create user guru
+sudo usermod -a -G sudo guru
