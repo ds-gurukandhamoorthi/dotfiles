@@ -153,3 +153,17 @@ if (A_PriorHotKey = "~Ctrl" AND A_TimeSincePriorHotkey < 400)
 Sleep 0
 KeyWait Ctrl
 return
+
+;Accented characters
+:?*:'e::é
+:?*:``a::à
+:?*:``e::è
+:?*:``u::ù
+:?*:''::'
+:?*:^a::â
+:?*:^e::ê
+:?*:^i::î
+:?*:^o::ô
+:?*:^u::û
+:?*:,c::ç
+

@@ -868,3 +868,230 @@ sudo npm i -g npm
 11/01/2018
 sudo apt install phantomjs
 sudo pip3 install pyvirtualdisplay
+
+12/01/2018
+sudo npm install -g casperjs
+
+13/01/2018
+sudo apt install whois
+yarn global add myna-parser
+#install hadoop : NOT YET SUCCESSFUL
+#to get xmllint
+sudo apt install libxml2-utils
+sudo apt install ssh
+
+16/01/2018
+sudo apt install unetbootin
+sudo apt install gparted
+
+17/01/2018
+sudo apt install duck
+sudo apt remove duck #because this is not cyberduck
+
+20/01/2018
+sudo yarn global add generator-jhipster
+
+27/01/2018
+sudo apt install mosh
+
+sudo apt update
+sudo apt upgrade
+#got firefox 58.0
+
+#installed fugitive vim
+sudo apt install qjoypad
+sudo apt install xmlstarlet
+
+02/02/2018
+sudo apt update
+sudo apt upgrade
+sudo pip3.6 install pyvirtualdisplay
+sudo apt update
+sudo apt upgrade
+sudo apt install xvfb
+sudo yarn global add gulp-cli
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+
+06/02/2018
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo  apt-key add -
+#apt install apt-transport-https
+#apt-transport-https is already installed...
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
+sudo apt update
+sudo apt upgrade
+sudo apt install filebeat
+
+10/02/2018
+sudo apt update
+sudo apt upgrade
+
+11/02/2018
+sudo apt update
+sudo apt upgrade
+
+19/02/2018
+sudo apt update
+sudo apt upgrade
+
+21/02/2018
+sudo pip3 install wget
+sudo apt update
+sudo apt upgrade
+
+22/02/2018
+sudo pip3 install autologging
+
+23/02/2018
+sudo apt update
+sudo apt upgrade
+
+25/02/2018
+sudo apt install lighttpd
+sudo apt install gitweb
+
+28/02/2018
+sudo gem install gist
+sudo apt update
+sudo apt upgrade
+
+03/03/2018
+#Gist plugin vim , webapi-vim; git config --global github.user ds-gurukandhamoorthi
+sudo apt update
+sudo apt upgrade
+
+sudo apt install libfuse-dev
+
+04/03/2018
+sudo apt install cutycapt
+sudo pip3 install imgur-uploader
+sudo apt install latex2html
+sudo apt install hevea
+sudo apt update
+sudo apt upgrade
+
+10/03/2018
+sudo yarn global add mermaid.cli
+sudo npm upgrade --global yarn
+sudo apt update
+sudo apt upgrade
+sudo yarn global add prettier
+sudo yarn global add @prettier/plugin-python
+sudo npm install -g yarn
+sudo npm i -g npm
+sudo yarn global remove mermaid.cli
+sudo yarn global add mermaid
+
+11/03/2018
+sudo apt install wdiff
+sudo apt update
+sudo apt upgrade
+sudo apt install screen
+
+17/03/2018
+sudo apt update
+sudo apt upgrade
+sudo pip3 install scrapy
+
+18/03/2018
+sudo apt install libreadline-dev
+sudo apt update
+sudo apt upgrade
+
+22/03/2018
+#got firefox 59
+sudo apt update
+sudo apt upgrade
+sudo apt remove --purge alsa-base pulseaudio
+sudo apt install alsa-base pulseaudio
+sudo alsa force-reload
+sudo apt install mplayer
+
+#this solved the sound problem
+alsactl init
+sudo pip install --upgrade pip
+sudo pip3 install tqdm
+
+30/03/2018
+sudo pip3 install pssh
+sudo pip3 uninstall pssh
+sudo apt install pssh
+sudo apt remove pssh
+
+31/03/2018
+sudo apt install exiftool
+sudo apt update
+sudo apt upgrade
+sudo pip3 install piexif
+sudo pip3 install splinter
+sudo pip3 install zope.testbrowser
+
+01/04/2018
+sudo apt install elasticsearch
+sudo systemctl enable elasticsearch
+sudo apt install unclutter
+sudo apt install rabbitmq-server
+sudo pip3 install pika
+
+02/04/2018
+
+sudo apt remove vagrant
+#download vagrant_2.03_x86_64.deb
+sudo dpkg -i vagrant_2.03_x86_64.deb
+sudo pip3 install ansible-lint
+sudo apt install python3-venv
+
+08/04/2018
+sudo apt install gnuplot
+sudo apt update
+sudo apt upgrade
+
+
+
+13/04/2018
+sudo apt install maim
+sudo apt install slop
+
+21/04/2018
+sudo apt install beep #doesn't function
+
+26/04/2018
+sudo apt install dict
+#This time I didn't even install sdcv
+sudo apt update
+sudo apt upgrade
+
+01/05/2018
+sudo apt install boxes
+sudo apt update
+sudo apt upgrade
+
+03/05/2018
+sudo apt update
+sudo apt upgrade
+
+04/05/2018
+#Dr Dobb's Navigating Linux Source Code (About ctags...)
+sudo apt install id-utils
+sudo apt remove id-utils
+
+05/05/2018
+sudo modprobe pcskpr #to make beep function
+sudo apt-get install cw
+
+06/05/2018
+#delete the blacklist pcspkr line from /etc/modprobe.d/blacklist.conf
+sudo apt update
+sudo apt upgrade
+
+07/05/2018
+sudo apt update
+sudo apt upgrade
+#downdload ripgregp binary
+sudo dpkg -i ripgrep_0.8.1_amd64.deb
+
+#make firefox to open urls instead of google-chrome
+xdg-settings get default-web-browser # debian-sensible-browser.desktop
+xdg-settings set default-web-browser firefox.desktop
