@@ -1095,3 +1095,17 @@ sudo dpkg -i ripgrep_0.8.1_amd64.deb
 #make firefox to open urls instead of google-chrome
 xdg-settings get default-web-browser # debian-sensible-browser.desktop
 xdg-settings set default-web-browser firefox.desktop
+
+13/05/2018
+sudo apt update
+sudo apt upgrade
+#got firefox 60.0
+
+14/05/2018
+sudo apt install dateutils
+
+17/05/2018
+sudo apt install pdftk
+sudo apt install meson
+apt remove meson # I installed meson to try to build zathura with mupdf (but meson version incompatible)
+sudo apt install mupdf

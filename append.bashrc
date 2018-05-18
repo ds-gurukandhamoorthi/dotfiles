@@ -134,3 +134,5 @@ alias tidy='tidy -q'
 source /home/guru/GURU_API.sh
 export PATH=$PATH:/opt/gdrive/
 
+#one can use /dev/null but it raises an error
+alias xpdf='zathura -d /tmp/$(date +zathura_remember_me_not%s%N)'

@@ -65,9 +65,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
-"It slows down when typing j.. And it is irritating.
-"inoremap jk <esc>
-cnoremap jk <esc>
+" It slows down when typing j.. And it is irritating.
+" inoremap jk <esc>
+" cnoremap jk <esc>
 
 filetype plugin  on
 "packadd! matchit
