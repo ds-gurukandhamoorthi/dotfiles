@@ -611,3 +611,69 @@ sudo pip3 install funcy
 
 24/11/2017
 sudo pip3 install ipython
+
+09/12/2017
+sudo apt-get install libatlas-base-dev python-dev gfortran pkg-config libfreetype6-dev
+sudo apt install python3-dev
+sudo pip install setuptools
+sudo pip install zipline
+
+25/12/2017
+sudo apt update
+sudo apt upgrade
+
+
+
+27/12/2017
+sudo apt update
+sudo apt upgrade
+sudo apt autoremove
+
+09/01/2018
+sudo apt update
+sudo apt upgrade
+
+
+11/01/2018
+sudo pip3 install selenium
+
+19/01/2018
+sudo apt update
+sudo apt upgrade
+
+03/02/2018
+sudo apt update
+sudo apt upgrade
+#linux kernel 4.8.0-58 generic
+#linux update to 18.3 sylvia
+sudo apt update
+sudo apt upgrade
+#linux kernel 4.13.0-32.35 generic
+sudo apt update
+sudo apt upgrade
+
+17/02/2018
+sudo apt update
+sudo apt upgrade
+
+02/03/2018
+sudo apt update
+sudo apt upgrade
+
+22/03/2018
+sudo apt install tor
+sudo add-apt-repository ppa:webupd8team/tor-browser
+sudo apt update
+
+31/03/2018
+sudo apt update
+sudo apt upgrade
+
+
+
+06/05/2018
+#to fix firefox sound problem
+pulseaudio --start --exit-idle-time=-1
+
+08/05/2018
+sudo apt install tmux

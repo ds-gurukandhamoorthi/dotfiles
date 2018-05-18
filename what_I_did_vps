@@ -103,6 +103,12 @@ sudo apt install iceweasel
 sudo apt install maven
 sudo apt install apache2
 
+#kill -9 wildfly process
+update-alternatives --config editor #then choose vim
+
+#create user guru
+sudo usermod -a -G sudo guru
+j
 24/01/2018
 sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_9.x | sudo bash -
