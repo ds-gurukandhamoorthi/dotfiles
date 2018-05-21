@@ -91,7 +91,7 @@ autocmd BufRead *BigOcto_what_i_installed*  :$;
 
 "Just to make it skip to exact occurrence instead of just  the line containing
 "the occurence
-" set grepprg=ag\ --nogroup\ --column
+set grepprg=ag\ --nogroup\ --column
 set grepformat=%f:%l:%c:%m
 
 "JSX
