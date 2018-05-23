@@ -1,5 +1,3 @@
-"filetype indent on
-
 set nocompatible
 set smartindent
 set tabstop=4
@@ -7,11 +5,11 @@ set shiftwidth=4
 set expandtab
 set history=500
 
+syntax on
+filetype plugin indent on
 
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-syntax on
-filetype plugin indent on
 
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
@@ -188,4 +186,13 @@ autocmd BufRead,BufNewFile 201* set spell
 
 "Show the modifications made to the original file (snippet found in Vim Doc)
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
+
+set termwinkey=<C-L>
+
+" To make `vim http://url` function without having to install elinks
+" let g:netrw_http_cmd='curl'
+" let g:netrw_http_xcmd='-s -L -o'
+let g:netrw_http_cmd='wget'
+let g:netrw_http_xcmd='-q -O'
+let g:netrw_silent=1
 

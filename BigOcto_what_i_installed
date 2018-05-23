@@ -1092,7 +1092,7 @@ sudo apt upgrade
 #downdload ripgregp binary
 sudo dpkg -i ripgrep_0.8.1_amd64.deb
 
-#make firefox to open urls instead of google-chrome
+#make firefox to open urls instead of google-chrome (in Zathura)
 xdg-settings get default-web-browser # debian-sensible-browser.desktop
 xdg-settings set default-web-browser firefox.desktop
 
@@ -1109,3 +1109,27 @@ sudo apt install pdftk
 sudo apt install meson
 apt remove meson # I installed meson to try to build zathura with mupdf (but meson version incompatible)
 sudo apt install mupdf
+
+21/05/2018
+sudo apt update
+sudo apt upgrade
+sudo apt upgrade -f
+#vim got :term command. (Even though it still shows as Vim 8.0...)(:term was introduced in Vim 8.1)
+#(To make URxvt open urls in firefox)
+sudo update-alternatives --config x-www-browser
+
+22/05/2018
+sudo apt update
+sudo apt upgrade
+sudo apt install meson
+sudo pip3 install ipdb
+sudo pip3 install --upgrade pip
+#to make `vim http://url` function:
+apt install elinks
+apt remove elinks
+#it functioned but I prefer the `:let g:netrw_http_xcmd='-s -L -o'` `let g:netrw_http_cmd='curl'` solution
+#later used a sligthly faster solution with wget.  `:let g:netrw_http_xcmd='-q -O'` `let g:netrw_http_cmd='wget'` solution
+sudo add-apt-repository ppa:pi-rho/dev
+#tried urxvt and tmux-next  (There are some problems with urxvt and pythic-python the 'print' unicode symbol is not displayed correctly
+sudo add-apt-repository -r ppa:pi-rho/dev
+apt install ttf-dejavu

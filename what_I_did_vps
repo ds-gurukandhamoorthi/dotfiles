@@ -224,3 +224,7 @@ apt install sdcv
 
 26/04/2018
 apt install dict
+
+21/05/2018
+apt update
+apt upgrade
