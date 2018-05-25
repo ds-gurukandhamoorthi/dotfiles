@@ -1133,3 +1133,37 @@ sudo add-apt-repository ppa:pi-rho/dev
 #tried urxvt and tmux-next  (There are some problems with urxvt and pythic-python the 'print' unicode symbol is not displayed correctly
 sudo add-apt-repository -r ppa:pi-rho/dev
 apt install ttf-dejavu
+
+24/05/2018
+apt update
+apt upgrade
+apt install terminology
+apt remove terminology
+apt install tmuxinator
+#this dependency is needed to compile tmux
+sudo apt install libevent-dev
+#download tmux 2.7 and compile and try
+apt install rxvt-unicode-256color
+apt remove rxvt-unicode-256color
+apt install rxvt-unicode
+#tput colors returns 88 : for now I think it's sufficient... Maybe later install the 256 colors
+
+#installed it anyhow : There doesn't seem any troublesome differnce.
+apt install rxvt-unicode-256color
+sudo apt remove tmux #removes tmux and tmuxinator
+
+sudo gem install tmuxinator
+#auto-completion for tmuxinator bash
+
+#cd /usr/bin
+sudo ln -s /opt/tmux/tmux tmux
+# append to the file the line following it
+# /home/guru/.local/share/applications/mimeapps.list 
+# application/pdf=mupdf.desktop
+
+# image/png=feh.desktop
+# image/jpeg=feh.desktop
+
+# /usr/share/applications 
+# in feh.desktop
+# Exec=feh -. %F

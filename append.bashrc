@@ -138,3 +138,12 @@ export PATH=$PATH:/opt/gdrive/
 alias xpdf='zathura -d /tmp/$(date +zathura_remember_me_not%s%N)'
 
 alias rvlc='rvlc --one-instance --playlist-enqueue'
+
+# To get 256 color support in lxterminal
+if [ "$TERM" = "xterm" ]
+then
+    export TERM="xterm-256color"
+fi
+
+export PATH=$PATH:/opt/tmux/
+source ~/.tmuxinator/tmuxinator.bash

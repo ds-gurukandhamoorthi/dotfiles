@@ -35,5 +35,6 @@ URxvt.iso14755_52: false
 
 #Neon green
 URxvt*cursorColor: #32cd32
+!URxvt*cursorBlink: true
 
 #URxvt.perl-ext-common: ...,tabbed,...

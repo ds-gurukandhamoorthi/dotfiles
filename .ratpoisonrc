@@ -29,7 +29,7 @@ bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-stud
 alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind C term-most-frecent-directory
-bind c exec exec /home/guru/bin/rp-run-or-raise.sh URxvt "urxvt -e tmux"
+bind c exec exec /home/guru/bin/rp-run-or-raise.sh URxvt /home/guru/bin/open-regular-tmux-session.sh
 
 
 #exec xmodmap -e 'remove Lock = Caps_Lock' -e 'keysym Caps_Lock = F13' &
