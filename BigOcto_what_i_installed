@@ -1167,3 +1167,22 @@ sudo ln -s /opt/tmux/tmux tmux
 # /usr/share/applications 
 # in feh.desktop
 # Exec=feh -. %F
+
+
+27/05/2018
+sudo apt update
+sudo apt upgrade
+
+31/05/2018
+sudo apt update
+sudo apt upgrade
+
+03/06/2018
+# to make udiskie function
+sudo rm /usr/bin/python3
+sudo ln -s python3.5 /usr/bin/python3
+# to make ipython open with python 3.6
+#edit /usr/local/bin/ipython3  first line:
+#!/usr/bin/python3.6
+sudo apt update
+sudo apt upgrade

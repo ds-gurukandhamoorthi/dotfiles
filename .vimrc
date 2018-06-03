@@ -196,3 +196,4 @@ let g:netrw_http_cmd='wget'
 let g:netrw_http_xcmd='-q -O'
 let g:netrw_silent=1
 
+autocmd Filetype gitcommit :set spell | set textwidth=72
