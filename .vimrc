@@ -4,6 +4,9 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set history=500
+" To curb vim's desire to execute whenever it encounters ex: (even though it
+" may mean example: )
+set nomodeline
 
 syntax on
 filetype plugin indent on

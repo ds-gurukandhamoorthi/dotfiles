@@ -1186,3 +1186,19 @@ sudo ln -s python3.5 /usr/bin/python3
 #!/usr/bin/python3.6
 sudo apt update
 sudo apt upgrade
+
+04/06/2018
+sudo apt update
+sudo apt upgrade
+sudo minupdate
+# update manager itself needed to be updated
+# shim, Linux-kernel-4.13.0-43.48~16.04.1
+
+
+# to make scrapy function
+sudo rm /usr/bin/python3
+sudo ln -s python3.6 /usr/bin/python3
+
+06/06/2018
+sudo apt update
+sudo apt upgrade
