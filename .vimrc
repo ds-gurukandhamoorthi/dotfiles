@@ -112,6 +112,11 @@ autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
 autocmd VimEnter *.py NERDTree
 autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
 
+" Subtitles
+" file
+" autocmd BufRead,BufEnter *.srt set filetype=subtitle
+autocmd FileType subrip set ignorecase
+
 " Clashes with vim fugitive
 " autocmd BufEnter * lcd %:p:h
 " set acd
