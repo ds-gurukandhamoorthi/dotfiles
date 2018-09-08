@@ -14,6 +14,10 @@ filetype plugin indent on
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" when editing maths tex files :up (save if necessary) then use 
+" :!tup (makefile-like building tool)
+autocmd FileType plaintex map <buffer> <F7> :up:!tup
+
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
