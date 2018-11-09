@@ -117,3 +117,7 @@ definekey top H-E one-paragraph-vim-slime
 
 alias select-video select Vlc
 bind v select-video
+
+# use it with R graphs
+alias select-graph select R_x11
+bind g select-graph
