@@ -58,6 +58,12 @@ alias mediumBrightness exec xrandr --output eDP1 --brightness 0.7
 alias brightnessDown exec xbacklight -dec 10
 alias brightnessUp exec xbacklight -inc 10
 
+alias nightLevelBrightness exec xrandr --output DVI-0 --brightness 0.8 --output HDMI-0 --brightness 0.8
+alias normalBrightness exec xrandr --output DVI-0 --brightness 1 --output HDMI-0 --brightness 1
+bind s-F11 nightLevelBrightness
+bind s-F12 normalBrightness
+
+
 #I redefined it in xbindkeys
 #definekey top XF86MonBrightnessDown brightnessDown
 #definekey top XF86MonBrightnessUp brightnessUp

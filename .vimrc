@@ -19,6 +19,8 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType plaintex map <buffer> <F7> :up:!tup
 autocmd FileType tex map <buffer> <F7> :up:!tup
 
+autocmd FileType r map <buffer> <F7> :SlimeSend1 source('<C-R>%')
+
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -198,6 +200,7 @@ au VimEnter *.notes set spell
 au VimEnter *_notes set spell
 
 autocmd BufRead,BufNewFile 201* set spell
+autocmd BufRead,BufNewFile *diff set spell
 
 "Show the modifications made to the original file (snippet found in Vim Doc)
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
