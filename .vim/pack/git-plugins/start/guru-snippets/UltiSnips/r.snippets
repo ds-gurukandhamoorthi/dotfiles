@@ -17,7 +17,37 @@ ${1:func.name} <- function(${2:args}){
 }$0
 endsnippet
 
-snippet " ?>s" "pipe to select" r
+snippet " ?>s" "%>% select" r
  %>%
 `!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`select($1)$0
+endsnippet
+
+snippet " ?>g" "%>% group_by" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`group_by($1)$0
+endsnippet
+
+snippet " ?>S" "%>% summarize" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`summarize($1)$0
+endsnippet
+
+snippet " ?>c" "%>% count" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`count()$0
+endsnippet
+
+snippet " ?>cs" "%>% count sorted" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`count(sort=T)$0
+endsnippet
+
+snippet " ?>sc" "%>% sorted count" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`count(sort=T)$0
+endsnippet
+
+snippet " ?>f" "%>% filter" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`filter($1)$0
 endsnippet
