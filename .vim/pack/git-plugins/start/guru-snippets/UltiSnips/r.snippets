@@ -1,0 +1,23 @@
+global !p
+from r_snippets import *
+endglobal
+
+# Use gf on the following line to switch to the python script file
+# ../pythonx/r_snippets.py
+	
+#LIBRARIES
+snippet "lib(\S+)" "library" br
+`!p snip.rv=getLibraries(match.group(1))`
+endsnippet
+
+snippet fun "function"
+${1:func.name} <- function(${2:args}){
+	$3
+	return(${4:${VISUAL}})
+}$0
+endsnippet
+
+snippet " ?>s" "pipe to select" r
+ %>%
+`!p snip.rv= '' if is_there_a_pipe_in_previous_line(snip) else '\t'`select($1)$0
+endsnippet
