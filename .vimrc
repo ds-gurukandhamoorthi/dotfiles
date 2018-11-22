@@ -19,7 +19,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType plaintex map <buffer> <F7> :up:!tup
 autocmd FileType tex map <buffer> <F7> :up:!tup
 
-autocmd FileType r map <buffer> <F7> :SlimeSend1 source('<C-R>%')
+autocmd FileType r map <buffer> <F7> :w:SlimeSend1 source('<C-R>%')
 
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
@@ -196,8 +196,8 @@ set thesaurus+=/usr/share/dict/thes/mthesaur.txt
 
 set keywordprg=dict\ -d\ wn
 
-au VimEnter *.notes set spell
-au VimEnter *_notes set spell
+au VimEnter *.notes set spell|set bg=dark
+au VimEnter *_notes set spell|set bg=dark
 
 autocmd BufRead,BufNewFile 201* set spell
 autocmd BufRead,BufNewFile *diff set spell
@@ -221,3 +221,10 @@ autocmd Filetype gitcommit :set spell | set textwidth=72
 " au BufRead 2read :nnoremap gf ^vg_<C-o>gf
 " au BufRead 2read :nnoremap gf ^vg_:!mupdf "<C-r><C-*>"<CR>
 au BufRead 2read :nnoremap gf ^vg_""y:!mupdf "<C-r>""<CR>
+
+autocmd FileType ratpoison setlocal commentstring=#\ %s
+
+" persistent-undo
+set undofile
+set undodir=~/.vim/undodir
+au BufWritePre /tmp/* setlocal noundofile

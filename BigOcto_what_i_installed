@@ -1399,3 +1399,22 @@ sudo pip3 install pyenchant
 
 11/11/2018
 #installed and uninstalled fd
+
+16/11/2018
+#R
+#install.packages('ggstance')
+#install.packages('viridis')
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('geom_lv')
+#install.packages('ggbeeswarm')
+
+17/11/2018
+sudo apt-get install ncftp #to copy entire folder to android, once an ftp connection is established
+
+18/11/2018
+#R
+#install.packages('tibbletime')
+#install.packages('seriation')
+#install.packages('hexbin')
