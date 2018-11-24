@@ -1418,3 +1418,9 @@ sudo apt-get install ncftp #to copy entire folder to android, once an ftp connec
 #install.packages('tibbletime')
 #install.packages('seriation')
 #install.packages('hexbin')
+
+24/11/2018
+sudo apt install aspell-es
+sudo apt update
+sudo apt upgrade
+#vim spanish spelling and suggestions download
