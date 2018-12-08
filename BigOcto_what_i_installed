@@ -1426,3 +1426,23 @@ sudo apt upgrade
 #vim spanish spelling and suggestions download
 #R
 #install.packages('vioplot')
+
+29/11/2018
+#R
+#install.packages('foreign')
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('babynames')
+#install.packages('nasaweather')
+#install.packages('fueleconomy')
+
+02/12/2018
+#R
+#install.packages('bit')
+#install.packages('htmlwidgets') #in order to use str_view()
+#install.packages('microbenchmark')
+
+07/12/2018
+sudo apt update
+sudo apt upgrade

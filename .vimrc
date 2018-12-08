@@ -161,6 +161,12 @@ let g:slime_paste_file="$HOME/.slime_paste"
 let g:slime_default_config={"socket_name": "default", "target_pane": ":.0"}
 let g:slime_dont_ask_default = 1
 let g:slime_python_ipython = 1
+
+" autocmd FileType r map <buffer> <F7> :w:SlimeSend1 source('<C-R>%')
+" map <F8> :SlimeSend0 
+" map <F9> :SlimeSend1 #end-of-previously-sent
+nnoremap <F9> :SlimeSend1 #end-of-previously-sent
+autocmd FileType r map <buffer> <F8> :SlimeSend1 source('<C-R>%')
                  
 "Otherwise it cripples the backward search .. '?'
 let NERDTreeMapHelp='<f1>'
