@@ -1446,3 +1446,23 @@ sudo apt upgrade
 07/12/2018
 sudo apt update
 sudo apt upgrade
+
+12/12/2018
+#R
+#install.packages('pryr')
+sudo apt update
+sudo apt upgrade
+
+14/12/2018
+#add -lm -lreadline in Makefile of eukleides (in the Build directory) to avoid Sin not found, hypot not found errors.
+sudo apt install texinfo #to get makeinfo. But still eukleides manual wouldn't compile...
+#alias eukleides towards the Downloaded directory where I built...
+
+#I was later able to install with apt. (Perhaps the previous steps weren't necessary, except perhaps for the `install texinfo` part)
+
+sudo apt install eukleides
+
+15/12/2018
+sudo apt update
+sudo apt upgrade
+#got Firefox 64

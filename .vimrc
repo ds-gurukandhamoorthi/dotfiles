@@ -229,6 +229,8 @@ autocmd Filetype gitcommit :set spell | set textwidth=72
 au BufRead 2read :nnoremap gf ^vg_""y:!mupdf "<C-r>""<CR>
 
 autocmd FileType ratpoison setlocal commentstring=#\ %s
+autocmd FileType eukleides setlocal commentstring=%\ %s
+au BufRead,BufNewFile *.euk set filetype=eukleides
 
 " persistent-undo
 set undofile

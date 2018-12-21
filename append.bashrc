@@ -10,7 +10,7 @@ alias minify='minify --no-comments'
 alias cvlc='cvlc --play-and-exit'
 alias aria2c='aria2c --seed-time=0'
 alias googler='googler -n 3 --noprompt'
-alias g='googler'
+alias g='googler -l en'
 #update-alternative used ...
 #alias node='/usr/local/bin/node'
 #alias n='/usr/local/bin/n'
