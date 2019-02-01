@@ -1470,3 +1470,59 @@ sudo apt upgrade
 22/12/2018
 #R
 #install.packages('argparse')
+
+30/12/2018
+#R
+#install.packages('rattle')
+#install.packages('rpart.plot')
+
+03/01/2019
+#R
+#install.packages('C50')
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('randomForest')
+#install.packages('party')
+
+04/01/2019
+#R
+#install.packages('caret')
+#install.packages('gbm')
+
+06/01/2019
+#R
+#install.packages('gapminder')
+sudo apt update
+sudo apt upgrade
+
+09/01/2019
+sudo apt install lmodern
+#R
+#install.packages('ggrepel')
+
+10/01/2019
+sudo apt update
+sudo apt upgrade
+sudo apt install libunibreak-dev
+# link python3 to python3.5 instead of python3.6
+#sudo mintupdate
+#Linux kernel 4.15.0-43.46~16.04.1
+sudo apt install mintupgrade
+# link python3 to python3.6 (again for regular use)
+
+12/01/2019
+sudo apt update
+sudo apt upgrade
+
+22/01/2019
+sudo apt update
+sudo apt upgrade
+
+31/01/2019
+sudo apt update
+sudo apt upgrade
+#Got Firefox 65.0
+
+01/02/2019
+sud n latest

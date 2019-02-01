@@ -28,6 +28,7 @@ LIBRARIES = [
     'feather',
     'candlesticks',
     'digest',
+    'modelr',
 ]
 
 def getLibraries(mnemo):
