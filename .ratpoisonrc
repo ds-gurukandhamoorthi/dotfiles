@@ -117,3 +117,5 @@ definekey top H-E one-paragraph-vim-slime
 
 alias select-video select Vlc
 bind v select-video
+
+alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
