@@ -7,7 +7,7 @@ export EDITOR='vim'
 alias uml2png='java -jar /home/guru/Downloads/plantuml.jar'
 alias minify='minify --no-comments'
 
-alias cvlc='cvlc --play-and-exit'
+alias cvlc='cvlc --play-and-exit --hotkeys-mousewheel-mode 1'
 alias aria2c='aria2c --seed-time=0'
 alias googler='googler -n 3 --noprompt'
 alias g='googler -l en'
