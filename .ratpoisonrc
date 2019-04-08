@@ -21,6 +21,7 @@ definekey top F13 other
 
 
 bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
+definekey top H-f exec firefox -private
 # bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
