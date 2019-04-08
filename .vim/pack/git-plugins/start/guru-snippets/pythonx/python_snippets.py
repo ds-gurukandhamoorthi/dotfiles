@@ -3,6 +3,9 @@ from itertools import count
 from common_func import *
 from fuzzywuzzy import process
 
+# Use gf on the following line to switch to the python script file
+# ../UltiSnips/python.snippets
+
 IMPORTS = [
     'sys',
     'math',

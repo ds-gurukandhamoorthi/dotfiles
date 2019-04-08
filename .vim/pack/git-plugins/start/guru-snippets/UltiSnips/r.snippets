@@ -1,0 +1,137 @@
+global !p
+from r_snippets import *
+endglobal
+
+# Use gf on the following line to switch to the python script file
+# ../pythonx/r_snippets.py
+	
+#LIBRARIES
+snippet "lib(\S+)" "library" br
+`!p snip.rv=getLibraries(match.group(1))`
+endsnippet
+
+snippet fun "function"
+${1:func.name} <- function(${2:args}){
+	$3
+	return(${4:${VISUAL}})
+}$0
+endsnippet
+
+snippet " ?>s" "%>% select" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`select($1)$0
+endsnippet
+
+snippet " ?>g" "%>% group_by" r
+ %>%
+`!p
+snip << 2
+snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`group_by($1)$0
+endsnippet
+
+snippet " ?>S" "%>% summarize" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`summarize(
+$1
+)$0
+endsnippet
+
+snippet " ?>c" "%>% count" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`count($1)$0
+endsnippet
+
+snippet " ?>cs" "%>% count sorted" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`count($1, sort=T)$0
+endsnippet
+
+snippet " ?>sc" "%>% sorted count" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`count($1, sort=T)$0
+endsnippet
+
+snippet " ?>f" "%>% filter" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`filter($1)$0
+endsnippet
+
+snippet " ?>m" "%>% mutate" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`mutate(
+$1
+)$0
+endsnippet
+
+snippet " ?>a" "%>% arrange" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`arrange($1)$0
+endsnippet
+
+snippet " ?>rn" "%>% rename" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`rename($1)$0
+endsnippet
+
+snippet " ?>ga" "%>% gather" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`gather($1)$0
+endsnippet
+
+snippet " ?>spr?" "%>% spread" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`spread($1)$0
+endsnippet
+
+#FIXME:
+# add joins lj left join ...
+
+#GGPLOT
+snippet " ?>ggp?" "%>% ggplot" r
+ %>%
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`ggplot($1)$0
+endsnippet
+
+snippet " ?[+]gfp" "%>% geom_freqpoly" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_freqpoly($1)$0
+endsnippet
+
+snippet " ?[+]gd" "%>% geom_density" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_density($1)$0
+endsnippet
+snippet " ?[+]gh" "%>% geom_histogram" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_histogram($1)$0
+endsnippet
+
+snippet " ?[+]gp" "%>% geom_point" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_point($1)$0
+endsnippet
+
+snippet " ?[+]gj" "%>% geom_jitter" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_jitter($1)$0
+endsnippet
+
+snippet " ?[+]gs" "%>% geom_smooth" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_smooth($1)$0
+endsnippet
+
+snippet " ?[+]bp" "%>% geom_boxplot" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_boxplot($1)$0
+endsnippet
+
+snippet " ?[+]fp" "%>% geom_freqpoly" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_freqpoly($1)$0
+endsnippet
+
+snippet " ?[+]gl" "%>% geom_line" r
+ +
+`!p snip.rv= '' if previous_line_forces_tabulation_on_me(snip) else '\t'`geom_line($1)$0
+endsnippet

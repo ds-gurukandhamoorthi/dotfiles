@@ -10,6 +10,9 @@ exec xrandr --output DVI-0 --rotate left
 exec unclutter &
 exec xbindkeys &
 
+exec tmuxinator start regular &
+exec tmuxinator start r4ds &
+
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
 definekey top Print random-wallpaper
 
@@ -18,18 +21,18 @@ definekey top F13 other
 
 
 bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
-#bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
+# bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
-alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf"
-alias second-most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -n2 -e zathura -f pdf"
+alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
+alias second-most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "/home/guru/bin/open-frecent-book.sh 1"
 alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
 bind B second-most-frecent-book
-bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
+# bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
 alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind C term-most-frecent-directory
-bind c exec exec /home/guru/bin/rp-run-or-raise.sh URxvt /home/guru/bin/open-regular-tmux-session.sh
+bind c exec /home/guru/bin/rp-run-or-raise.sh URxvt /home/guru/bin/open-regular-tmux-session.sh
 
 
 #exec xmodmap -e 'remove Lock = Caps_Lock' -e 'keysym Caps_Lock = F13' &
@@ -58,6 +61,12 @@ alias mediumBrightness exec xrandr --output eDP1 --brightness 0.7
 alias brightnessDown exec xbacklight -dec 10
 alias brightnessUp exec xbacklight -inc 10
 
+alias nightLevelBrightness exec xrandr --output DVI-0 --brightness 0.8 --output HDMI-0 --brightness 0.8
+alias normalBrightness exec xrandr --output DVI-0 --brightness 1 --output HDMI-0 --brightness 1
+bind s-F11 nightLevelBrightness
+bind s-F12 normalBrightness
+
+
 #I redefined it in xbindkeys
 #definekey top XF86MonBrightnessDown brightnessDown
 #definekey top XF86MonBrightnessUp brightnessUp
@@ -80,6 +89,14 @@ bind a show-date-time
 #later make this more robust   AND what is sdump and sfdump  ... can they be used to create a eterm scratchpad and then return to that previous `blissful :-)` state
 definekey top s-Right sselect 1
 definekey top s-Left sselect 0
+
+alias reader-page-up exec /home/guru/bin/reader_page_up.sh
+alias reader-page-down exec /home/guru/bin/reader_page_down.sh
+
+definekey top s-Up reader-page-up
+definekey top s-Down reader-page-down
+
+
 
 set fwcolor limegreen
 
@@ -106,7 +123,7 @@ definekey top H-p python-console
 
 alias borderless set border 0
 bind C-KP_0 borderless
-definekey top C-KP_0 borderless
+kefinekey top C-KP_0 borderless
 
 #alias one-line-vim-slime exec ratpoison -c 'meta Escape' -c 'meta S-v' -c 'meta C-c' -c 'meta C-c'
 #alias one-line-vim-slime exec xdotool key V key Ctrl+c key Ctrl+c
@@ -119,3 +136,9 @@ alias select-video select Vlc
 bind v select-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
+# use it with R graphs
+alias select-graph select R_x11
+bind g select-graph
+
+alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh
+bind C-b open-recent-books-menu

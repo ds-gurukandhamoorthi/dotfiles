@@ -1,6 +1,9 @@
-! #to use caps lock key as additional key
+! #to use caps lock key as the Escape key (Vim-friendly)
 remove Lock = Caps_Lock
-keysym Caps_Lock = F13
+keysym Caps_Lock = Escape
+! #to use Escape as an additional key (for ulterior binding that would give Ratpoison friendly switch to previous window see ~/.ratpoisonrc, when pressed with shift it would give CapsLock see ~/.xbindkeysrc)
+keysym Escape = F13
+
 keycode 108 = Hyper_R
 clear mod1
 add mod1 = Alt_L

@@ -3,3 +3,5 @@ map <Space> navigate next
 map <Return> navigate next
 map <Button8> navigate next
 map <Button9> navigate previous
+
+set window-title-page true

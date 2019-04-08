@@ -14,6 +14,13 @@ filetype plugin indent on
 autocmd FileType html set shiftwidth=2
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
+" when editing maths tex files :up (save if necessary) then use 
+" :!tup (makefile-like building tool)
+autocmd FileType plaintex map <buffer> <F7> :up:!tup
+autocmd FileType tex map <buffer> <F7> :up:!tup
+
+autocmd FileType r map <buffer> <F7> :w:SlimeSend1 source('<C-R>%')
+
 set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -154,6 +161,12 @@ let g:slime_paste_file="$HOME/.slime_paste"
 let g:slime_default_config={"socket_name": "default", "target_pane": ":.0"}
 let g:slime_dont_ask_default = 1
 let g:slime_python_ipython = 1
+
+" autocmd FileType r map <buffer> <F7> :w:SlimeSend1 source('<C-R>%')
+" map <F8> :SlimeSend0 
+" map <F9> :SlimeSend1 #end-of-previously-sent
+nnoremap <F9> :SlimeSend1 #end-of-previously-sent
+autocmd FileType r map <buffer> <F8> :SlimeSend1 source('<C-R>%')
                  
 "Otherwise it cripples the backward search .. '?'
 let NERDTreeMapHelp='<f1>'
@@ -175,6 +188,8 @@ let g:ale_python_pylint_executable = 'pylint3'
 
 let g:ale_linters = {'python' : ['pylint']}
 
+let g:ale_r_lintr_options='lintr::with_defaults(object_name_linter = NULL, infix_spaces_linter = NULL, single_quotes_linter = NULL)'
+
 let g:AutoCloseExpandSpace = 0
 
 autocmd FileType python noremap <buffer> <F12> :call Autopep8()<CR>
@@ -187,10 +202,11 @@ set thesaurus+=/usr/share/dict/thes/mthesaur.txt
 
 set keywordprg=dict\ -d\ wn
 
-au VimEnter *.notes set spell
-au VimEnter *_notes set spell
+au VimEnter *.notes set spell|set bg=dark
+au VimEnter *_notes set spell|set bg=dark
 
 autocmd BufRead,BufNewFile 201* set spell
+autocmd BufRead,BufNewFile *diff set spell
 
 "Show the modifications made to the original file (snippet found in Vim Doc)
 command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis | wincmd p | diffthis
@@ -205,3 +221,18 @@ let g:netrw_http_xcmd='-q -O'
 let g:netrw_silent=1
 
 autocmd Filetype gitcommit :set spell | set textwidth=72
+
+" Open pdfs to read in mupdf
+" au BufRead 2read :nnoremap gf :!mupdf "<cfile>" &<CR>
+" au BufRead 2read :nnoremap gf ^vg_<C-o>gf
+" au BufRead 2read :nnoremap gf ^vg_:!mupdf "<C-r><C-*>"<CR>
+au BufRead 2read :nnoremap gf ^vg_""y:!mupdf "<C-r>""<CR>
+
+autocmd FileType ratpoison setlocal commentstring=#\ %s
+autocmd FileType eukleides setlocal commentstring=%\ %s
+au BufRead,BufNewFile *.euk set filetype=eukleides
+
+" persistent-undo
+set undofile
+set undodir=~/.vim/undodir
+au BufWritePre /tmp/* setlocal noundofile
