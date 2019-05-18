@@ -150,3 +150,4 @@ export PATH=$PATH:/opt/tmux/
 source ~/.tmuxinator/tmuxinator.bash
 
 alias R='R --silent --vanilla'
+alias youtube-dl='/opt/youtube-dl/youtube-dl'
