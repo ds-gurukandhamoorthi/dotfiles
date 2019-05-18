@@ -1525,4 +1525,71 @@ sudo apt upgrade
 #Got Firefox 65.0
 
 01/02/2019
-sud n latest
+sudo n latest
+yarn global add gh-pages
+
+05/02/2019
+sudo yarn global add create-react-native-app
+sudo yarn remove add create-react-native-app
+
+18/03/2019
+sudo pip3 install dmenu
+
+19/03/2019
+sudo apt update
+sudo apt upgrade
+#got firefox 65.0.1
+
+20/03/2019
+#R
+#install.packages('tidytext')
+
+25/03/2019
+#update vim plugins
+
+01/04/2019
+#vim plugins update
+sudo apt update
+sudo apt upgrade
+
+07/04/2019
+sudo apt update
+sudo apt upgrade
+
+11/04/2019
+sudo apt install chromium-bsu
+sudo apt install koules
+
+16/04/2019
+sudo apt update
+sudo apt upgrade
+
+21/04/2019
+sudo apt install gcal
+sudo apt update
+sudo apt upgrade
+
+22/04/2019
+#update vim plugins
+
+02/05/2019
+sudo apt install aisleriot
+sudo apt install kdiamond
+sudo apt install lmarbles
+sudo apt install lbreakout2
+
+08/05/2019
+#R
+#install.packages('pROC')
+sudo apt update
+sudo apt upgrade
+
+10/05/2019
+#R
+#install.packages('igraph')
+sudo apt install blobby
+sudo apt install katomic
+sudo apt install kreversi
+sudo apt remove kreversi #some error
+sudo apt install libsox-fmt-mp3
+sudo apt install audacity
