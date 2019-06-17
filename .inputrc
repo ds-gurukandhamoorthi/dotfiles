@@ -1,0 +1,4 @@
+# Found in Bash manual "Macros that are convenient for shell interaction".
+# Quoted insert for strings (double and single). No need to limit it for Bash. R may profit by it too
+"\C-x\"": "\"\"\C-b"
+"\C-x'": "''\C-b"
