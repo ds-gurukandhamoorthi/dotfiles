@@ -7,7 +7,14 @@ export EDITOR='vim'
 alias uml2png='java -jar /home/guru/Downloads/plantuml.jar'
 alias minify='minify --no-comments'
 
-alias cvlc='cvlc --play-and-exit --hotkeys-mousewheel-mode 1'
+#alias cvlc='cvlc --play-and-exit --hotkeys-mousewheel-mode 1'
+alias cvlc='cvlc --play-and-exit --hotkeys-mousewheel-mode 1\
+        --key-intf-popup-menu "None" --key-frame-next "Menu"\
+        --key-nav-activate "None" --key-play-pause 'Enter' \
+        --key-nav-left "None" --key-jump-extrashort "Left" \
+        --key-nav-right "None" --key-jump+extrashort "Right" \
+        --key-jump-short "Page Up" \
+        --key-jump+short "Page Down"'
 alias aria2c='aria2c --seed-time=0'
 alias googler='googler -n 3 --noprompt'
 alias g='googler -l en'
@@ -150,3 +157,4 @@ export PATH=$PATH:/opt/tmux/
 source ~/.tmuxinator/tmuxinator.bash
 
 alias R='R --silent --vanilla'
+alias youtube-dl='/opt/youtube-dl/youtube-dl'

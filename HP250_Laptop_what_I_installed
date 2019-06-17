@@ -677,3 +677,16 @@ pulseaudio --start --exit-idle-time=-1
 
 08/05/2018
 sudo apt install tmux
+
+#day unknown because deleted
+sudo apt install sox
+#sox mp3 handler
+sudo apt install audacity
+
+12/05/2019
+sudo apt install mp3info
+
+18/05/2019
+sudo apt update
+sudo apt upgrade
+# sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl > /opt/youtube-dl/youtube-dl
