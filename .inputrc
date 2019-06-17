@@ -2,3 +2,14 @@
 # Quoted insert for strings (double and single). No need to limit it for Bash. R may profit by it too
 "\C-x\"": "\"\"\C-b"
 "\C-x'": "''\C-b"
+
+# incremenal search. It is better not to bind these to C-p C-n or ordinary arrows, as what we want most of the time is execute the last entered command ^p^j <up><enter>
+# The original binding to non-incremental-reverse-search-history is not that helpful
+"\ep": history-substring-search-backward
+"\en": history-substring-search-forward
+#sh finds 'ssh ...' with history-substring-search-backward. To limit it to beginning '^' functions. Example '^pov' only finds 'pov..' and not 'ls ..pov'. But '$' regexp seems not to function with it..
+
+#NOTE: if the use-case is for prefix-only the following functions can be bound. (Mnemonic: as ctrl key is often represented as ^. This could be thought of as the the ^ of regexp 'starting-with'
+# If it's for multiple search it's much better to use '^prefix' followed by multiple '\ep' rather than 'prefix' followed by multiple '\eC-p'
+"\e\C-p": history-search-backward
+"\e\C-n": history-search-forward
