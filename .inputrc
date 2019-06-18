@@ -24,3 +24,8 @@ $endif
 $if R
     "\C-xp": "\C-a\C-](\C-u"
 $endif
+
+# 'open-with-editor' (known in readline as edit-and-execute) As R doesn't implement this shortcut, fix-and-assign. CAUTION: this changes the value of the variable. Can be used more as a quickfix
+$if R
+    "\C-x\C-e": "\C-afix(\C-e)\C-j"
+$endif
