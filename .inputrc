@@ -5,6 +5,21 @@
 "\C-x\"": "\"\"\C-b"
 "\C-x'": "''\C-b"
 
+#Surround line with parentheses
+"\C-xb": "\C-e)\C-a(\C-b"
+
+#Evaluate line
+$if Bash
+    "\C-x=":  "\C-abc <<< \C-j"
+$endif
+
+#dictionary-lookup-line. Know more about... a word...
+$if Bash
+    "\C-x?":  "\C-awn \C-e -over\C-j"
+$endif
+
+
+
 # incremental search. It is better not to bind these to C-p C-n or ordinary arrows, as what we want most of the time is execute the last entered command ^p^j <up><enter>
 # The original binding to non-incremental-reverse-search-history is not that helpful
 "\ep": history-substring-search-backward
@@ -30,7 +45,7 @@ $endif
 #Can be thought of as fix-arguments. 'my-program arg1 arg2 arg3' deletes args in bash. my.function(a, b, c). deletes my.function in R
 $if Bash
     "\C-xa": "\C-a\ef\C-k "
-    #NOTE: write a controlled kill only if it is needed. There is the problem of the surrouding not being unique "cat $(prog args)" or "cat `prog args`"
+    #NOTE: write a controlled kill only if it is needed. There is the problem of the surrounding not being unique "cat $(prog args)" or "cat `prog args`"
 $endif
 $if R
     "\C-xa": "\C-a\C-](\C-k()\C-b"
