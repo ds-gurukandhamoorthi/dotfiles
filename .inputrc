@@ -1,3 +1,5 @@
+"\C-xk": kill-region
+
 # Found in Bash manual "Macros that are convenient for shell interaction".
 # Quoted insert for strings (double and single). No need to limit it for Bash. R may profit by it too
 "\C-x\"": "\"\"\C-b"
@@ -17,12 +19,23 @@
 #alternative vim-like shortcut for the same functionality
 "\C-x\C-l": history-search-backward
 
-#Thought of as fix-prefix or change program. 'my-program arg1 arg2 arg3' delete my-program in bash. my.function(a, b, c). deletes my.function in R
+#Can be thought of as fix-prefix or change program. 'my-program arg1 arg2 arg3' delete my-program in bash. my.function(a, b, c). deletes my.function in R
 $if Bash
     "\C-xp": "\C-a\ed"
 $endif
 $if R
     "\C-xp": "\C-a\C-](\C-u"
+$endif
+
+#Can be thought of as fix-arguments. 'my-program arg1 arg2 arg3' deletes args in bash. my.function(a, b, c). deletes my.function in R
+$if Bash
+    "\C-xa": "\C-a\ef\C-k "
+    #NOTE: write a controlled kill only if it is needed. There is the problem of the surrouding not being unique "cat $(prog args)" or "cat `prog args`"
+$endif
+$if R
+    "\C-xa": "\C-a\C-](\C-k()\C-b"
+    "\C-x\C-a": "\e\C-](\C-f\e \C-])\C-xk" #CAUTION: This needs the \C-xk kill-region binding.
+    # This last can be thought of as controlled-kill (selective kill). we only remove argument from the last  nest function. func1(func2(func3(arg-that-will-be-deleted)))j
 $endif
 
 # 'open-with-editor' (known in readline as edit-and-execute) As R doesn't implement this shortcut, fix-and-assign. CAUTION: this changes the value of the variable. Can be used more as a quickfix
