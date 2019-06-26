@@ -13,7 +13,7 @@
 
 #Evaluate line
 $if Bash
-    "\C-x=":  "\C-abc <<< \C-j"
+    "\C-x=":  "\C-e'\C-abc <<< '\C-j"
 $endif
 
 #dictionary-lookup-line. Know more about... a word...
