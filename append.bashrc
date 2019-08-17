@@ -102,7 +102,8 @@ export JAVA_HOME=/opt/java/jdk1.8.0_131
 
 export PATH=$PATH:/opt/gradle/gradle-4.0/bin/
 
-complete -A file -X !*.@(mp4|mp3|mkv|avi|wav|mpg|webm) cvlc
+complete -A file -X !*.@(mp4|mkv|avi|wav|mpg|webm) cvlc
+complete -A file -X !*.@(mp3|opus) rvlc
 complete -o plusdirs -A file -X !*.@(epub) fbreader
 
 alias gzip='pigz'  
@@ -145,7 +146,7 @@ export PATH=$PATH:/opt/gdrive/
 #one can use /dev/null but it raises an error
 alias xpdf='zathura -d /tmp/$(date +zathura_remember_me_not%s%N)'
 
-alias rvlc='rvlc --one-instance --playlist-enqueue'
+alias rvlc='rvlc --one-instance --playlist-enqueue --play-and-exit'
 
 # To get 256 color support in lxterminal
 if [ "$TERM" = "xterm" ]
