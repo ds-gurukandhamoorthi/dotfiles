@@ -10,8 +10,7 @@ then
         --key-nav-activate "None" --key-play-pause 'Enter' \
         --key-nav-left "None" --key-jump-extrashort "Left" \
         --key-nav-right "None" --key-jump+extrashort "Right" \
-        --key-jump-short "Page Up" \
-        --key-jump+short "Page Down"\
+        --key-jump-short "Up" \
+        --key-jump+short "Down"'
         "$FILE"
 fi
-
