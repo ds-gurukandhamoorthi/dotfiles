@@ -11,6 +11,6 @@ then
         --key-nav-left "None" --key-jump-extrashort "Left" \
         --key-nav-right "None" --key-jump+extrashort "Right" \
         --key-jump-short "Up" \
-        --key-jump+short "Down"'
+        --key-jump+short "Down"\
         "$FILE"
 fi
