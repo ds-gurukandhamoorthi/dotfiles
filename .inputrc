@@ -2,6 +2,8 @@
 
 # go back WORD. (taking only into account space". The \eb\ef it to escape any space near the point where we issue the command that could befuddle the macro
 "\eB": "\eb\ef\e\C-] \C-f"
+"\eF": "\C-] "
+# even though it is tempting to use \eW to resemble emacs it wouldn't be consistent with our other emacs bindings
 
 # Found in Bash manual "Macros that are convenient for shell interaction".
 # Quoted insert for strings (double and single). No need to limit it for Bash. R may profit by it too
