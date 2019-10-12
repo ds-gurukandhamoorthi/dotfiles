@@ -13,8 +13,11 @@ alias cvlc='cvlc --play-and-exit --hotkeys-mousewheel-mode 1\
         --key-nav-activate "None" --key-play-pause 'Enter' \
         --key-nav-left "None" --key-jump-extrashort "Left" \
         --key-nav-right "None" --key-jump+extrashort "Right" \
-        --key-jump-short "Page Up" \
-        --key-jump+short "Page Down"'
+        --key-jump-short "Up" \
+        --key-jump+short "Down"\
+        --key-zoom "None"\
+        --key-aspect-ratio "None"\
+        --key-crop "None"'
 alias aria2c='aria2c --seed-time=0'
 alias googler='googler -n 3 --noprompt'
 alias g='googler -l en'
@@ -159,3 +162,4 @@ source ~/.tmuxinator/tmuxinator.bash
 
 alias R='R --silent --vanilla'
 alias youtube-dl='/opt/youtube-dl/youtube-dl'
+alias exa='/opt/exa/exa-linux-x86_64'
