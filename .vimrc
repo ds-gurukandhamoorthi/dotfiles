@@ -236,3 +236,6 @@ au BufRead,BufNewFile *.euk set filetype=eukleides
 set undofile
 set undodir=~/.vim/undodir
 au BufWritePre /tmp/* setlocal noundofile
+
+" Remove trailing whitespace from R files
+autocmd BufWritePre *.R :%s/\s\+$//e

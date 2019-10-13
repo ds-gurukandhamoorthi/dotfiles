@@ -1593,3 +1593,289 @@ sudo apt install kreversi
 sudo apt remove kreversi #some error
 sudo apt install libsox-fmt-mp3
 sudo apt install audacity
+
+18/05/2019
+#R
+#install.packages('remote')  #installed by error
+#install.packages('remotes')
+
+22/05/2019
+#R
+#install.packages('sjmisc') #to get split_var
+
+23/05/2019
+#R
+#install.packages('ggpmisc') #to get stat_peaks, stat_valleys 
+#install.packages('ggplot2') #to update to latest version (>3.1.0 is needed by ggpmisc)
+
+24/05/2019
+#R
+#install.packages('reldist') #to get gini. There is another package named DescTools... But it seems heavy-weight...
+#install.packages('adabag')
+#install.packages('xgboost')
+sudo update-alternatives --install /usr/bin/javac javac /opt/java/jdk1.8.0_131/bin/javac 1
+sudo update-alternatives --install /usr/bin/javah javah /opt/java/jdk1.8.0_131/bin/javah 1
+sudo update-alternatives --install /usr/bin/jar jar /opt/java/jdk1.8.0_131/bin/jar 1
+sudo update-alternatives --install /usr/bin/java java /opt/java/jdk1.8.0_131/bin/java 1
+# edited /etc/environment to include the line JAVA_HOME="/opt/java/jdk1.8.0_131/jre"
+# Now sudo R CMD javareconf successful
+
+# R
+#install.packages('glmulti') #This need rJava ... that's why the java related configurations above  
+sudo ln -s /opt/java/jdk1.8.0_131/jre/lib/amd64/server/libjvm.so  /usr/lib/R/lib/libjvm.so # needed to make rJava function...
+
+27/05/2019
+#R
+#install.packages('leaps')
+#install.packages('HMisc') #to get wtd.var
+
+28/05/2019
+#R
+#install.packages('Metrics')
+
+29/05/2019
+#R
+#install.packages('R.utils') #needed to read .gz (and .bzip2) from fread from 'data.table' package
+
+01/06/2019
+#R
+#install.packages('mice')
+#install.packages('missForest')
+#install.packages('drake')
+#install.packages('downloader') #needed by drake_example
+#install.packages('visNetwork') #needed by vis_drake_graph
+
+05/06/2019
+#R
+#install.packages('e1071') #caret needs it for train( ... cforest...)
+sudo pip3 install kaggle
+sudo pip3 install --upgrade pip
+
+07/06/2019
+sudo apt install avogadro
+sudo apt install openbabel
+
+10/06/2019
+#R
+#install.packages('plotly') #3d scatter plot
+
+13/06/2019
+#R
+#install.packages('furrr') #parallelize features creation
+
+15/06/2019
+#R
+#update.packages(ask=F)
+#install.packages('testthat') # some problem in installation
+#install.packages('dbplyr') # some problem in installation
+# got caret 6.0-84 (the latest)
+# ./update vim plugins
+
+16/06/2019
+#R
+#install.packages('doMC') # for parallel parameter tuning with caret
+
+#R
+#install.packages('mlbench')
+#install.packages('import') #caret parRF needs it
+
+17/06/2019
+sudo apt install csh
+sudo apt remove csh
+
+20/06/2019
+# NOT FUNCTIONING
+#sudo apt install libiodbc2-dev #to be able to install RODBC in R
+##R
+##install.packages('RODBC')
+sudo apt install r-cran-rodbc # functions
+
+sudo apt update
+sudo apt upgrade
+sudo apt install libsqliteodbc
+# TODO: datasource to be configured
+# OR better use a connector particular to each database... (ODBC is very good with java like languages... But for R it seems like an overkill)
+#R
+#install.packages('RSQLite')
+#install.packages('hmeasure')
+
+21/06/2019
+#R
+#install.packages('biglm')
+#install.packages('GGally')
+
+22/06/2019
+#R
+#install.packages('ggmosaic')
+#install.packages('devtools')
+#devtools::install_github("earowang/sugrrants", build_vignettes = TRUE)
+# Later, found that devtools installation was unnecessary. It seems to exist... in CRAN
+#update.packages(ask=F) #got v3.2.0 (released 5 days ago)
+#install.packages('scatterplot3d')
+#install.packages('rgl') #to get plot3d
+
+23/06/2019
+#R
+#installed lightgbm using 'git clone' and cmake. not successful.
+#installed lightgbm using 'git clone' and cd LightGBM; Rscript build_r.R. successful
+#devtools::install_url('https://github.com/catboost/catboost/releases/download/v0.15.1/catboost-R-Linux-0.15.1.tgz')
+
+25/06/2019
+#R
+#install.packages('robust')
+#install.packages('lars')
+#install.packages('elasticnet')
+#install.packages('pls')
+#install.packages('glmnet')
+#install.packages('maptree')
+
+26/06/2019
+#R
+#install.packages('arules')
+
+27/06/2019
+sudo apt update
+sudo apt upgrade
+#R
+#source("https://bioconductor.org/biocLite.R") #As BiocManager is not available for R 3.4. (BiocManager is needed to install ChemmineOB)
+
+# cd /opt
+# mkdir R
+# chown guru:guru R
+# wget https://cran.r-project.org/src/base/R-3/R-3.6.0.tar.gz
+# ./configure
+# make
+# R3.6 at /opt
+# install.packages('BiocManager')
+# BiocManager::install('ChemmineOB') .not successful... needs to set some variables...
+
+28/06/2019
+sudo apt install sqlite
+sudo apt remove sqlite
+
+29/06/2019
+#R
+#install.packages('ggthemes')
+
+02/07/2019
+# R3.6 at /opt
+# BiocManager::install('fmcsR')
+sudo apt install librsvg2-dev
+# R3.6 at /opt
+# BiocManager::install('fmcsR'). Previously it failed because of rsvg...
+
+03/07/2019
+sudo apt update
+sudo apt upgrade
+# ~/update_vim_plugins.sh
+
+06/07/2019
+#R
+#install.packages('useful')
+
+10/07/2019
+#R
+#install.packages('rlang') # to get rland 0.4.0 if it wasn't already present: for curly operator {{
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('segmented') # linear model with breakpoint. (example v shaped...) 
+#install.packages('UsingR')
+
+17/07/2019
+#R
+#install.packages('coefplot')
+sudo apt update
+sudo apt upgrade
+#got firefox 68
+
+21/07/2019
+sudo apt update
+sudo apt upgrade
+
+25/07/2019
+sudo apt update
+sudo apt upgrade
+
+02/08/2019
+sudo apt update
+sudo apt upgrade
+
+17/08/2019
+#R
+#install.packages('arm')
+sudo apt update
+sudo apt upgrade
+
+
+21/08/2019
+#R
+#install.packages('DiagrammeR')
+#install.packages('WDI')
+
+24/08/2019
+#R
+#install.packages('vars')
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('rugarch')
+
+27/08/2019
+#R
+#install.packages('clean') #formatting for currency. support in tibble
+#install.packages('tictoc')
+
+01/09/2019
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('maptools')
+#install.packages('gpclib')
+#install.packages('DT')
+#install.packages('leaflet')
+#install.packages('RDSTK')
+#install.packages('threejs')
+#install.packages('d3heatmap')
+
+02/09/2019
+#R
+#install.packages('ISLR')
+
+07/09/2019
+sudo apt update
+sudo apt upgrade
+#Got Firefox 69.0
+
+17/09/2019
+sudo pip3 install face_recognition
+sudo pip3 install --upgrade pip
+
+18/09/2019
+sudo apt update
+sudo apt upgrade
+
+25/09/2019
+#R
+#install.packages('fmsb') #VIF variance inflation factor
+
+27/09/2019
+#R
+#install.packages('cattonum') #to get frequency encoding catto_freq
+
+01/10/2019
+sudo apt update
+sudo apt upgrade
+#R
+# 'car' package with vif (variance inflation factor) for each variable.  It needs R 3.5. Ours is 3.4.4
+# unable to install DescTools either
+#install.packages('usdm') #vif variance inflation factor showing vif values for all variables
+# NOTE: use fmsb::VIF on result of lm to get 'global' VIF. used usdm::vif on columns/variables to find each variable's vif compared to the selected variables. (using along with select() from tidyverse)
+
+04/10/2019
+sudo pip3 install kaggle --upgrade
+
+06/10/2019
+#R
+#install.packages('matrixStats') # to get rowCumsum colCumsum to create summed area table. an alternative to apply(mat, 1, cumsum)
+#install.packages('imager')

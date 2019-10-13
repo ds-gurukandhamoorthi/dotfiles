@@ -2,7 +2,7 @@
 SKIP=${1:-0}
 FRECENT_BOOKS=$(fasd -flR pdf)
 # Minimum number of pages to be considered as a book
-MIN_PAGES_OF_BOOK=2
+MIN_PAGES_OF_BOOK=3
 
 nb_pages_pdf () {
     local book=$1
