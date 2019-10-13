@@ -142,7 +142,8 @@ alias select-graph select R_x11
 bind g select-graph
 
 alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh
-bind C-b open-recent-books-menu
+alias open-frecent-and-related-books-menu exec /home/guru/bin/open-frecent-and-related-with-book-reader.sh
+bind C-b open-frecent-and-related-books-menu 
 alias open-recent-media-menu exec /home/guru/bin/open-with-vlc.sh
 bind C-v open-recent-media-menu
 definekey top XF86HomePage open-recent-media-menu
