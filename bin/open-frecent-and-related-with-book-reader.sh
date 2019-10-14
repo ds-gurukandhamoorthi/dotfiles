@@ -1,7 +1,7 @@
 #!/bin/bash
 PDF_VIEWER=mupdf
 EPUB_VIEWER=fbreader
-FILE=$(python3 /home/guru/bin/open-frecent-and-related.py pdf)
+FILE=$(python3 /home/guru/bin/open-frecent-and-related.py --file-type-book)
 echo $FILE
 if [ -n "$FILE" ]
 then

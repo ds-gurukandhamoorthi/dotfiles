@@ -1879,3 +1879,10 @@ sudo pip3 install kaggle --upgrade
 #R
 #install.packages('matrixStats') # to get rowCumsum colCumsum to create summed area table. an alternative to apply(mat, 1, cumsum)
 #install.packages('imager')
+
+09/10/2019
+sudo apt update
+sudo apt upgrade
+
+14/10/2019
+rustup update

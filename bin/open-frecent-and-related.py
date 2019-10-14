@@ -6,25 +6,21 @@ import subprocess
 import argparse
 import glob
 import dmenu
-from funcy import re_test, filter, group_by
+from funcy import re_test, filter, group_by, select
 from os.path import splitext
 
 
-def get_extension(f):
-    return splitext(f)[1]
-
 # NOTE: It would be much better to create a dictionary of extensions {'.pdf': [], '.epub': []}
-# NOTE: May be not. if we want ordered by frecency it may not be a good idea
+# NOTE: May be not. if we want ordered by frecency it may not be a good idea. Except if want entropy of extensions' frequency.
+
+
+def get_extension(f):
+    return splitext(f)[1][1:]
 
 def files_of_extensions(files, exts):
-    files_gr_extension = group_by(get_extension, files)
-    res = []
-    for ext in exts:
-        res += files_gr_extension['.' + ext]
-    return res
-
-
-
+    def file_of_extensions(file):
+        return get_extension(file) in exts
+    return list(filter(file_of_extensions, files))
 
 def main():
     parser = argparse.ArgumentParser(description='Open frecent and related files')
