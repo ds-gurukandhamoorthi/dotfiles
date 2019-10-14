@@ -28,9 +28,26 @@ def files_of_extensions(files, exts):
 
 def main():
     parser = argparse.ArgumentParser(description='Open frecent and related files')
-    parser.add_argument('--file-exts', type=str, nargs='+', help='file extension')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--file-exts', type=str, nargs='+', help='file extension')
+    group.add_argument('--file-type-book', action='store_true', help='books: epub, pdf, mobi...')
+    group.add_argument('--file-type-audio', action='store_true', help='audio files: mp3, wav, m4a, aac, opus, webm...')
+    group.add_argument('--file-type-video', action='store_true', help='video files: mp4, mkv, avi, wav, mpg, webm...')
+    group.add_argument('--file-type-image', action='store_true', help='image files: jpg, png, gif, ...')
+    group.add_argument('--file-type-code', action='store_true', help='code files: R, py')
     args = parser.parse_args()
-    file_exts = args.file_exts
+    if args.file_type_book:
+        file_exts = ['pdf', 'epub', 'mobi']
+    elif args.file_type_audio:
+        file_exts = ['mp3', 'wav', 'm4a', 'aac', 'opus', 'webm']
+    elif args.file_type_video:
+        file_exts = ['mp4', 'mk4', 'avi', 'wav', 'mpg', 'webm']
+    elif args.file_type_image:
+        file_exts = ['png', 'jpg', 'gif']
+    elif args.file_type_code:
+        file_exts = ['R', 'py']
+    else:
+        file_exts = args.file_exts
     cmd = subprocess.Popen(['fasd', '-f', '-R', '-l'], stdout=subprocess.PIPE)
     sout, serr = cmd.communicate()
     sout = sout.decode('utf-8')
