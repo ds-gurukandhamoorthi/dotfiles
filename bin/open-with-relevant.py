@@ -1,6 +1,8 @@
 import os
 import glob
 from funcy import cut_prefix
+from operator import __and__
+from functools import reduce
 
 def remove_common_prefix(strs):
     cmn_pref = os.path.commonprefix(strs)
@@ -14,6 +16,29 @@ def remove_common_suffix(strs):
 
 remove_adfix = lambda s: remove_common_prefix(remove_common_suffix(s))
 
+# Normally it is but longest common substring. but there may be multiple in some cases
+def longest_common_substrings(strs):
+    for i in range(len(strs[0]), 0, -1):
+        res = common_stem_of_length(strs, i)
+        if res:
+            return list(res)
+    return None
+
+
+def common_stem_of_length(strs, n):
+    arr = [set(stems_of_length(s, n)) for s in strs]
+    res = reduce(__and__, arr)
+    if len(res) > 0:
+        return res
+    return None
+
+
+def stems_of_length(string, n):
+    return (string[i:i+n] for i in range(0, len(string)-n+1))
+
+
+       
+
 
 if __name__ == "__main__":
     lst = ['abc', 'abe',  'abf']
@@ -23,3 +48,5 @@ if __name__ == "__main__":
     lst = glob.glob('*')
     print(remove_common_suffix(remove_common_prefix(lst)))
     print(remove_adfix(lst))
+    print(longest_common_substrings(lst))
+
