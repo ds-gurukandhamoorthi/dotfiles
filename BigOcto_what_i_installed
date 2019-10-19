@@ -1886,3 +1886,12 @@ sudo apt upgrade
 
 14/10/2019
 rustup update
+#update vim plugins to get latest rust.vim
+rustup component add rustfmt
+
+17/10/2019
+sudo apt update
+sudo apt upgrade #Got sudo too probably due to the recent -1/0 problem found in it.
+
+19/01/2019
+# installed loc (very fast alternative to cloc. But doesn't identify unique files)

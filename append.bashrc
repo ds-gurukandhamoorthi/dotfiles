@@ -164,3 +164,4 @@ alias R='R --silent --vanilla'
 alias youtube-dl='/opt/youtube-dl/youtube-dl'
 alias sqlite=sqlite3
 alias exa='/opt/exa/exa-linux-x86_64'
+alias loc='/opt/loc/loc'
