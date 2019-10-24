@@ -4,7 +4,7 @@ import os
 import sys
 import subprocess
 import argparse
-import glob
+# import glob
 import dmenu
 from funcy import re_test, filter, group_by, select
 from os.path import splitext
@@ -33,15 +33,15 @@ def main():
     group.add_argument('--file-type-code', action='store_true', help='code files: R, py')
     args = parser.parse_args()
     if args.file_type_book:
-        file_exts = ['pdf', 'epub', 'mobi']
+        file_exts = ('pdf', 'epub', 'mobi')
     elif args.file_type_audio:
-        file_exts = ['mp3', 'wav', 'm4a', 'aac', 'opus', 'webm']
+        file_exts = ('mp3', 'wav', 'm4a', 'aac', 'opus', 'webm')
     elif args.file_type_video:
-        file_exts = ['mp4', 'mk4', 'avi', 'wav', 'mpg', 'webm']
+        file_exts = ('mp4', 'mk4', 'avi', 'wav', 'mpg', 'webm')
     elif args.file_type_image:
-        file_exts = ['png', 'jpg', 'gif']
+        file_exts = ('png', 'jpg', 'gif')
     elif args.file_type_code:
-        file_exts = ['R', 'py']
+        file_exts = ('R', 'py')
     else:
         file_exts = args.file_exts
     cmd = subprocess.Popen(['fasd', '-f', '-R', '-l'], stdout=subprocess.PIPE)
@@ -53,8 +53,9 @@ def main():
     dir_files = list(
             group_by(os.path.dirname, files).keys())
     for dir in dir_files:
-        for ext in file_exts:
-            files += glob.glob(dir + '/' + '*.' + ext)
+        for dir_entry in os.scandir(dir):
+            if dir_entry.name.endswith(file_exts):
+                files += [dir_entry.path]
     res = dmenu.show(files, case_insensitive=True, lines=3)
     print(res)
 
