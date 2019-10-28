@@ -24,6 +24,7 @@ def files_of_extensions(files, exts):
 
 def main():
     parser = argparse.ArgumentParser(description='Open frecent and related files')
+    parser.add_argument('--fast', action='store_true', help='fast open time by forsaking sortedness')
     group = parser.add_mutually_exclusive_group()
     group.add_argument('--file-exts', type=str, nargs='+', help='file extension')
     group.add_argument('--file-type-book', action='store_true', help='books: epub, pdf, mobi...')
@@ -37,17 +38,24 @@ def main():
     elif args.file_type_audio:
         file_exts = ('mp3', 'wav', 'm4a', 'aac', 'opus', 'webm')
     elif args.file_type_video:
-        file_exts = ('mp4', 'mk4', 'avi', 'wav', 'mpg', 'webm')
+        file_exts = ('mp4', 'mkv', 'avi', 'wav', 'mpg', 'webm')
     elif args.file_type_image:
         file_exts = ('png', 'jpg', 'gif')
     elif args.file_type_code:
         file_exts = ('R', 'py')
     else:
         file_exts = args.file_exts
-    cmd = subprocess.Popen(['fasd', '-f', '-R', '-l'], stdout=subprocess.PIPE)
-    sout, serr = cmd.communicate()
-    sout = sout.decode('utf-8')
-    all_files = sout.split('\n')
+
+    all_files = []
+    if args.fast:
+        fasd_file = open(os.environ['HOME']+'/.fasd', 'r')
+        for line in fasd_file:
+            all_files += [line.split('|')[0]]
+    else:
+        cmd = subprocess.Popen(['fasd', '-f', '-R', '-l'], stdout=subprocess.PIPE)
+        sout, serr = cmd.communicate()
+        sout = sout.decode('utf-8')
+        all_files = sout.split('\n')
     # files = files_gr_extension['.'+ file_exts] #files of given extension: pdfs ...
     files = files_of_extensions(all_files, file_exts) #file_exts is an array
     dir_files = list(
