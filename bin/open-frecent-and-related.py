@@ -44,13 +44,15 @@ def main():
     elif args.file_type_code:
         file_exts = ('R', 'py')
     else:
-        file_exts = args.file_exts
+        file_exts = tuple(args.file_exts)
 
     all_files = []
     if args.fast:
         fasd_file = open(os.environ['HOME']+'/.fasd', 'r')
         for line in fasd_file:
-            all_files += [line.split('|')[0]]
+            file_ = line.split('|')[0]
+            if os.path.exists(file_):
+                all_files += [file_]
     else:
         cmd = subprocess.Popen(['fasd', '-f', '-R', '-l'], stdout=subprocess.PIPE)
         sout, serr = cmd.communicate()
