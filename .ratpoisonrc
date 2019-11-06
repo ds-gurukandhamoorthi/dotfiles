@@ -44,8 +44,8 @@ definekey top F13 other
 
 #exec numlockx on
 
-#so as to make run-or-raise executable.... FIXME
-set winname class
+##so as to make run-or-raise executable.... FIXME
+#set winname class
 
 #to disable touchpad when typing
 #exec syndaemon -d -K -i 0.4
@@ -148,3 +148,5 @@ alias open-recent-media-menu exec /home/guru/bin/open-with-vlc.sh
 alias open-frecent-and-related-videos-menu exec /home/guru/bin/open-frecent-and-related-with-video-player.sh
 bind C-v open-frecent-and-related-videos-menu
 definekey top XF86HomePage open-recent-media-menu
+
+bind C-w exec rp-window-chooser

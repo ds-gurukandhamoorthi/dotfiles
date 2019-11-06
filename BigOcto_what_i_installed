@@ -1893,5 +1893,32 @@ rustup component add rustfmt
 sudo apt update
 sudo apt upgrade #Got sudo too probably due to the recent -1/0 problem found in it.
 
-19/01/2019
+19/10/2019
 # installed loc (very fast alternative to cloc. But doesn't identify unique files)
+
+22/10/2019
+#cargo install ripgrep
+
+
+24/10/2019
+sudo apt update
+sudo apt upgrade
+#got firefox 70.0
+
+25/10/2019
+#cargo install skim
+
+#to install wasm-pack
+# curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+26/10/2019
+# install emscripten
+
+31/10/2019
+rustup component add clippy --toolchain stable-x86_64-unknown-linux-gnu
+
+02/11/2019
+cargo install tealdeer #tldr man pages
+
+03/11/2019
+sudo pip3 install termcolor
