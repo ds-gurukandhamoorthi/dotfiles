@@ -716,3 +716,12 @@ chmod +x /opt/youtube-dl/youtube-dl
 13/10/2019
 sudo pip3 install dmenu
 sudo pip3 install --upgrade pip
+sudo apt install mupdf
+
+24/10/2019
+sudo apt update
+sudo apt upgrade
+#got firefox 70.0
+
+28/10/2019
+#install rustup

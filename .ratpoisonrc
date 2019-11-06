@@ -145,5 +145,6 @@ alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh
 alias open-frecent-and-related-books-menu exec /home/guru/bin/open-frecent-and-related-with-book-reader.sh
 bind C-b open-frecent-and-related-books-menu 
 alias open-recent-media-menu exec /home/guru/bin/open-with-vlc.sh
-bind C-v open-recent-media-menu
+alias open-frecent-and-related-videos-menu exec /home/guru/bin/open-frecent-and-related-with-video-player.sh
+bind C-v open-frecent-and-related-videos-menu
 definekey top XF86HomePage open-recent-media-menu
