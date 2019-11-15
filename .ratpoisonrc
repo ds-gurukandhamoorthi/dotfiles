@@ -133,7 +133,8 @@ alias one-paragraph-vim-slime exec /home/guru/bin/exec_vim_slime_paragraph.py
 definekey top H-e one-line-vim-slime
 definekey top H-E one-paragraph-vim-slime
 
-alias select-video select Vlc
+#echo as 'nop' temporarily until the program can be made to just select or do nothing
+alias select-video exec /home/guru/bin/rp-run-or-raise.sh Vlc echo
 bind v select-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
