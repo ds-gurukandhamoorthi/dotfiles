@@ -15,6 +15,8 @@ exec tmuxinator start r4ds &
 
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
 definekey top Print random-wallpaper
+alias select-then-copy-to-clipboard exec /home/guru/bin/select-image-copy-clipboard.sh
+definekey top C-Print select-then-copy-to-clipboard
 
 definekey top F13 other
 
