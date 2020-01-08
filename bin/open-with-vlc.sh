@@ -6,8 +6,9 @@ VID_PLAYER=cvlc --play-and-exit --hotkeys-mousewheel-mode 1\
         --key-nav-right "None" --key-jump+extrashort "Right" \
         --key-jump-short "Page Up" \
         --key-jump+short "Page Down"
-AUD_PLAYER=rvlc
-FILE=$(fasd -lRf |grep "\.mp4$\|\.mkv\|\.mp3$" | dmenu -i -l 3) 
+AUD_PLAYER=rvlc --play-and-exit
+#FIXME: append list all open directory files, and all relevant files too... so that we can have it all in one place...
+FILE=$(fasd -lRf |grep "\.mp4$\|\.mkv\|\.mp3$" | dmenu -i -f -l 3)
 echo $FILE
 if [ -n "$FILE" ]
 then

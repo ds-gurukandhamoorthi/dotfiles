@@ -14,5 +14,6 @@ then
         --key-zoom "None"\
         --key-aspect-ratio "None"\
         --key-crop "None"\
+        --video-title "$_"\
         "$FILE"
 fi
