@@ -166,3 +166,4 @@ alias sqlite=sqlite3
 alias exa='/opt/exa/exa-linux-x86_64'
 alias loc='/opt/loc/loc'
 alias vmtouch='/opt/vmtouch/vmtouch'
+export PATH=$PATH:/home/guru/devflutter/flutter/bin/

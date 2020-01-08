@@ -140,7 +140,7 @@ bind v select-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
 # use it with R graphs
-alias select-graph select R_x11
+alias select-graph select R
 bind g select-graph
 
 alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh

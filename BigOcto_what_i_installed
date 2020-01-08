@@ -1922,3 +1922,39 @@ cargo install tealdeer #tldr man pages
 
 03/11/2019
 sudo pip3 install termcolor
+
+06/11/2019
+sudo pip3 install lz4
+
+10/11/2019
+#installed flutter
+#flutter doctor --android-licences #6 accepted
+sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils ia32-libs-multiarch #to get kvm  to accelerate AVD?   The processor had AMD-V virtualization
+
+08/12/2019
+rustup update stable #to get 1.39
+sudo apt update
+sudo apt upgrade
+
+01/01/2020
+rustup update stable
+sudo apt update
+sudo apt upgrade
+#Got Firefox 71.0
+
+sudo apt install libgstreamer1.0-dev
+sudo apt install libgstreamer-plugins-good1.0-dev
+sudo apt install libgstreamer-plugins-bad1.0-dev
+sudo apt install libgst-dev
+#to try to make servo run. unsuccessful
+
+04/01/2020
+sudo add-apt-repository -r ppa:jonathonf/python-3.6
+wget -O - https://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -
+echo 'deb https://debian.neo4j.org/repo stable/' | sudo tee -a /etc/apt/sources.list.d/neo4j.list
+sudo apt-get update
+sudo apt upgrade
+
+08/01/2020
+sudo apt update
+sudo apt upgrade
