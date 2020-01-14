@@ -725,3 +725,14 @@ sudo apt upgrade
 
 28/10/2019
 #install rustup
+
+25/11/2019
+sudo apt install libunibreak-dev #To try to solve fbreader segmentation fault
+sudo apt install libfribidi-bin
+
+#downloading the key geometer.. fbreader...
+#apt-key add geometer.fbreader.org.asc
+
+14/01/2020
+sudo apt install maim
+sudo apt install slop
