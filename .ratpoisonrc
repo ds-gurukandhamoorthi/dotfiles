@@ -15,6 +15,8 @@ exec tmuxinator start r4ds &
 
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
 definekey top Print random-wallpaper
+alias select-then-copy-to-clipboard exec /home/guru/bin/select-image-copy-clipboard.sh
+definekey top C-Print select-then-copy-to-clipboard
 
 definekey top F13 other
 
@@ -140,7 +142,7 @@ bind v run-or-raise-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
 # use it with R graphs
-alias select-graph select R_x11
+alias select-graph select R
 bind g select-graph
 
 alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh
