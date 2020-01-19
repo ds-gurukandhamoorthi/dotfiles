@@ -1958,3 +1958,8 @@ sudo apt upgrade
 08/01/2020
 sudo apt update
 sudo apt upgrade
+
+18/01/2020
+sudo apt update
+sudo apt upgrade
+#Got Firefox 72.0.1
