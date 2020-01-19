@@ -138,7 +138,8 @@ definekey top H-E one-paragraph-vim-slime
 
 #echo as 'nop' temporarily until the program can be made to just select or do nothing
 alias select-video exec /home/guru/bin/rp-run-or-raise.sh Vlc echo
-bind v select-video
+alias run-or-raise-video exec /home/guru/bin/rp-run-or-raise.sh Vlc /home/guru/bin/open-frecent-and-related-with-video-player.sh
+bind v run-or-raise-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
 # use it with R graphs
