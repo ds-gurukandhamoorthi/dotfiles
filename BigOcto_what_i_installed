@@ -1963,3 +1963,15 @@ sudo apt upgrade
 sudo apt update
 sudo apt upgrade
 #Got Firefox 72.0.1
+
+25/01/2020
+sudo apt update
+sudo apt upgrade
+
+27/01/2020
+sudo apt install libxdo-dev #rust enigo crate needs it.
+
+30/01/2020
+sudo pip3 install evdev
+rustup update stable
+#got rust 1.41.0

@@ -27,7 +27,7 @@ definekey top H-f exec firefox -private
 # bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 # alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
-alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "/home/guru/bin/orfalgen pdf zathura"
+alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/orfalgen pdf zathura
 alias second-most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "/home/guru/bin/open-frecent-book.sh 1"
 alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
@@ -94,11 +94,11 @@ bind a show-date-time
 definekey top s-Right sselect 1
 definekey top s-Left sselect 0
 
-alias reader-page-up exec /home/guru/bin/reader_page_up.sh
-alias reader-page-down exec /home/guru/bin/reader_page_down.sh
+alias reader-page-up exec ~/bin/page-turner prior
+alias reader-page-down exec ~/bin/page-turner next
 
-definekey top s-Up reader-page-up
-definekey top s-Down reader-page-down
+bind space reader-page-down
+bind BackSpace reader-page-up
 
 
 
