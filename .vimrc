@@ -125,6 +125,7 @@ autocmd VimEnter *.py wincmd p "Switch from the NERDTree buffer
 " file
 " autocmd BufRead,BufEnter *.srt set filetype=subtitle
 autocmd FileType subrip set ignorecase
+autocmd BufRead,BufEnter *.srt set nomodifiable
 
 " Clashes with vim fugitive
 " autocmd BufEnter * lcd %:p:h
