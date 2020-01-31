@@ -736,3 +736,14 @@ sudo apt install libfribidi-bin
 14/01/2020
 sudo apt install maim
 sudo apt install slop
+
+17/01/2020
+rustup update stable
+
+21/01/2020
+#installed vmtouch
+
+30/01/2020
+sudo apt install libxdo-dev
+sudo pip3 install pyautogui
+sudo apt install python3-tk python3-dev

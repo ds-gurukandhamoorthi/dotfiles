@@ -1,5 +1,5 @@
 #!/bin/bash
-FILE=$(python3 /home/guru/bin/open-frecent-and-related.py --file-type-video)
+FILE=$(/home/guru/bin/open-enhanced video)
 echo $FILE
 if [ -n "$FILE" ]
 then
