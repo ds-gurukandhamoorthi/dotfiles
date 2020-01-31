@@ -80,8 +80,11 @@ PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "   # '#' for root, else '$'
 export PS1
 
-alias e='f -e vim'  
-
+# alias e='f -e vim'
+e ()
+{
+    vim "$(orfalgen echo "$@")"
+}
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
 stty -ixon
