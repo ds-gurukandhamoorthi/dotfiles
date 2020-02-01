@@ -85,6 +85,8 @@ e ()
 {
     vim "$(orfalgen-file echo "$@")"
 }
+#edit here in this directory and its descendants
+alias e.='e ~+'
 unalias z
 z ()
 {
@@ -96,7 +98,7 @@ stty -ixon
 
 
 function v(){
-		FN="$(f -n1 $*)"
+		FN="$(orfalgen-file echo $*)"
 		case "$FN" in
 				*pdf)
 						zathura "$FN"

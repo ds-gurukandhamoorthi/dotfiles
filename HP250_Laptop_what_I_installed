@@ -747,3 +747,7 @@ rustup update stable
 sudo apt install libxdo-dev
 sudo pip3 install pyautogui
 sudo apt install python3-tk python3-dev
+
+31/01/2020
+rustup update stable
+#got rust 1.41.0
