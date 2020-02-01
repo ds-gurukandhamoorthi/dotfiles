@@ -46,6 +46,7 @@ e ()
 }
 #edit here in this directory and its descendants
 alias e.='e ~+'
+alias e..='e ~+/..'
 unalias z
 z ()
 {
@@ -68,6 +69,7 @@ function v(){
 
 }
 alias v.='v ~+'
+alias v..='v ~+/..'
 
 export ANDROID_HOME=$HOME/Android/Sdk/
 export PATH=$PATH:$ANDROID_HOME/tools
