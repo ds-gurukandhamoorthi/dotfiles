@@ -34,8 +34,10 @@ eval "$(fasd --init auto)"
 alias l='ls -ltr'
 alias m='f -e '\''cvlc --play-and-exit'\'' '
 
-
-PS1+="\$(where-am-i-git)"           # prints current branch in color using compiled rust program
+COLOR_BLUE=$(echo -e "\033[0;34m")
+COLOR_RESET=$(echo -e "\033[0m")
+PS1+="\[\$(where-am-i-git color)\]"           # prints color code using compiled rust program
+PS1+="\$(where-am-i-git branch)"           # prints current branch using compiled rust program
 PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "   # '#' for root, else '$'
 export PS1
 
