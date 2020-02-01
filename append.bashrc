@@ -83,7 +83,12 @@ export PS1
 # alias e='f -e vim'
 e ()
 {
-    vim "$(orfalgen echo "$@")"
+    vim "$(orfalgen-file echo "$@")"
+}
+unalias z
+z ()
+{
+    cd "$(orfalgen-dir echo "$@")"
 }
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
