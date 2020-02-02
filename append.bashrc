@@ -44,7 +44,7 @@ export PS1
 # alias e='f -e vim'
 e ()
 {
-    vim "$(orfalgen-file echo "$@")"
+    vim "$(orfalgen-editable echo "$@")"
 }
 #edit here in this directory and its descendants
 alias e.='e ~+'
@@ -53,6 +53,14 @@ unalias z
 z ()
 {
     cd "$(orfalgen-dir echo "$@")"
+}
+er ()
+{
+    vim "$(rel "$@" $(fasd -fl .rs) | head -1)"
+}
+vr ()
+{
+    view "$(rel "$@" $(fasd -fl .rs) | head -1)"
 }
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
