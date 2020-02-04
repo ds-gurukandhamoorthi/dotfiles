@@ -56,11 +56,11 @@ z ()
 }
 er ()
 {
-    vim +/$1\\c "$(rel "$@" $(fasd -fl .rs) | head -1)"
+    vim +/$1\\c "$(rel "$@" $(open-enhanced-list .rs) | head -1)"
 }
 vr ()
 {
-    view +/$1\\c -c "set hlsearch" "$(rel "$@" $(fasd -fl .rs) | head -1)"
+    view +/$1\\c -c "set hlsearch" "$(rel "$@" $(open-enhanced-list .rs) | head -1)"
 }
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
