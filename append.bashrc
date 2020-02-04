@@ -60,7 +60,7 @@ er ()
 }
 vr ()
 {
-    view +/$1\\c "$(rel "$@" $(fasd -fl .rs) | head -1)"
+    view +/$1\\c -c "set hlsearch" "$(rel "$@" $(fasd -fl .rs) | head -1)"
 }
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
