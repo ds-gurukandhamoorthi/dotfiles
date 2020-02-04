@@ -56,11 +56,11 @@ z ()
 }
 er ()
 {
-    vim "$(rel "$@" $(fasd -fl .rs) | head -1)"
+    vim +/$1\\c "$(rel "$@" $(fasd -fl .rs) | head -1)"
 }
 vr ()
 {
-    view "$(rel "$@" $(fasd -fl .rs) | head -1)"
+    view +/$1\\c "$(rel "$@" $(fasd -fl .rs) | head -1)"
 }
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
