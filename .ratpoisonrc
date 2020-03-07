@@ -22,21 +22,21 @@ definekey top F13 other
 
 
 
-bind f exec /home/guru/bin/rp-run-or-raise.sh Firefox firefox
+bind f exec /home/guru/bin/rp-enhanced-window-switcher -c Firefox -e firefox
 definekey top H-f exec firefox -private
 # bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 # alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
-alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/orfalgen zathura pdf
-alias second-most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "/home/guru/bin/open-frecent-book.sh 1"
-alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
+alias most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher -c Zathura -e /home/guru/bin/orfalgen --extra zathura pdf
+alias second-most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher -c Zathura -e /home/guru/bin/open-frecent-book.sh --extra 1
+# alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
 bind B second-most-frecent-book
 # bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
-alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal /home/guru/bin/open-frecent-directory-term.sh
+alias term-most-frecent-directory exec /home/guru/bin/rp-enhanced-window-switcher -c Lxterminal -e /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind C term-most-frecent-directory
-bind c exec /home/guru/bin/rp-run-or-raise.sh URxvt /home/guru/bin/open-regular-tmux-session.sh
+bind c exec /home/guru/bin/rp-enhanced-window-switcher -c URxvt -e /home/guru/bin/open-regular-tmux-session.sh
 
 
 #exec xmodmap -e 'remove Lock = Caps_Lock' -e 'keysym Caps_Lock = F13' &
@@ -137,8 +137,8 @@ definekey top H-e one-line-vim-slime
 definekey top H-E one-paragraph-vim-slime
 
 #echo as 'nop' temporarily until the program can be made to just select or do nothing
-alias select-video exec /home/guru/bin/rp-run-or-raise.sh Vlc echo
-alias run-or-raise-video exec /home/guru/bin/rp-run-or-raise.sh Vlc /home/guru/bin/open-frecent-and-related-with-video-player.sh
+alias select-video exec /home/guru/bin/rp-enhanced-window-switcher -c Vlc -e echo
+alias run-or-raise-video exec /home/guru/bin/rp-enhanced-window-switcher -c Vlc -e /home/guru/bin/open-frecent-and-related-with-video-player.sh
 bind v run-or-raise-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
