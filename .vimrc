@@ -242,3 +242,7 @@ au BufWritePre /tmp/* setlocal noundofile
 
 " Remove trailing whitespace from R files
 autocmd BufWritePre *.R :%s/\s\+$//e
+
+" To make the lime-green cursor stand out and attract our gaze without
+" resorting to blinking. (making the matching parenthesis less pronounced)
+hi MatchParen cterm=bold ctermbg=brown ctermfg=yellow
