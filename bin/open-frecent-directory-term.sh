@@ -1,4 +1,4 @@
 #!/bin/bash
-FRECENT_DIREC=$(fasd -d -n1)
+FRECENT_DIREC=$(orfalgen-dir echo /)
 echo "$FRECENT_DIREC"
 lxterminal --working-directory="$FRECENT_DIREC"

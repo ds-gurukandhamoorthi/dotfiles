@@ -1975,3 +1975,51 @@ sudo apt install libxdo-dev #rust enigo crate needs it.
 sudo pip3 install evdev
 rustup update stable
 #got rust 1.41.0
+
+02/02/2020
+sudo apt update
+sudo apt upgrade
+#got Firefox 72.0.2
+
+13/02/2020
+sudo apt update
+sudo apt upgrade
+#R
+#install.packages('gutenbergr')
+
+15/02/2020
+sudo apt update
+sudo apt upgrade
+
+20/02/2020
+sudo apt update
+sudo apt upgrade
+
+sudo apt update
+sudo apt upgrade
+
+24/02/2020
+#install wabt from github
+
+28/02/2020
+sudo apt update
+sudo apt upgrade
+#got firefox 73.0.1
+
+29/02/2020
+rustup update stable
+#got Rust 1.41.1
+
+01/03/2020
+cargo install wasm-bindgen-cli
+
+04/03/2020
+cargo install cargo-web
+sudo apt update
+sudo apt upgrade
+
+sudo apt update
+sudo apt upgrade
+
+07/03/2020
+cargo install cargo-edit
