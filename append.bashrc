@@ -62,6 +62,10 @@ vr ()
 {
     view +/$1\\c -c "set hlsearch" "$(rel "$@" $(open-enhanced-list .rs) | head -1)"
 }
+echorel ()
+{
+    echo "$(rel "$@" $(open-enhanced-list .rs) | head -1)"
+}
 
 #disable ctrl-Q on terminal   to use unimpaired.vim plugin :cnfile
 stty -ixon
@@ -149,3 +153,4 @@ alias exa='/opt/exa/exa-linux-x86_64'
 alias loc='/opt/loc/loc'
 alias vmtouch='/opt/vmtouch/vmtouch'
 export PATH=$PATH:/home/guru/devflutter/flutter/bin/
+export PATH=$PATH:/opt/wabt/bin/
