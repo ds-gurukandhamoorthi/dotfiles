@@ -2023,3 +2023,11 @@ sudo apt upgrade
 
 07/03/2020
 cargo install cargo-edit
+
+12/03/2020
+rustup update stable
+#got Rust 1.42.0
+
+sudo apt update
+sudo apt upgrade
+#got firefox 74.0
