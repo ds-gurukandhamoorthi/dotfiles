@@ -12,7 +12,7 @@ sudo apt install suckless-tools #to get dmenu and for wmname
 05/05/2017
 
 #installed ad-block plus for firefox
-sudo apt-get install feh 
+sudo apt-get install feh
 sudo apt-get install aria2 
 sudo apt-get install zathura fbreader
 #xbacklight is only needed for laptop
@@ -2031,3 +2031,83 @@ rustup update stable
 sudo apt update
 sudo apt upgrade
 #got firefox 74.0
+
+23/03/2020
+sudo apt install libsqlite3-dev
+sudo apt update
+sudo apt upgrade
+
+24/03/2020
+sudo apt update
+sudo apt upgrade
+
+25/03/2020
+sudo apt install xosd-bin #to get osd_cat
+
+26/03/2020
+sudo apt update
+sudo apt upgrade
+
+28/03/2020
+sudo apt update
+sudo apt upgrade
+
+01/04/2020
+cargo install -f wasm-bindgen-cli
+cargo install cargo-generate
+sudo npm install npm@latest -g
+sudo npm install npm@latest -g
+#(executed twice)
+
+06/04/2020
+sudo npm install -g create-react-app
+sudo npm install -g n
+sudo n latest
+
+09/04/2020
+sudo apt update
+sudo apt upgrade
+#got Firefox 75.0
+
+22/07/2020
+sudo apt update
+sudo apt upgrade
+sudo pip3.6 install --upgrade pip
+
+#to make udiskie function
+#cd /usr/lib/python3/dist-packages/gi
+#sudo ln -s _gi_cairo.cpython-35m-x86_64-linux-gnu.so _gi_cairo.cpython-36m-x86_64-linux-gnu.so
+#sudo ln -s _gi.cpython-35m-x86_64-linux-gnu.so _gi.cpython-36m-x86_64-linux-gnu.so
+
+23/04/2020
+rustup update
+#this only update nightly for now 1.40 -> 1.44
+sudo apt update
+sudo apt upgrade
+rustup update
+#got rustc 1.43
+
+15/05/2020
+sudo apt update
+sudo apt upgrade
+#got Firefox 76.0
+rustup update
+#got rustc 1.43.1
+#got nightly 1.45
+
+20/05/2020
+sudo apt update
+sudo apt upgrade
+
+23/05/2020
+#sudo pip3 install scikit-learn #But it was already installed
+sudo pip3 install theano
+sudo pip3 install --upgrade pip
+
+27/05/2020
+sudo gem install gist
+sudo pip3 install nltk
+
+29/05/2020
+#install aspell tamil dic
+sudo apt install emacs

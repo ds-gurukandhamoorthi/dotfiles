@@ -27,7 +27,7 @@ definekey top H-f exec firefox -private
 # bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
 # alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
-alias most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/orfalgen --extra zathura pdf
+alias most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/orfalgen zathura pdf
 alias second-most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/open-frecent-book.sh --extra 1
 # alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
@@ -143,8 +143,8 @@ bind v run-or-raise-video
 
 alias show-vlc-details exec /home/guru/bin/show-vlc-details.sh
 # use it with R graphs
-alias select-graph select R
-bind g select-graph
+#select graph
+bind g exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise R_x11 echo
 
 alias open-recent-books-menu exec /home/guru/bin/open-with-book-reader.sh
 alias open-frecent-and-related-books-menu exec /home/guru/bin/open-frecent-and-related-with-book-reader.sh
