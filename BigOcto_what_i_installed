@@ -2111,3 +2111,13 @@ sudo pip3 install nltk
 29/05/2020
 #install aspell tamil dic
 sudo apt install emacs
+
+04/06/2020
+#From 29/05/2020 to  05/06/ I lost the lines as I made a mistaken > ~/BigOcto
+#pip3 install tensorflow keras
+#got rust nightly
+#got rust 1.44
+
+
+05/06/2020
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh  #to update wasmpack
