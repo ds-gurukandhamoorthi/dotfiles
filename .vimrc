@@ -113,7 +113,7 @@ autocmd BufRead .vimrc  map <F5> :source %<CR>
 autocmd BufRead *.html  map <F5> :!xdg-open %:p<CR>
 autocmd BufRead *.rs  map <F5> :update <CR>:!cargo run<CR>
 
-autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.5 -q %<CR>
+autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.6 -q %<CR>
 autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
 
 

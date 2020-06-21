@@ -2120,4 +2120,25 @@ sudo apt install emacs
 
 
 05/06/2020
-curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh  #to update wasmpack
+curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh  #to update wasmpack #got 0.9.1
+sudo npm install wasm-opt -g #to avoid "`wasm-opt`: exited with signal: 11" # STILL UNSUCCESSFUL
+rustup update #got rust 1.45.0 nightly
+#this can ohly be solved as of now by putting wasm-opt = false under [package.metadata.wasm-pack.profile.release].  CAUTION: just putting under [package.metadata] won't do
+
+sudo pip3 install pandas --upgrade #to avoid 'nosetester' error  which apparently is caused by a mismatch between numpy and pandas versions
+
+08/06/2020
+sudo pip3 install pyparsing -U # to get Char
+
+11/06/2020
+sudo apt update
+sudo apt upgrade #Got Firefox 77.0.1
+sudo pip3 install recordlinkage
+sudo pip3 install pyjarowinkler
+
+12/06/2020
+sudo pip3 install editdistance
+sudo pip3 install ipython -U
+
+13/06/2020
+#sudo pip3 install swifter #unable to install

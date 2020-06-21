@@ -28,7 +28,7 @@ definekey top H-f exec firefox -private
 
 # alias most-frecent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura /home/guru/bin/open-frecent-book.sh
 alias most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/orfalgen zathura pdf
-alias second-most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/open-frecent-book.sh --extra 1
+alias second-most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Zathura /home/guru/bin/open-frecent-book.sh 1
 # alias most-recent-book exec /home/guru/bin/rp-run-or-raise.sh Zathura "fasd -e zathura -f pdf -tR"
 bind b most-frecent-book
 bind B second-most-frecent-book
