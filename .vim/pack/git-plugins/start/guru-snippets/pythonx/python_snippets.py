@@ -2,6 +2,7 @@ import re
 from itertools import count
 from common_func import *
 from fuzzywuzzy import process
+from rustsnippetsutils import gen_init
 
 # Use gf on the following line to switch to the python script file
 # ../UltiSnips/python.snippets
@@ -90,7 +91,8 @@ def gen_range(variable):
     return 'range(%s)' % variable
 
 
-def gen_init(variables_str):
+#Deprectated in favor of rust powered code
+def gen_init_deprecated(variables_str):
     variables = variables_str.split(',')
     TAB = '    '
     templ = lambda var: (TAB + 'self._%s = %s\n' + TAB) % (var, var)

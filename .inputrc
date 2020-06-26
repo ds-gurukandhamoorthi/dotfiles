@@ -62,3 +62,8 @@ $endif
 $if R
     "\C-x\C-e": "\C-afix(\C-e)\C-j"
 $endif
+
+"\e[A": ""
+"\e[B": ""
+"\e[C": ""
+"\e[D": ""

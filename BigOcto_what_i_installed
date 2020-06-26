@@ -2142,3 +2142,27 @@ sudo pip3 install ipython -U
 
 13/06/2020
 #sudo pip3 install swifter #unable to install
+
+24/06/2020
+sudo apt update
+sudo apt upgrade
+
+25/06/2020
+pip3 install notedown
+sudo googler -u
+rustup update stable #got rust 1.44.1
+rustup update #got rust 1.46.0-nightly
+sudo apt update
+sudo apt upgrade
+
+26/06/2020
+sudo pip3 install line_profiler
+sudo pip3 install memory_profiler
+sudo pip3 install psutil -U
+#cannot import _psutil_linux error
+#some problem :not being able to unistall previous version.
+#https://raw.githubusercontent.com/giampaolo/psutil/master/scripts/internal/purge_installation.py
+#sudo python3 #abovescript after wgetting it.
+#it removes /usr/lib/python3/dist-packages/psutil-3.4.2.egg-info
+
+#NOTE: mem_profiler shows same results (Peak memory: 97.96MiB) for a rust-cpython function and a python function. Better do any rust-profiling at the rust level.
