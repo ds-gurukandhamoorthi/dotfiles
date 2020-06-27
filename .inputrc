@@ -67,3 +67,10 @@ $endif
 "\e[B": ""
 "\e[C": ""
 "\e[D": ""
+
+#If we want to force the use of ^j the following would disable both 'Return' and '^m'
+# "\C-m": ""
+
+#Though backspace is helpful when rubbing-out last char while typing, it sometimes allows us to hold it down to delete upto the beggining of the line.
+#We want to grow conscious of its use.. and then we can comment out the following line.
+"\C-?": ""

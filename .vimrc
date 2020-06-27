@@ -246,3 +246,11 @@ autocmd BufWritePre *.R :%s/\s\+$//e
 " To make the lime-green cursor stand out and attract our gaze without
 " resorting to blinking. (making the matching parenthesis less pronounced)
 hi MatchParen cterm=bold ctermbg=brown ctermfg=yellow
+
+
+" To just force us use vim movements (with a higher-level meaning: paragraph, code block..)
+" Sleep for 1 second
+noremap h h1gs
+noremap j j1gs
+noremap k k1gs
+noremap l l1gs
