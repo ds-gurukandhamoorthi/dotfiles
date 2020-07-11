@@ -74,3 +74,10 @@ $endif
 #Though backspace is helpful when rubbing-out last char while typing, it sometimes allows us to hold it down to delete upto the beggining of the line.
 #We want to grow conscious of its use.. and then we can comment out the following line.
 "\C-?": ""
+# "qr\e": "abc"
+
+# Disable Home and End button to force use ^a and ^e respectively. Note. Surprisingly ^[ (escape) followed by [ 1 ~ functions as Home too. It may be because a multi-sequence encoding was needed
+"[1~": ""
+"[4~": ""
+
+#Note: Similar to the ^[[1~ ^[[2 ... ^[[6 are keys above the arrow keys
