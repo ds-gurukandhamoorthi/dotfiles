@@ -2279,4 +2279,4 @@ sudo pip3 install matplotlib -U
 
 02/10/2020
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade #got Firefox 81.0

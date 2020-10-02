@@ -11,7 +11,7 @@ exec unclutter &
 exec xbindkeys &
 
 exec tmuxinator start regular &
-exec tmuxinator start r4ds &
+# exec tmuxinator start r4ds &
 
 alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
 definekey top Print random-wallpaper
