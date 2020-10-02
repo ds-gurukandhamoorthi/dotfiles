@@ -2069,7 +2069,7 @@ sudo apt update
 sudo apt upgrade
 #got Firefox 75.0
 
-22/07/2020
+22/04/2020
 sudo apt update
 sudo apt upgrade
 sudo pip3.6 install --upgrade pip
@@ -2183,5 +2183,100 @@ sudo apt-get install libgeos-dev
 sudo pip3 install -U git+https://github.com/matplotlib/basemap.git
 
 11/07/2020
+sudo apt update
+sudo apt upgrade
+
+13/07/2020
+#R
+#install.packages('vegan')
+#install.packages('svglite') # to make ggsave save to svg format
+#install.packages('gganimate') #but saving to svg was not successful
+sudo apt-get install libmagick++-dev
+sudo pip3.6 install -U pillow
+sudo pip3 install -U scikit-learn #0.19.1 -> 0.23.1 (latest version as of now)
+
+15/07/2020
+sudo apt update
+sudo apt upgrade
+rustup update stable #got rust 1.45
+rustup update #upgraded rust 1.46.0-nightly 24/06/2020 -> 15/07/2020
+
+17/07/2020
+sudo pip3 install pyGithub
+
+18/07/2020
+sudo pip3 install scikit-image
+
+20/07/2020
+sudo pip3 install -U pandas #1.0.4 -> 1.0.5
+sudo pip3 install -U numpy #1.18.5 -> 1.19.0
+#uninstalled numpy and reinstalled it. as suggested. as there was an error
+#
+
+23/07/2020
+sudo apt update
+sudo apt upgrade
+
+#to try to make fbreader function
+sudo apt install libfribidi-dev
+sudo apt install libfribidi-bin
+#dpkg -i libunibreak-dev_1.0-1_amd64.deb
+#dpkg -i libunibreak1_1.0-1_amd64.deb
+
+25/07/2020
+#Tried udisksctrl as shown in 'arch wiki'
+#It seems like a better alternative to 'udiskie' as we can have everything in commandline and the udiskie notifications are merely distractions and they clutter our visual attention by making us focus elsewhere...
+#And we can avoid the python version confusion of udiskie. (Refer to the fix made on 22/04/2020)
+
+27/07/2020
+sudo apt install pbzip2 #like pigz ... for bzip2
+sudo apt install pxz #like pigz ... for xz
+sudo pip3 install graphviz
+
+29/07/2020
+sudo dpkg -i python3-multibootusb_9.2.0-1_all.deb
+sudo pip3 install config
+sudo dpkg -r python3-multibootusb
+
+01/08/2020
+sudo apt update
+sudo apt upgrade #got Firefox 79.0
+
+02/08/2020
+sudo apt update
+sudo apt upgrade
+sudo apt install testdisk
+
+08/08/2020
+sudo apt update
+sudo apt upgrade
+rustup update stable #got rust 1.45.2
+rustup update #upgraded rust 1.46.0-nightly 15/07/2020 -> 1.47.0-nightly
+
+20/08/2020
+sudo apt update
+sudo apt upgrade
+
+21/08/2020
+sudo pip3 install scikit-learn -U #got 0.23.2 (from 0.23.1)
+sudo pip3 install --upgrade pip #got pip 20.2.2 (from 20.1.1)
+
+23/08/2020
+sudo pip3 install spacy
+sudo python3 -m spacy download en
+
+28/08/2020
+rustup update stable #got rust 1.46
+sudo apt update
+sudo apt upgrade
+#Got firefox 80.0
+
+16/09/2020
+sudo pip3 install pip -U
+sudo pip3 install pandas -U
+sudo pip3 install numpy -U
+sudo pip3 install matplotlib -U
+
+02/10/2020
 sudo apt update
 sudo apt upgrade
