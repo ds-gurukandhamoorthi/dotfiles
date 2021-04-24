@@ -52,7 +52,12 @@ alias e..='e ~+/..'
 unalias z
 z ()
 {
-    cd "$(orfalgen-dir echo "$@")"
+    if [[ $# -eq 0 ]]
+    then
+        cd
+    else
+        cd "$(orfalgen-dir echo "$@")"
+    fi
 }
 er ()
 {
