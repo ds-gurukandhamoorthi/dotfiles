@@ -2280,3 +2280,152 @@ sudo pip3 install matplotlib -U
 02/10/2020
 sudo apt update
 sudo apt upgrade #got Firefox 81.0
+
+12/10/2020
+rustup update stable #got rust 1.47
+rustup update #got rust 1.49.0 nightly from 1.48.0 nightly
+sudo apt update
+sudo apt upgrade
+
+16/10/2020
+sudo pip3 install xgboost
+
+31/10/2020
+sudo apt install python-pydot
+
+18/11/2020
+sudo apt update
+sudo apt upgrade
+
+19/11/2020
+sudo -H pip3 install kaggle --upgrade
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade requests
+sudo -H pip3 install --upgrade certifi
+sudo -H pip3 install --upgrade urllib3
+
+20/11/2020
+rustup update stable #got rust 1.48
+
+21/11/2020
+pip uninstall slugify #to remove python version 2 slugify which gives error: "name 'unicode' is not defined"
+#to be able to push a newly initiated kernel/notebook to kaggle: Ok
+
+23/11/2020
+sudo pip3 install tensorflow-datasets
+
+02/12/2020
+sudo apt update
+sudo apt upgrade
+sudo pip3 install pylint --upgrade
+
+05/12/2020
+sudo -H pip3 install kaggle -U
+
+07/12/2020
+sudo pip3 install tensorflow_hub
+
+
+24/01/2021
+wget -O- https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update
+sudo apt install signal-desktop
+sudo apt upgrade #got Firefox 84
+
+01/02/2021
+sudo apt install libxcb-xinerama0 #for anki
+
+14/02/2021
+sudo apt update
+sudo apt upgrade
+sudo apt install parallel
+
+20/02/2021
+sudo apt update
+sudo apt upgrade
+
+22/01/2021
+sudo pip3 install --upgrade pip
+sudo pip3 install --upgrade tensorflow
+sudo pip3 install --upgrade keras
+
+25/02/2021
+sudo apt update
+sudo apt upgrade
+#Got firefox 86
+
+27/02/2021
+sudo apt update
+sudo apt upgrade
+
+01/03/2021
+sudo pip3 install mypy
+sudo apt update
+sudo apt upgrade
+
+04/03/2021
+sudo apt update
+sudo apt upgrade
+sudo pip3 install scikit-learn -U #got 0.24.1 (from 0.23.2)
+sudo pip3 install pandas -U #got 1.1.5 (from 1.1.2)
+sudo pip3 install numpy -U #got 1.19.5 (from 1.19.2)
+sudo pip3 install scipy -U #got 1.5.4 (from 1.4.1)
+sudo pip3 install tensorflow_hub -U #got 0.11.0 (from 0.10.0)
+sudo pip3 install pylint -U #got 2.7.2 (from 2.6.0)  # this installed astroid 2.5.1 (from 2.4.2)
+sudo pip3 install matplotlib -U #got 3.3.4 (from 3.3.2)
+sudo pip3 install ipython -U #got 7.16.1 (from 7.15.0)
+sudo pip3 install jupyter -U #got 6.2.0 (from 5.2.0)
+sudo pip3 install prompt-toolkit -U #got 3.0.16 (from 3.0.5)
+sudo pip3 install tensorflow_addons #to get TimeStopping
+sudo pip3 install albumentations #it installed among others opencv-python 4.5.1.48
+
+
+08/03/2021
+sudo apt update
+sudo apt upgrade
+
+12/03/2021
+sudo pip3 install -U funcy #got 1.15 (from 1.10)
+
+13/03/2021
+rustup update stable #got 1.50.0
+
+18/03/2021
+#choosing package pip, Cuda None
+pip install torch==1.8.0+cpu torchvision==0.9.0+cpu torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
+sudo apt update
+sudo apt upgrade #got Firefox 86.0.1
+
+19/03/2021
+sudo apt update
+sudo apt upgrade
+
+24/03/2021
+sudo apt update
+sudo apt upgrade #got Firefox 87.0
+sudo pip3 install jupytext
+
+17/04/2021
+sudo apt update
+sudo apt upgrade
+
+19/04/2021
+rustup update stable #got 1.51.0
+sudo pip3 install mltype
+
+27/07/2021
+sudo apt update
+sudo apt upgrade
+
+19/08/2021
+sudo apt update
+sudo apt upgrade
+
+22/08/2021
+sudo apt update
+sudo apt upgrade
+sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
+sudo apt upgrade
+#got git version 2.33.0
