@@ -2,7 +2,7 @@ import re
 from itertools import count
 from common_func import *
 from fuzzywuzzy import process
-from rustsnippetsutils import gen_init
+from rustsnippetsutils import gen_init, get_last_read_argument, get_recent_line_containing_pattern
 
 # Use gf on the following line to switch to the python script file
 # ../UltiSnips/python.snippets
@@ -30,10 +30,36 @@ IMPORTS = [
 ]
 
 STATIC_IMPORTS = [
-    'math import cos',
+    # 'math import cos',
     'numpy.random import choice',
     'collections import Counter',
     'collections import defaultdict',
+    'sklearn.linear_model import LinearRegression',
+    'sklearn.linear_model import LogisticRegression',
+    'sklearn.pipeline import make_pipeline',
+    'sklearn.model_selection import train_test_split',
+    'sklearn.metrics import confusion_matrix',
+    'sklearn.manifold import Isomap',
+    'sklearn.model_selection import GridSearchCV',
+    'sklearn.model_selection import cross_val_score',
+    'sklearn.decomposition import PCA',
+    'sklearn.svm import SVC',
+    'sklearn.naive_bayes import GaussianNB',
+    'sklearn.neighbors import KNeighborsClassifier',
+    'sklearn.feature_extraction.text import TfidfVectorizer',
+    'sklearn.preprocessing import PolynomialFeatures',
+    'sklearn.datasets import load_iris',
+    'sklearn.datasets import make_blobs',
+    'sklearn.datasets import load_digits',
+    'sklearn.ensemble import RandomForestClassifier',
+    'sklearn.metrics import accuracy_score',
+    'sklearn.linear_model import Ridge',
+    'sklearn.cluster import KMeans',
+    'sklearn.tree import DecisionTreeRegressor',
+    'sklearn.tree import DecisionTreeClassifier',
+    'mpl_toolkits.basemap import Basemap',
+    'tensorflow import keras',
+
     'bs4 import BeautifulSoup',
 ]
 
@@ -49,7 +75,7 @@ def getStaticImports(mnemo):
 
 
 def forLoop(variable, start, end):
-    templ = 'for ' + variable + ' in range(%s)'
+    templ = 'for ' + variable + ' in range(%s):'
     if start == '0':
         return templ % end
     if end == "":
@@ -58,7 +84,7 @@ def forLoop(variable, start, end):
         return templ % end
 
 
-def getLastReadArgument(line):
+def getLastReadArgument_deprecated(line):
     regexp = r'argv\[(\d+)\]'
     srchRes = re.search(regexp, line)
     if srchRes:
