@@ -17,7 +17,7 @@ endsnippet
 snippet "a([0-9]+)?" "sys arg" br
 ${1:arg`!p
 line=getPreviousLine(snip)
-n=getLastReadArgument(line)
+n=get_last_read_argument(line)
 mtch=match.group(1)
 snip.rv=mtch or n`} = sys.argv[`!p snip.rv=mtch or n`]
 endsnippet
@@ -25,7 +25,7 @@ endsnippet
 snippet "ia([0-9]+)?" "sys arg as int" br
 ${1:arg`!p
 line=getPreviousLine(snip)
-n=getLastReadArgument(line)
+n=get_last_read_argument(line)
 mtch=match.group(1)
 snip.rv=mtch or n`} = int(sys.argv[`!p snip.rv=mtch or n`])
 endsnippet
@@ -33,7 +33,7 @@ endsnippet
 snippet "fa([0-9]+)?" "sys arg as float" br
 ${1:arg`!p
 line=getPreviousLine(snip)
-n=getLastReadArgument(line)
+n=get_last_read_argument(line)
 mtch=match.group(1)
 snip.rv=mtch or n`} = float(sys.argv[`!p snip.rv=mtch or n`])
 endsnippet
@@ -112,7 +112,14 @@ snippet lgv "log variable"
 print(`!p
 line=getPreviousLine(snip)
 var=getVariable(line)
-res='"' + var + '", ' + var
+res="f'{variab_name} {{{value}}}'".format(variab_name=var,value=var)
+snip.rv=res`)
+endsnippet
+
+snippet "pf(.*)" "print formatted/f-string" r
+print(`!p
+var=match.group(1)
+res="f'{variab_name} {{{value}}}'".format(variab_name=var,value=var)
 snip.rv=res`)
 endsnippet
 
@@ -127,6 +134,9 @@ endsnippet
 
 snippet f,a "figure ax" b
 fig, ax = plt.subplots()
+endsnippet
+snippet f,as "figure axes" b
+fig, axes = plt.subplots($1)
 endsnippet
 snippet ps "plot show" b
 plt.show()
@@ -187,4 +197,12 @@ endsnippet
 
 snippet =arr "numpy array" b
 $1 = np.array([$2])
+endsnippet
+
+# IPYTHON inspired
+snippet "[/](.*)" "/function arg1 arg2 ..." r
+`!p wholeline=match.group(1)
+(funcname, *arguments) = wholeline.split(' ')
+res = "{func}({fargs})".format(func=funcname,fargs=', '.join(arguments))
+snip.rv=res`
 endsnippet
