@@ -44,7 +44,11 @@ export PS1
 # alias e='f -e vim'
 e ()
 {
-    vim "$(orfalgen-editable echo "$@")"
+    FN="$(orfalgen-editable echo "$@")"
+    if [[ ! -z "$FN" ]]
+    then
+        vim "$FN"
+    fi
 }
 #edit here in this directory and its descendants
 alias e.='e ~+'
@@ -82,6 +86,8 @@ function v(){
 				*pdf)
 						zathura "$FN"
 						;;
+                "")
+                        ;;
 				*)      view "$FN"
 						;;
 		esac
