@@ -2429,3 +2429,80 @@ sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt upgrade
 #got git version 2.33.0
+
+27/08/2021
+sudo apt update
+sudo apt upgrade
+
+09/10/2021
+sudo apt update
+sudo apt upgrade
+sudo apt remove elasticsearch
+sudo apt remove filebeat
+sudo apt remove neo4j
+sudo pip3 install --upgrade pip
+sudo pip3 install tokenizers
+
+11/10/2021
+rustup update stable #got 1.55.0 (from 1.51.0)
+
+13/10/2021
+sudo pip3 install --upgrade pip
+sudo python3.5 -m pip install --upgrade pip #to try to solve "No matching distribution found for vim"
+
+21/10/2021
+rustup update stable #got 1.56.0
+sudo apt update
+sudo apt upgrade
+
+22/10/2021
+#cargo install runiq
+
+25/10/2021
+sudo pip3.6 install stringdist
+sudo pip3.6 install scikit-learn-extra
+
+12/11/2021
+cargo install fd-find
+
+18/11/2021
+sudo apt update
+sudo apt upgrade
+
+29/11/2021
+sudo apt update
+sudo apt upgrade
+#got git version 2.34.1
+# This is the one with optimized merge strategy ort
+sudo apt install lightdm lightdm-settings slick-greeter
+sudo apt remove --purge mdm mint-mdm-themes
+sudo dpkg-reconfigure lightdm
+sudo apt install timeshift
+
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt autoremove --purge
+sudo apt autoclean
+sudo apt clean
+sudo ln -sfn /usr/bin/python3.5 /usr/bin/python3
+# look at 13/11/2017 and 26/12/2017
+
+mintupgrade check
+mintupgrade download
+mintupgrade upgrade
+
+#got Linux Mint Tara
+#Firefox version is 94
+
+
+03/12/2021
+sudo apt update
+sudo apt upgrade
+# https://mirrors.edge.kernel.org/pub/linux/utils/util-linux/v2.37/
+# ./configure
+# make cal
+# put the `cal` binary at /opt
+# alias cal
+# cargo install fd-find  (8.2.1 -> 8.3.0)
+rustup update stable #got 1.57.0
