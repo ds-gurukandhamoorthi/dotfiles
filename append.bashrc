@@ -112,7 +112,7 @@ alias python='python3.6 -q'
 alias ipython='ipython3 --no-confirm-exit'
 alias bc='bc -ql'
 
-alias cal='cal -NMC'
+alias cal='/opt/cal -m'
 
 export PYTHONSTARTUP=$HOME/.pythonrc
 alias cclip='xclip -sel clip'
