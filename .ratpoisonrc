@@ -13,7 +13,7 @@ exec xbindkeys &
 exec tmuxinator start regular &
 # exec tmuxinator start r4ds &
 
-alias random-wallpaper exec feh --randomize --recursive --bg-scale ~/wp
+alias random-wallpaper exec find ~/wp | shuf -n 2 | feh --bg-scale -f -
 definekey top Print random-wallpaper
 alias select-then-copy-to-clipboard exec /home/guru/bin/select-image-copy-clipboard.sh
 definekey top C-Print select-then-copy-to-clipboard
@@ -22,7 +22,7 @@ definekey top F13 other
 
 
 
-bind f exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Firefox firefox
+bind f exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise firefox firefox
 definekey top H-f exec firefox -private
 # bind b exec /home/guru/bin/rp-run-or-raise.sh Zathura zathura
 
@@ -33,7 +33,7 @@ alias second-most-frecent-book exec /home/guru/bin/rp-enhanced-window-switcher r
 bind b most-frecent-book
 bind B second-most-frecent-book
 # bind e exec /home/guru/bin/rp-run-or-raise.sh jetbrains-studio /opt/android-studio/bin/studio.sh
-alias term-most-frecent-directory exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Lxterminal /home/guru/bin/open-frecent-directory-term.sh
+alias term-most-frecent-directory exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise Alacritty /home/guru/bin/open-frecent-directory-term.sh
 #alias term-most-frecent-directory exec /home/guru/bin/rp-run-or-raise.sh Lxterminal lxterminal
 bind C term-most-frecent-directory
 bind c exec /home/guru/bin/rp-enhanced-window-switcher run-or-raise URxvt /home/guru/bin/open-regular-tmux-session.sh
