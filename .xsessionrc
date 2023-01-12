@@ -21,5 +21,14 @@ syndaemon -d -K -i 0.7
 #exec ratpoison
 #exec xmonad
 ##exec /home/guru/.cabal/bin/xmonad
-exec /opt/ratpoison-1.4.9/src/ratpoison 
+# exec /opt/ratpoison-1.4.9/src/ratpoison
 
+# The following file `ratpoison.desktop` with the content that follows it would allow us to avoid using the line above `exec  ...ratpoison`  which is odd (any desktop manager we open would open ratpoison which may not be what we want)
+# /usr/share/xsessions/ratpoison.desktop
+# [Desktop Entry]
+# Name=Ratpoison
+# Comment=Use this session to run Ratpoison as your desktop environment
+# Exec=/opt/ratpoison-1.4.9/src/ratpoison
+# Icon=
+# Type=Application
+# DesktopNames=Ratpoison
