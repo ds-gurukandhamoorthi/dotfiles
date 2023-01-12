@@ -2504,5 +2504,89 @@ sudo apt upgrade
 # make cal
 # put the `cal` binary at /opt
 # alias cal
-# cargo install fd-find  (8.2.1 -> 8.3.0)
+cargo install fd-find  #(8.2.1 -> 8.3.0)
 rustup update stable #got 1.57.0
+cargo install ripgrep #(11.0.2 -> 13.0.0)
+
+09/12/2021
+sudo apt update && sudo apt upgrade
+#got Firefox 95.0
+
+10/12/2021
+sudo -H pip3.6 install more-itertools --upgrade
+# to get groupby_transform with 4 arguments instead of 3
+
+16/12/2021
+sudo pip3 install ortools
+sudo pip3.6 install ortools
+sudo apt update
+sudo apt upgrade
+sudo pip3 install --upgrade pip
+sudo pip3.6 install --upgrade pip
+sudo pip3.6 install tabulate
+
+17/12/2021
+sudo pip3 install --upgrade networkx
+sudo pip3.6 install --upgrade networkx
+
+18/12/2021
+sudo pip3 install --upgrade ortools # 9.1.9490 -> 9.2.9972
+
+05/01/2022
+sudo apt update
+sudo apt upgrade
+#got Firefox 95.0.1
+
+22/01/2022
+sudo apt update && apt upgrade
+#got Firefox 96.0.1
+rustup update stable #got 1.58.1
+cargo install fd-find #(8.3.0 -> 8.3.1)
+
+02/02/2022
+sudo apt update
+sudo apt upgrade
+#got Firefox 96.0.3
+
+15/02/2022
+sudo apt update
+sudo apt upgrade
+#got Firefox 97.0
+
+
+#update signal desktop
+#wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+#
+#cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+#
+#echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+#  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+#
+#  sudo apt update && sudo apt install signal-desktop
+
+
+17/02/2022
+sudo apt update
+sudo apt upgrade
+sudo npm install npm@latest -g
+sudo npm install nodejs
+sudo npm install bookmarklet
+
+************************************************************************
+AFTER ~6 MONTHS OF HIBERNATION THIS COMPUTER IS AGAIN PUT TO REGUAR USE.
+************************************************************************
+
+29/09/2022
+sudo apt update
+sudo apt upgrade
+#got Firefox 105.0.1
+rustup update stable #got 1.64
+
+23/12/2022
+rustup update stable #got 1.66
+
+12/01/2023
+sudo apt update
+sudo apt upgrade
+#got Firefox 108.0.2
+rustup update stable #got 1.66.1
