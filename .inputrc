@@ -76,7 +76,7 @@ $endif
 "\C-?": ""
 # "qr\e": "abc"
 
-# Disable Home and End button to force use ^a and ^e respectively. Note. Surprisingly ^[ (escape) followed by [ 1 ~ functions as Home too. It may be because a multi-sequence encoding was needed
+# Disable Home and End button to force the use of ^a and ^e respectively. Note. Surprisingly ^[ (escape) followed by [ 1 ~ functions as Home too. It may be because a multi-sequence encoding was needed
 "[1~": ""
 "[4~": ""
 

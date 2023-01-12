@@ -116,6 +116,8 @@ autocmd BufRead *.rs  map <F5> :update <CR>:!cargo run<CR>
 autocmd BufRead *.py  noremap <F5> :w <CR>:!python3.6 -q %<CR>
 autocmd BufRead *.py  vnoremap <F5> :!python3.5 -q <CR>
 
+autocmd BufRead *.mzn  map <F5> :w <CR>:!minizinc %<CR>
+
 
 
 " autocmd VimEnter *.py NERDTree
@@ -208,7 +210,7 @@ set keywordprg=dict\ -d\ wn
 au VimEnter *.notes set spell|set bg=dark
 au VimEnter *_notes set spell|set bg=dark
 
-autocmd BufRead,BufNewFile 201* set spell
+autocmd BufRead,BufNewFile 20* set spell
 autocmd BufRead,BufNewFile *diff set spell
 
 "Show the modifications made to the original file (snippet found in Vim Doc)
@@ -235,6 +237,8 @@ autocmd FileType ratpoison setlocal commentstring=#\ %s
 autocmd FileType eukleides setlocal commentstring=%\ %s
 au BufRead,BufNewFile *.euk set filetype=eukleides
 
+autocmd FileType zinc setlocal commentstring=%\ %s
+
 " persistent-undo
 set undofile
 set undodir=~/.vim/undodir
@@ -250,7 +254,7 @@ hi MatchParen cterm=bold ctermbg=brown ctermfg=yellow
 
 " To just force us use vim movements (with a higher-level meaning: paragraph, code block..)
 " Sleep for 1 second
-noremap h h1gs
-noremap j j1gs
-noremap k k1gs
-noremap l l1gs
+" noremap h h1gs
+" noremap j j1gs
+" noremap k k1gs
+" noremap l l1gs
